@@ -46,32 +46,20 @@ const databaseGizi = {
         fotoBesar: fotoDefaultKotakAman,
         
         itemsKecil: [
-            { nama: "Beras (Nasi Putih)", berat: 125, energi: 225.0, prot: 3.75, lemak: 0.375, karb: 49.75, serat: 0.25 },
-            { nama: "Daging Ayam", berat: 45, energi: 134.1, prot: 8.19, lemak: 11.25, karb: 0.00, serat: 0.00 },
-            { nama: "Tepung", berat: 20, energi: 66.6, prot: 1.80, lemak: 0.20, karb: 15.44, serat: 0.06 },
-            { nama: "Minyak (Ayam Geprek)", berat: 5, energi: 44.2, prot: 0.00, lemak: 5.00, karb: 0.00, serat: 0.00 },
-            { nama: "Tomat", berat: 10, energi: 1.35, prot: 0.15, lemak: 0.015, karb: 0.255, serat: 0.12 },
-            { nama: "Cabai", berat: 10, energi: 3.6, prot: 0.10, lemak: 0.03, karb: 0.73, serat: 0.14 },
-            { nama: "Minyak (Sambal Bawang)", berat: 5, energi: 44.2, prot: 0.00, lemak: 5.00, karb: 0.00, serat: 0.00 },
-            { nama: "Tahu", berat: 55, energi: 44.0, prot: 5.99, lemak: 0.11, karb: 0.44, serat: 0.04 },
-            { nama: "Minyak (Tahu Goreng)", berat: 5, energi: 44.2, prot: 0.00, lemak: 5.00, karb: 0.00, serat: 0.00 },
-            { nama: "Timun", berat: 10, energi: 0.8, prot: 0.02, lemak: 0.02, karb: 0.14, serat: 0.03 },
-            { nama: "Selada", berat: 8, energi: 1.44, prot: 0.096, lemak: 0.016, karb: 0.232, serat: 0.00 },
+            { nama: "Nasi putih", berat: 125, energi: 225.0, prot: 3.75, lemak: 0.375, karb: 49.75, serat: 0.25 },
+            { nama: "Ayam geprek", berat: 70, energi: 244.9, prot: 9.99, lemak: 16.45, karb: 15.44, serat: 0.06 },
+            { nama: "Sambal bawang", berat: 25, energi: 49.15, prot: 0.25, lemak: 5.045, karb: 0.985, serat: 0.26 },
+            { nama: "Tahu goreng", berat: 60, energi: 88.2, prot: 5.99, lemak: 5.11, karb: 0.44, serat: 0.04 },
+            { nama: "Timun dan Selada", berat: 18, energi: 2.24, prot: 0.116, lemak: 0.036, karb: 0.372, serat: 0.03 },
             { nama: "Kelengkeng", berat: 50, energi: 30.0, prot: 0.66, lemak: 0.05, karb: 7.57, serat: 0.00 }
         ],
 
         itemsBesar: [
-            { nama: "Beras (Nasi Putih)", berat: 180, energi: 324.0, prot: 6.75, lemak: 0.54, karb: 71.64, serat: 0.36 },
-            { nama: "Daging Ayam", berat: 45, energi: 134.1, prot: 8.19, lemak: 11.25, karb: 0.00, serat: 0.00 },
-            { nama: "Tepung", berat: 20, energi: 66.6, prot: 1.80, lemak: 0.20, karb: 15.44, serat: 0.06 },
-            { nama: "Minyak (Ayam Geprek)", berat: 5, energi: 44.2, prot: 0.00, lemak: 5.00, karb: 0.00, serat: 0.00 },
-            { nama: "Tomat", berat: 10, energi: 1.35, prot: 0.15, lemak: 0.015, karb: 0.255, serat: 0.12 },
-            { nama: "Cabai", berat: 10, energi: 3.6, prot: 0.10, lemak: 0.03, karb: 0.73, serat: 0.14 },
-            { nama: "Minyak (Sambal Bawang)", berat: 5, energi: 44.2, prot: 0.00, lemak: 5.00, karb: 0.00, serat: 0.00 },
-            { nama: "Tahu", berat: 55, energi: 44.0, prot: 5.99, lemak: 0.11, karb: 0.44, serat: 0.04 },
-            { nama: "Minyak (Tahu Goreng)", berat: 5, energi: 44.2, prot: 0.00, lemak: 5.00, karb: 0.00, serat: 0.00 },
-            { nama: "Timun", berat: 10, energi: 0.8, prot: 0.02, lemak: 0.02, karb: 0.14, serat: 0.03 },
-            { nama: "Selada", berat: 8, energi: 1.44, prot: 0.096, lemak: 0.016, karb: 0.232, serat: 0.00 },
+            { nama: "Nasi putih", berat: 180, energi: 324.0, prot: 6.75, lemak: 0.54, karb: 71.64, serat: 0.36 },
+            { nama: "Ayam geprek", berat: 70, energi: 244.9, prot: 9.99, lemak: 16.45, karb: 15.44, serat: 0.06 },
+            { nama: "Sambal bawang", berat: 25, energi: 49.15, prot: 0.25, lemak: 5.045, karb: 0.985, serat: 0.26 },
+            { nama: "Tahu goreng", berat: 60, energi: 88.2, prot: 5.99, lemak: 5.11, karb: 0.44, serat: 0.04 },
+            { nama: "Timun dan Selada", berat: 18, energi: 2.24, prot: 0.116, lemak: 0.036, karb: 0.372, serat: 0.03 },
             { nama: "Kelengkeng", berat: 50, energi: 30.0, prot: 0.66, lemak: 0.05, karb: 7.57, serat: 0.00 }
         ]
     }
