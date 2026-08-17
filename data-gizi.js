@@ -42,8 +42,8 @@ const databaseGizi = {
         targetKecil: 413,            
         targetBesar: 708,            
         
-        fotoKecil: fotoDefaultKotakAman,
-        fotoBesar: fotoDefaultKotakAman,
+        fotoKecil: "https://lh3.googleusercontent.com/d/1TAYmJ2iHCoxgwCZCRZL46KjFDqcSI1m0",
+        fotoBesar: "https://lh3.googleusercontent.com/d/1A7rO9aNyQXLdqrL1Bin3kKZvHRxSpPFW",
         
         itemsKecil: [
             { nama: "Nasi putih", berat: 125, energi: 225.0, prot: 3.75, lemak: 0.375, karb: 49.75, serat: 0.25 },
