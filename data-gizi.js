@@ -36,7 +36,7 @@ const databaseGizi = {
             { nama: "Timun dan Selada", berat: 18, energi: 2.24, prot: 0.116, lemak: 0.036, karb: 0.372, serat: 0.03 },
             { nama: "Kelengkeng", berat: 50, energi: 30.0, prot: 0.66, lemak: 0.05, karb: 7.57, serat: 0.00 }
         ]
-    }
+    },
     
     // --- CONTOH TANGGAL 1 : 15 AGUSTUS ---
     "2026-08-15": {
