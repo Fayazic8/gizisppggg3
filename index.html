@@ -3,170 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistem Gizi Dapur 2 | SPPG GULUK-GULUK 03</title>
+    <title>Sistem Distribusi Gizi | Annuqayah 03</title>
     <style>
+        /* === MENCEGAH FONT HP BERANTAKAN === */
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif !important; }
-        
-        body { background-color: #f8fafc; color: #1e293b; padding: 12px 12px 40px 12px; line-height: 1.5; }
+        body { background-color: #f8fafc; color: #1e293b; padding: 12px 12px 50px 12px; line-height: 1.5; }
 
-        .card { background: #ffffff; border-radius: 22px; padding: 22px; margin-bottom: 22px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
-        
-        .flex { display: flex; } .justify-between { justify-content: space-between; } .items-center { align-items: center; } .gap-10 { gap: 10px; } .gap-15 { gap: 15px; }
+        .card { background: #ffffff; border-radius: 20px; padding: 22px; margin-bottom: 22px; border: 1px solid #e2e8f0; box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.05); }
+        .flex { display: flex; } .justify-between { justify-content: space-between; } .items-center { align-items: center; } .gap-15 { gap: 15px; }
 
-        h1 { font-size: 1.15rem; font-weight: 900; color: #0f172a; margin-bottom: 3px;}
+        h1 { font-size: 1.15rem; font-weight: 900; color: #0f172a; margin-bottom: 2px;}
         .school-subtitle { font-size: 0.65rem; font-weight: 800; color: #0ea5e9; letter-spacing: 1.5px; text-transform: uppercase; }
+        .special-title { font-size: 2rem; font-weight: 900; margin-bottom: 12px; color: #1d4ed8; line-height: 1.1; letter-spacing: -1px;}
         
-        .special-title { font-size: 2.1rem; font-weight: 900; margin-bottom: 12px; color: #1d4ed8; line-height: 1.1; letter-spacing: -1px;}
+        .logo-box { background: #e0e7ff; color: #4338ca; width: 48px; height: 48px; border-radius: 12px; display: flex; justify-content: center; align-items: center; font-size: 24px; border: 1px solid #c7d2fe;}
+        .date-picker-wrap { background: #2563eb; border-radius: 50px; padding: 8px 18px; display: flex; align-items: center; color: white; box-shadow: 0 4px 10px rgba(37,99,235,0.2);}
+        .date-picker-wrap input { background: transparent; border: none; outline: none; font-weight: 800; color: white; font-size: 1rem; cursor: pointer; text-align: center;}
         
-        .logo-box { background: #e0e7ff; color: #4338ca; width: 48px; height: 48px; border-radius: 12px; display: flex; justify-content: center; align-items: center; font-size: 26px; border: 1px solid #c7d2fe; box-shadow: 0 2px 4px rgba(0,0,0,0.05);}
-
-.logo-box img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
-
-        .date-picker-wrap { background: #2563eb; border-radius: 50px; padding: 7px 18px; display: flex; align-items: center; color: white; box-shadow: 0 4px 10px rgba(37,99,235,0.2);}
-        .date-picker-wrap input { background: transparent; border: none; outline: none; font-weight: 800; color: white; font-size: 0.95rem; cursor: pointer; text-align: center;}
-        
-        .realtime-widget { background: #f1f5f9; padding: 6px 14px; border-radius: 20px; font-weight: 800; font-family: monospace !important; font-size: 0.9rem; color: #334155; border: 1px solid #cbd5e1; display: inline-flex; gap:5px; align-items:center; }
         .info-tag { display: inline-flex; align-items: center; background: #e0e7ff; color: #4338ca; font-size: 0.75rem; font-weight: 800; padding: 7px 16px; border-radius: 50px; text-transform: uppercase; letter-spacing: 1px;}
-        .porsi-badge-custom { color: #ea580c; font-size: 1.2rem; font-weight: 800; font-style: italic; display: inline-flex; align-items: flex-end; margin-left: 10px; padding: 10px 15px; background: #fff7ed; border-radius: 15px; border: 1px solid #fdba74;}
-        .btn-print { background: #0f172a; color: white; width: 55px; height: 55px; border-radius: 16px; font-size: 20px; border: none; display: flex; justify-content: center; align-items: center; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: 0.2s ease;}
-
-        .visual-container { display: flex; gap: 20px; margin-top: 25px; margin-bottom: 25px; align-items: stretch;}
         
-        /* Proteksi Fallback Layout jika Gambar tidak terkonek ke wifi sama skali.  */
-        .img-wrapper { flex: 1.2; border-radius: 20px; overflow: hidden; background: #e2e8f0; display: flex; align-items: center; justify-content: center; border: 2px solid #cbd5e1;}
+        /* THEME SECTION HEADER (Pemisah Kategori) */
+        .section-header { font-size: 1.5rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; padding: 15px 20px; color: white; border-radius: 15px; margin-top: 40px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
+        .bg-school { background: linear-gradient(135deg, #2563eb, #1e40af); border: 2px solid #1e3a8a;}
+        .bg-3b     { background: linear-gradient(135deg, #7c3aed, #5b21b6); border: 2px solid #4c1d95;}
+
+        /* TOMBOL DROPDOWN/BISA BUKA TUTUP (Collapsible) */
+        .header-clickable { cursor: pointer; user-select: none; transition: 0.2s;}
+        .header-clickable:active { opacity: 0.7; }
+        .accordion-btn { background: #f1f5f9; border: none; font-size: 1.2rem; font-weight: bold; color: #1d4ed8; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: 0.3s; cursor:pointer;}
+        .accordion-content { display: none; margin-top: 15px; transition: 0.3s;}
+
+        /* BROSUR GAMBAR MENU & KOTAK RINGKASAN */
+        .visual-container { display: flex; gap: 20px; margin-top: 15px; margin-bottom: 20px; align-items: stretch;}
+        .img-wrapper { flex: 1.2; border-radius: 15px; overflow: hidden; background: #e2e8f0; display: flex; align-items: center; justify-content: center; border: 2px solid #cbd5e1;}
         .img-wrapper img { width: 100%; height: 100%; object-fit: cover;}
         
-        .brosur-highlight { flex: 1; background: #ffffff; border-radius: 20px; padding: 25px; box-shadow: inset 0 0 0 4px white, 0 8px 15px -3px rgba(0,0,0,0.06); }
-        .brosur-kecil { outline: 4px solid #f43f5e; outline-offset: -4px;} 
-        .brosur-besar { outline: 4px solid #0284c7; outline-offset: -4px;}
+        .brosur-highlight { flex: 1; background: #ffffff; border-radius: 15px; padding: 22px; box-shadow: inset 0 0 0 4px white, 0 8px 15px -3px rgba(0,0,0,0.06); }
+        .brosur-kecil { outline: 3px solid #f43f5e; outline-offset: -3px;} 
+        .brosur-besar { outline: 3px solid #0284c7; outline-offset: -3px;}
+        .brosur-3b    { outline: 3px solid #8b5cf6; outline-offset: -3px;} 
 
-        .stat-row { display: flex; justify-content: flex-start; align-items: center; font-size: 1.15rem; font-weight: 800; color: #1e293b; padding: 10px 0; border-bottom: 1px dashed #cbd5e1; }
-        .stat-row:last-child { border-bottom: none; font-size: 1.3rem; margin-top:5px; }
-        .stat-val { color: #0f172a; font-size: 1.25rem; margin-left: auto; }
-        .bullet-merah::before { content: "●"; color: #f43f5e; margin-right: 8px;}
-        .bullet-biru::before { content: "●"; color: #0ea5e9; margin-right: 8px;}
+        /* PERATA KANAN & BULLET POIN KIRI LURUS MANTAP */
+        .stat-row { display: flex; justify-content: space-between; align-items: center; font-size: 1.15rem; font-weight: 800; color: #1e293b; padding: 8px 0; border-bottom: 1px dashed #cbd5e1; }
+        .stat-row:last-child { border-bottom: none; font-size: 1.25rem; margin-top:5px; }
+        .bullet-box { display: flex; align-items: center; } 
+        .bullet-merah::before { content: "●"; color: #f43f5e; margin-right: 10px;}
+        .bullet-biru::before  { content: "●"; color: #0ea5e9; margin-right: 10px;}
+        .bullet-ungu::before  { content: "●"; color: #8b5cf6; margin-right: 10px;}
+        .stat-val { color: #0f172a; text-align:right;}
 
+        /* TABEL DEFAULT & LAYOUTNYA */
         table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-        th { color: #64748b; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; padding: 12px 10px; border-bottom: 2px solid #e2e8f0; text-align: center;}
+        th { color: #64748b; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; padding: 12px 10px; border-bottom: 2px solid #e2e8f0; text-align: center; background:#f8fafc;}
         td { padding: 16px 10px; font-size: 0.95rem; border-bottom: 1px solid #f1f5f9; color: #334155; font-weight: 600;}
         td:first-child { text-align: left; font-weight: 800; color: #0f172a;}
-        
-        .total-row { background-color: #f8fafc; border-top: 3px solid #cbd5e1; }
+        .total-row { background-color: #f1f5f9; border-top: 3px solid #cbd5e1; }
         .total-row td { font-weight: 900; color: #0f172a; font-size: 1rem; text-align: center; border-bottom: none;}
         .total-row td:first-child { text-align: left; }
 
-        .prog-container { display: flex; align-items: center; gap: 15px; margin-top: 25px; padding-top: 20px; border-top: 2px dashed #e2e8f0;}
+        /* TABEL LIST DISTRIBUSI */
+        .tbl-distribusi th { background: #e2e8f0; color:#1e293b;}
+        .tbl-distribusi tr:hover { background: #f8fafc; }
+        .tot-dist-col { background: #0f172a; color: white !important;}
+        .tot-dist-col td { color: white !important; font-weight: 900;}
+
+        /* PERCENTASE GRAPH MURNI */
+        .prog-container { display: flex; align-items: center; gap: 15px; margin-top: 25px; padding-top: 15px; border-top: 2px dashed #e2e8f0;}
         .prog-text { width: 90px;}
-        .prog-text h4 { font-size: 1.7rem; font-weight: 900; margin-bottom: 0px; color: #0f172a; line-height: 1; }
+        .prog-text h4 { font-size: 1.6rem; font-weight: 900; margin-bottom: 0px; color: #0f172a; line-height: 1; }
         .prog-track { flex-grow: 1; height: 16px; background: #e2e8f0; border-radius: 50px; overflow: hidden;}
         .prog-fill { height: 100%; border-radius: 50px; transition: width 0.8s ease-in-out; background-color: #cbd5e1; }
 
-        /* TABEL HP (Kartu Tumpuk yg bkin responsiv lancar dibaca dr Acode bapak ) */
+        /* MODO HAPE RESPONSIVE ! */
         @media (max-width: 750px) {
-            .nav-top { flex-direction: column; align-items: stretch; gap: 15px; padding-bottom: 18px; border-bottom: 2px dashed #cbd5e1;}
-            .top-jam { align-self: flex-end; }
+            .nav-top { flex-direction: column; align-items: stretch; gap: 15px; padding-bottom: 18px;}
             .date-picker-wrap { width: 100%; justify-content: center;}
-
-            .header-info-wrap { flex-direction: column; align-items: flex-start; gap: 20px; margin-bottom: 10px;}
+            .header-info-wrap { flex-direction: column; align-items: flex-start; gap: 15px;}
             .visual-container { flex-direction: column; gap: 15px; margin-bottom:30px;}
-            .img-wrapper { min-height: 250px; border-radius: 18px;}
-            .brosur-highlight { border-radius: 18px; padding: 20px;}
+            .img-wrapper { min-height: 250px;}
             
             thead { display: none; }
             tbody tr, tfoot tr { display: flex; flex-direction: column; background: #ffffff; border-radius: 14px; padding: 18px; margin-bottom: 15px; border: 1.5px solid #cbd5e1; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);}
-            tfoot tr.total-row { background-color: #f1f5f9; border: 2.5px solid #94a3b8; } 
             
-            td, .total-row td { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border: none; text-align: right !important; }
-            td::before, .total-row td::before { content: attr(data-label); font-size: 0.75rem; font-weight: 800; color: #64748b; text-transform: uppercase; }
+            /* TABEL BERTUMPUK HP  */
+            .total-row { border: 2.5px solid #94a3b8; } 
+            .tot-dist-col { border: 2px solid #0f172a;}
+            td, .total-row td, .tot-dist-col td { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border: none; text-align: right !important; }
+            td::before, .total-row td::before, .tot-dist-col td::before { content: attr(data-label); font-size: 0.75rem; font-weight: 800; color: #64748b; text-transform: uppercase; }
             
+            .tot-dist-col td::before {color: #cbd5e1;}
             .prog-container { flex-direction: column; align-items: flex-start; gap: 8px;}
             .prog-track { width: 100%; }
             .prog-text { display: flex; align-items: baseline; gap: 10px; width: 100%; justify-content: space-between; border-bottom:1px solid #f1f5f9; padding-bottom:5px; margin-bottom:5px;}
         }
         
-        .site-footer { text-align: center; padding: 30px 10px 40px 10px; margin-top: 15px; }
-        .copyright-text { font-size: 0.75rem; color: #64748b; font-weight: 800; text-transform: uppercase; margin-bottom: 20px;}
-        .support-btn { display: inline-flex; align-items: center; justify-content: center; background: #1e293b; color: #ffffff; padding: 12px 28px; border-radius: 30px; font-size: 0.85rem; font-weight: 800; text-decoration: none; box-shadow: 0 8px 15px -3px rgba(30,41,59,0.3); transition: all 0.3s ease; letter-spacing: 0.5px;}
-        @media print { .no-print { display: none !important; } body { background: white; padding: 0; } .card{ box-shadow: none; border: 1px solid #cbd5e1; margin-bottom: 20px; page-break-inside: avoid; } }
+        .btn-print { background: #0f172a; color: white; padding:10px 25px; border-radius: 12px; font-size: 16px; font-weight:bold; border: none; display: flex; justify-content: center; align-items: center; cursor: pointer;}
+        @media print { .no-print { display: none !important; } body { background: white; padding: 0; } .card{ box-shadow: none; border: 1px solid #cbd5e1; page-break-inside: avoid; margin-bottom:20px; } .accordion-content {display:block !important;} .accordion-btn{display:none;} }
     </style>
 </head>
 <body>
 
-    <div class="card nav-top flex justify-between items-center no-print" style="position: sticky; top: 0; z-index: 50; margin-bottom: 25px; padding: 15px 24px;">
-        <div class="flex items-center gap-15 w-full justify-between sm:w-auto">
-            <div class="flex items-center gap-15">
-                <div class="logo-box"><img src="https://lh3.googleusercontent.com/d/1dg4IOeDhbLOXv2k5zok8y5uLBY6vBIep"></div> 
-                <div>
-                    <h1>BADAN GIZI NASIONAL</h1>
-                    <p class="school-subtitle">SPPG GULUK-GULUK 03 - ANNUQAYAH</p>
-                </div>
-            </div>
-            <div class="realtime-widget top-jam no-print">
-                ⏱️ <span id="realtime-clock">00:00</span>
+    <!-- 1. HEADER UTAMA NAVBAR-->
+    <div class="card nav-top flex justify-between items-center no-print" style="position: sticky; top: 0; z-index: 50; margin-bottom: 25px;">
+        <div class="flex items-center gap-15 w-full sm:w-auto">
+            <div class="logo-box">🦅</div> 
+            <div>
+                <h1>BADAN GIZI NASIONAL</h1>
+                <p class="school-subtitle">SPPG GULUK-GULUK 03 - ANNUQAYAH</p>
             </div>
         </div>
-        
+        <!-- PENYESUAI TANGGAL KALENDAR -->
         <div class="date-picker-wrap">
-            <span style="font-size: 0.7rem; text-transform: uppercase; margin-right: 12px; font-weight: 900;">Lihat Data:</span>
+            <span style="font-size: 0.75rem; text-transform: uppercase; margin-right: 12px; font-weight: 900;">Lihat Laporan Data:</span>
             <input type="date" id="dateSelector">
         </div>
     </div>
 
-    <!-- KEPALA DASHBOARD MENU SPESIAL GRTISAN -->
-    <div class="card" style="border-left: 6px solid #ea580c; position: relative;">
-        <div class="flex justify-between items-center header-info-wrap">
-            <div>
-                <h2 class="special-title">Menu Makan<br>Bergizi Gratis</h2>
-                <div class="info-tag" style="margin-top: 5px;">
-                    📅 Tgl: <span id="display-date-pretty" style="margin-left:5px; color: #312e81;">Memuat...</span>
-                </div>
-            </div>
-            <div class="flex items-center gap-15 w-full justify-between sm:w-auto mt-2 sm:mt-0 border-t sm:border-0 border-dashed pt-4 sm:pt-0">
-                <div class="porsi-badge-custom">
-                    Total: <span id="display-total-porsi" style="font-size: 2.5rem; color: #c2410c; margin-left:8px; line-height: 0.8; font-weight:900;">0</span> 
-                    <span style="font-size:1rem; margin-left: 8px;">Porsi</span>
-                </div>
-                <button class="btn-print no-print" onclick="window.print()">🖨️</button>
-            </div>
+    <!-- LOGISTIK BANNER UTAMA SPESIAL-->
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:25px;" class="no-print">
+        <div>
+           <h2 class="special-title">Logistik Menu <br>Makan Bergizi Gratis</h2>
+           <div class="info-tag">📅 Berlaku Tgl: <span id="label-tgl-atas" style="margin-left:5px; color:#312e81;">Memuat...</span></div>
         </div>
+        <button class="btn-print" onclick="window.print()">🖨️ Cetak Laporan SPJ</button>
     </div>
 
-    <!-- PORTAL JUNIOR -->
+
+    <!-- =========================================================
+                     JALUR 1: ZONA REGULER (SEKOLAH) 
+         ========================================================= -->
+    <div class="section-header bg-school">🏢 WILAYAH DISTRIBUSI : REGULER (SEKOLAH)</div>
+
+    <!-- ----------------------- AREA KLIK (DROPDOWN/BUKA TUTUP DAFTAR SEKOLAH) ---------------------- -->
     <div class="card">
-        <h3 style="font-size: 1.6rem; font-weight: 900; color: #0f172a; margin-bottom: 5px;">Menu Porsi Kecil</h3>
-        
+        <!-- Kepala TAbel nya diberi onClick Event :-->
+        <div class="flex justify-between items-center header-clickable" onclick="tutupBukaMenuLogistik('wrp-sekolah', 'ic-sch')">
+            <div>
+                <h3 style="font-size: 1.3rem; font-weight: 900; color: #0f172a; margin-bottom: 5px;">📜 Daftar Sekolah Penerima</h3>
+                <p style="font-size: 0.75rem; color: #64748b; font-weight: 800; text-transform: uppercase;">Sentuh area ini Untuk Menampilkan Nama/Menutup Titik Sekolah ^ </p>
+            </div>
+            <button class="accordion-btn" id="ic-sch">▼</button>
+        </div>
+
+        <!-- Badan DAftaar/ Isi diumpetin Dalam Content !-->
+        <div id="wrp-sekolah" class="accordion-content">
+            <table class="tbl-distribusi" style="margin-top:0px;">
+                <thead>
+                    <tr><th style="text-align:left;">Nama Sekolah Penerima</th><th>Alokasi Box (Junior)</th><th>Alokasi Box (Senior)</th><th>Total Drops(Kecil+Besar)</th></tr>
+                </thead>
+                <tbody id="tbody-penerima-sekolah"></tbody>
+                <tfoot id="tfoot-penerima-sekolah"></tfoot>
+            </table>
+        </div>
+    </div>
+    <!-- ----------------------- AKHIR DARI AREA DAFTAR KLIK ----------------------------------- -->
+
+
+    <!-- 🔴 MENU GIZI : PORSI KECIL (JUNIOR)-->
+    <div class="card">
+        <h3 style="font-size: 1.6rem; font-weight: 900; color: #1e293b; margin-bottom: 5px;">Boks Menu : Porsi Kecil</h3>
         <div class="visual-container">
             <div class="img-wrapper">
-                <img id="gambar-kecil" src="" alt="Gagal Terhubung Ke Google Gambar. Silahkan Konek Ke Wifi">
+                <img id="gambar-kecil" src="" alt="Gbr. Lauk Kecil (Belum Termuat)" onerror="this.style.display='none';">
             </div>
+            
             <div class="brosur-highlight brosur-kecil">
-                <h3 style="color: #f43f5e; margin-bottom: 20px; font-size: 1.45rem; font-weight: 900; border-bottom:3px solid #f43f5e; padding-bottom:5px; display:inline-block;">Status Nilai Kecil</h3>
-                <div class="stat-row bullet-merah"><span>Karbohidrat</span><span class="stat-val" id="hl-kcl-kb">0g</span></div>
-                <div class="stat-row bullet-merah"><span>Serat</span><span class="stat-val" id="hl-kcl-sr">0g</span></div>
-                <div class="stat-row bullet-merah"><span>Protein</span><span class="stat-val" id="hl-kcl-pr">0g</span></div>
-                <div class="stat-row bullet-merah"><span>Lemak</span><span class="stat-val" id="hl-kcl-lm">0g</span></div>
-                <div class="stat-row bullet-merah" style="color: #e11d48; margin-top:8px;">
-                    <span>Energi Tot.</span><span class="stat-val" id="hl-kcl-en" style="color: #e11d48; font-weight:900;">0kkal</span>
+                <h3 style="color: #f43f5e; margin-bottom: 20px; font-size: 1.35rem; font-weight: 900; border-bottom:3px solid #f43f5e; padding-bottom:5px; display:inline-block;">Rincian Total Nilai</h3>
+                
+                <div class="stat-row"><span class="bullet-box bullet-merah">Karbohidrat</span> <span class="stat-val" id="hl-kcl-kb">0g</span></div>
+                <div class="stat-row"><span class="bullet-box bullet-merah">Serat</span>       <span class="stat-val" id="hl-kcl-sr">0g</span></div>
+                <div class="stat-row"><span class="bullet-box bullet-merah">Protein</span>     <span class="stat-val" id="hl-kcl-pr">0g</span></div>
+                <div class="stat-row"><span class="bullet-box bullet-merah">Lemak</span>       <span class="stat-val" id="hl-kcl-lm">0g</span></div>
+                <div class="stat-row" style="color: #e11d48; margin-top:8px;">
+                    <span class="bullet-box bullet-merah">Total Energi</span><span class="stat-val" id="hl-kcl-en" style="color: #e11d48; font-weight:900;">0kkal</span>
                 </div>
             </div>
         </div>
 
-        <p style="font-size: 0.75rem; color: #64748b; font-weight: 800; text-transform: uppercase;">Detail Bahan  — Target: <span id="target-kecil" style="color: #f43f5e; font-weight: 900; background:#fff1f2; padding:3px 6px; border-radius:5px;">0</span> kkal</p>
+        <p style="font-size: 0.75rem; color: #64748b; font-weight: 800; text-transform: uppercase;">Komposisi  — Standar Minimum (AKG): <span id="target-kecil" style="color:#f43f5e; background:#fff1f2; padding:2px 5px; border-radius:5px;">0</span> Kkal</p>
         <table>
             <thead>
-                <tr>
-                    <th style="text-align:left;">Nama Lauk Makanan</th><th>Takaran</th><th>Energi(kal)</th><th>Prot(g)</th><th>Lemak(g)</th><th>Karbo(g)</th><th>Serat(g)</th>
-                </tr>
+                <tr><th style="text-align:left;">Nama Lauk/Masakan</th><th>Takaran(g)</th><th>Energi(kal)</th><th>Prot(g)</th><th>Lemak(g)</th><th>Karbo(g)</th><th>Serat(g)</th></tr>
             </thead>
             <tbody id="tbody-kecil"></tbody>
             <tfoot>
                 <tr class="total-row">
-                    <td data-label="Barisan ">AKUMULASI NILAI</td><td data-label="Berat">-</td>
+                    <td data-label="Resume Total">GIZI TERKUMPUL :</td><td data-label="Brt">-</td>
                     <td data-label="T. Energi" id="tot-kcl-en" style="color: #e11d48;">0</td>
                     <td data-label="T. Protein" id="tot-kcl-pr">0</td><td data-label="T. Lemak" id="tot-kcl-lm">0</td>
                     <td data-label="T. Karbo" id="tot-kcl-kb">0</td><td data-label="T. Serat" id="tot-kcl-sr" style="color: #059669;">0</td>
@@ -175,44 +197,43 @@
         </table>
         
         <div class="prog-container">
-            <div class="prog-text">
-                <span style="font-size:0.65rem; color:#94a3b8; font-weight:800; text-transform:uppercase;">PEMENUHAN:</span><h4 id="perc-kecil" style="color: #e11d48;">0%</h4>
-            </div>
-            <div class="prog-track"><div class="prog-fill" id="bar-kecil" style="background-color: #f43f5e; width: 0%;"></div></div>
+            <div class="prog-text"><span style="font-size:0.6rem; color:#94a3b8; font-weight:800; text-transform:uppercase;">Syarat Pemenuhan:</span><h4 id="perc-kecil" style="color:#e11d48;">0%</h4></div>
+            <div class="prog-track"><div class="prog-fill" id="bar-kecil" style="background-color: #f43f5e; width:0%;"></div></div>
         </div>
     </div>
 
-    <!-- PORTAL SENIOR -->
+
+    <!-- 🔵 MENU GIZI : PORSI BESAR (SENIOR)-->
     <div class="card">
-        <h3 style="font-size: 1.6rem; font-weight: 900; color: #0f172a; margin-bottom: 5px;">Menu Porsi Besar</h3>
+        <h3 style="font-size: 1.6rem; font-weight: 900; color: #1e293b; margin-bottom: 5px;">Boks Menu : Porsi Besar</h3>
         <div class="visual-container">
             <div class="img-wrapper">
-                <img id="gambar-besar" src="" alt="Gagal Terhubung Ke Google Gambar. Silahkan Konek Ke Wifi">
+                <img id="gambar-besar" src="" alt="Gbr Lauk Besar">
             </div>
+            
             <div class="brosur-highlight brosur-besar">
-                <h3 style="color: #0284c7; margin-bottom: 20px; font-size: 1.45rem; font-weight: 900; border-bottom:3px solid #0284c7; padding-bottom:5px; display:inline-block;">Status Nilai Besar</h3>
-                <div class="stat-row bullet-biru"><span>Karbohidrat</span><span class="stat-val" id="hl-bsr-kb">0g</span></div>
-                <div class="stat-row bullet-biru"><span>Serat</span><span class="stat-val" id="hl-bsr-sr">0g</span></div>
-                <div class="stat-row bullet-biru"><span>Protein</span><span class="stat-val" id="hl-bsr-pr">0g</span></div>
-                <div class="stat-row bullet-biru"><span>Lemak</span><span class="stat-val" id="hl-bsr-lm">0g</span></div>
-                <div class="stat-row bullet-biru" style="color: #0369a1; margin-top:8px;">
-                    <span>Energi Tot.</span><span class="stat-val" id="hl-bsr-en" style="color: #0369a1; font-weight:900;">0kkal</span>
+                <h3 style="color: #0284c7; margin-bottom: 20px; font-size: 1.35rem; font-weight: 900; border-bottom:3px solid #0284c7; padding-bottom:5px; display:inline-block;">Rincian Total Nilai</h3>
+                
+                <div class="stat-row"><span class="bullet-box bullet-biru">Karbohidrat</span> <span class="stat-val" id="hl-bsr-kb">0g</span></div>
+                <div class="stat-row"><span class="bullet-box bullet-biru">Serat</span>       <span class="stat-val" id="hl-bsr-sr">0g</span></div>
+                <div class="stat-row"><span class="bullet-box bullet-biru">Protein</span>     <span class="stat-val" id="hl-bsr-pr">0g</span></div>
+                <div class="stat-row"><span class="bullet-box bullet-biru">Lemak</span>       <span class="stat-val" id="hl-bsr-lm">0g</span></div>
+                <div class="stat-row" style="color: #0369a1; margin-top:8px;">
+                    <span class="bullet-box bullet-biru">Total Energi</span><span class="stat-val" id="hl-bsr-en" style="color: #0369a1; font-weight:900;">0kkal</span>
                 </div>
             </div>
         </div>
 
-        <p style="font-size: 0.75rem; color: #64748b; font-weight: 800; text-transform: uppercase;">Detail Bahan  — Target: <span id="target-besar" style="color: #0284c7; font-weight: 900; background:#f0f9ff; padding:3px 6px; border-radius:5px;">0</span> kkal</p>
+        <p style="font-size: 0.75rem; color: #64748b; font-weight: 800; text-transform: uppercase;">Komposisi  — Standar Minimum (AKG): <span id="target-besar" style="color:#0284c7; background:#f0f9ff; padding:2px 5px; border-radius:5px;">0</span> kkal</p>
         <table>
             <thead>
-                <tr>
-                    <th style="text-align:left;">Nama Lauk Makanan</th><th>Takaran</th><th>Energi(kal)</th><th>Prot(g)</th><th>Lemak(g)</th><th>Karbo(g)</th><th>Serat(g)</th>
-                </tr>
+                <tr><th style="text-align:left;">Nama Lauk/Masakan</th><th>Takaran(g)</th><th>Energi(kal)</th><th>Prot(g)</th><th>Lemak(g)</th><th>Karbo(g)</th><th>Serat(g)</th></tr>
             </thead>
             <tbody id="tbody-besar"></tbody>
             <tfoot>
                 <tr class="total-row">
-                    <td data-label="Barisan">AKUMULASI NILAI</td><td data-label="Berat">-</td>
-                    <td data-label="T. Energi" id="tot-bsr-en" style="color: #0369a1;">0</td>
+                    <td data-label="Resume Total">GIZI TERKUMPUL :</td><td data-label="Berat">-</td>
+                    <td data-label="T. Energi" id="tot-bsr-en" style="color:#0369a1;">0</td>
                     <td data-label="T. Protein" id="tot-bsr-pr">0</td><td data-label="T. Lemak" id="tot-bsr-lm">0</td>
                     <td data-label="T. Karbo" id="tot-bsr-kb">0</td><td data-label="T. Serat" id="tot-bsr-sr" style="color: #059669;">0</td>
                 </tr>
@@ -220,25 +241,371 @@
         </table>
 
         <div class="prog-container">
-            <div class="prog-text">
-                <span style="font-size:0.65rem; color:#94a3b8; font-weight:800; text-transform:uppercase;">PEMENUHAN:</span><h4 id="perc-besar" style="color: #0284c7;">0%</h4>
-            </div>
-            <div class="prog-track"><div class="prog-fill" id="bar-besar" style="background-color: #0ea5e9; width: 0%;"></div></div>
+            <div class="prog-text"><span style="font-size:0.6rem; color:#94a3b8; font-weight:800; text-transform:uppercase;">Syarat Pemenuhan:</span><h4 id="perc-besar" style="color: #0284c7;">0%</h4></div>
+            <div class="prog-track"><div class="prog-fill" id="bar-besar" style="background-color:#0ea5e9; width: 0%;"></div></div>
         </div>
     </div>
 
-    <!-- AREA FOOTER -->
-    <footer class="site-footer no-print">
-        <p class="copyright-text">
-            © <span id="tahun-aktif">2026</span> Hak Cipta Sistem | By Administrator SPPG GULUK-GULUK 03
+
+
+
+    <!-- =========================================================
+                     JALUR 2: ZONA SPESIAL KHUSUS (3B dll)
+         ========================================================= -->
+
+    <div class="section-header bg-3b">🏥 WILAYAH DISTRIBUSI : JALUR KHUSUS (MENU 3B)</div>
+
+    <!-- ----------------------- DAFTAR KLIK 3B (Collapsible Dropwdown !) -------------------- -->
+    <div class="card">
+        <div class="flex justify-between items-center header-clickable" onclick="tutupBukaMenuLogistik('wrp-3b', 'ic-3b')">
+            <div>
+                <h3 style="font-size: 1.3rem; font-weight: 900; color: #0f172a; margin-bottom: 5px;">📜 Daftar Lokasi Titik Penerima 3B</h3>
+                <p style="font-size: 0.75rem; color: #64748b; font-weight: 800; text-transform: uppercase;">Pencet di Area  sini Membuka/Menutup Nama Titik Bantuan ^ </p>
+            </div>
+            <button class="accordion-btn" id="ic-3b">▼</button>
+        </div>
+        
+        <div id="wrp-3b" class="accordion-content">
+            <table class="tbl-distribusi" style="margin-top:0px;">
+                <thead>
+                    <tr><th style="text-align:left;">Kelompok Posko / Identitas Titik</th><th>Dropping Paket Boks Sasaran</th></tr>
+                </thead>
+                <tbody id="tbody-penerima-3b"></tbody>
+                <tfoot id="tfoot-penerima-3b"></tfoot>
+            </table>
+        </div>
+    </div>
+
+    <!-- 🟣 TRAY MENU UNGU KHUSUS 3B-->
+    <div class="card">
+        <h3 style="font-size: 1.6rem; font-weight: 900; color: #1e293b; margin-bottom: 5px;">Boks Menu Khusus : Varian 3B</h3>
+        <div class="visual-container">
+            <div class="img-wrapper">
+                <img id="gambar-3b" src="" alt="Gbr 3b">
+            </div>
+            
+            <div class="brosur-highlight brosur-3b">
+                <h3 style="color: #8b5cf6; margin-bottom: 20px; font-size: 1.35rem; font-weight: 900; border-bottom:3px solid #8b5cf6; padding-bottom:5px; display:inline-block;">Rincian Nilai Menu 3B</h3>
+                
+                <div class="stat-row"><span class="bullet-box bullet-ungu">Karbohidrat</span> <span class="stat-val" id="hl-3b-kb">0g</span></div>
+                <div class="stat-row"><span class="bullet-box bullet-ungu">Serat</span>       <span class="stat-val" id="hl-3b-sr">0g</span></div>
+                <div class="stat-row"><span class="bullet-box bullet-ungu">Protein</span>     <span class="stat-val" id="hl-3b-pr">0g</span></div>
+                <div class="stat-row"><span class="bullet-box bullet-ungu">Lemak</span>       <span class="stat-val" id="hl-3b-lm">0g</span></div>
+                <div class="stat-row" style="color: #6d28d9; margin-top:8px;">
+                    <span class="bullet-box bullet-ungu">Total Energi</span><span class="stat-val" id="hl-3b-en" style="color: #6d28d9; font-weight:900;">0kkal</span>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 0.75rem; color: #64748b; font-weight: 800; text-transform: uppercase;">Komposisi Boks Khusus — Target AKG: <span id="target-3b" style="color: #7c3aed; background:#f3e8ff; font-weight: 900; padding:2px 5px; border-radius:5px;">0</span> kkal</p>
+        
+        <table>
+            <thead>
+                <tr><th style="text-align:left;">Nama Lauk/Dietary Mkn</th><th>Takaran</th><th>Energi(kal)</th><th>Prot(g)</th><th>Lemak(g)</th><th>Karbo(g)</th><th>Serat(g)</th></tr>
+            </thead>
+            <tbody id="tbody-3b"></tbody>
+            <tfoot>
+                <tr class="total-row">
+                    <td data-label="Resume Totl (3B)">GIZI TERKUMPUL :</td><td data-label="Berat">-</td>
+                    <td data-label="Energi" id="tot-3b-en" style="color: #6d28d9;">0</td>
+                    <td data-label="Protein" id="tot-3b-pr">0</td><td data-label="Lemak" id="tot-3b-lm">0</td>
+                    <td data-label="Karbo" id="tot-3b-kb">0</td><td data-label="Serat" id="tot-3b-sr" style="color: #059669;">0</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div class="prog-container">
+            <div class="prog-text"><span style="font-size:0.6rem; color:#94a3b8; font-weight:800; text-transform:uppercase;">Syarat Pemenuhan:</span><h4 id="perc-3b" style="color: #7c3aed;">0%</h4></div>
+            <div class="prog-track"><div class="prog-fill" id="bar-3b" style="background-color: #8b5cf6; width: 0%;"></div></div>
+        </div>
+    </div>
+
+
+    <!-- ==================== C OPYRIGhT /  FOOTTERR  ============ -->
+    <div style="text-align: center; padding: 20px 10px 40px 10px; margin-top: 15px;" class="no-print">
+        <p style="font-size: 0.75rem; color: #64748b; font-weight: 800; text-transform: uppercase;">
+            © <span id="th-ft">2026</span> Hak Cipta Sistem | Developed by Admin SPPG GULUK-GULUK 03
         </p>
-        <a href="https://wa.me/6281235991027?text=MBG nya enak kok, mantul dah pokoknya😋" target="_blank" class="support-btn">
-            📨 HUBUNGI LAYANAN / BANTUAN
-        </a>
-    </footer>
+    </div>
 
 
-    <script src="data-gizi.js"></script>
-    <script src="app-kalkulator.js"></script>
+
+<!-- ============================================================================================== 
+                          DATABASE GIZI DAN MESIN PENJUMLAH OTOMATIS BERADA DI SINI  (DISATUKAN/SINGLE FILE MURNI !  )
+     ============================================================================================== -->
+<script>
+
+/* FITUR ANIMASI BUKA/TUTUP ACCORDION DROPDOWN MURNI JS  (!Tugasan Bapak Selesai!)*/
+function tutupBukaMenuLogistik(idElYgDIBungkusXvLrz_, idTmnbolpanahArrXss__) {
+    let blkrDomMnnnxQ_= document.getElementById(idElYgDIBungkusXvLrz_); let BtbDmxAr__nNsnr_ = document.getElementById(idTmnbolpanahArrXss__);
+    if(blkrDomMnnnxQ_.style.display === "block") {
+         blkrDomMnnnxQ_.style.display = "none"; BtbDmxAr__nNsnr_.innerText = "▼";
+    } else {
+         blkrDomMnnnxQ_.style.display = "block"; BtbDmxAr__nNsnr_.innerText = "▲";
+    }
+}
+
+
+/* === 1. TAHUN COPYRHT BAWAH*/
+document.getElementById('th-ft').innerText = new Date().getFullYear();
+
+
+/* ===================================================================
+// === 2. TUMPukaaNN DAATA ARRAYY SEPERTI BIAsaa NYyAA (MEliputi  tgl 15 - 18 SesuAi Permitaan ) ==== ! */
+const UrlP_CdgGagal ="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500";
+const LimgZDsD__S_Dlmv_"https://lh3.googleusercontent.com/d/1nLNt7UjL32qCxLxWcfvm8QZKf9GE00E0"; 
+const LBsrImgS_= "https://lh3.googleusercontent.com/d/1z22G6LHGG2VTb2OPB9l92c6cT-DsPY3H"; 
+// Dummy Imgs_ untk tgl selnajut nya bR gak KSgnan ::... ->>. ..  ... ==== !!:
+const dummL3bHrzNst ="https://images.unsplash.com/photo-1628198305739-16eb5dc2ff1b?w=500";
+
+const dbCatatanSpjHarianMenuMBG = {
+    //  ---   TANGGA L 15 AGUSTUS ---- 
+    "2026-08-15": {
+        umum: {
+            penerima: [
+                { instansiSekolah: "SDN 1 Guluk-Guluk", jumKecil: 120, jumBesar: 40 },
+                { instansiSekolah: "SMP Annuqayah Daerah 2", jumKecil: 0, jumBesar: 250 },
+                { instansiSekolah: "Madrasah Diniyah Playgrb", jumKecil: 80, jumBesar: 15 }
+            ], tgtAkngnKecil: 413, tgtAkmBsrDws: 708,
+            fotoURLKecil: LimgZDsD__S_Dlmv_, fotoURLBesr : LBsrImgS_,
+            rncBhn_TblKcils: [
+                { nama: "Nasi Putih", berat: 125, energi: 225.0, prot: 3.75, lemak: 0.38, karb: 49.75, serat: 0.25 },
+                { nama: "Ayam Palekko",berat: 50, energi: 178.3, prot: 8.19, lemak: 16.25, karb: 0.00, serat: 0.00 },
+                { nama: "Tempe Goreng",berat: 30, energi: 81.7, prot: 3.50, lemak: 6.93, karb: 2.27, serat: 0.35 },
+                { nama: "Sayur Asem", berat: 40, energi: 44.0, prot: 1.42, lemak: 0.77, karb: 8.36, serat: 1.23 },
+                { nama: "Anggur Merah", berat: 50, energi: 15.0, prot: 0.25, lemak: 0.10, karb: 3.40, serat: 0.60 }
+            ],
+            rncBhn_TblBsar_: [
+                { nama: "Nasi Putih Jmb", berat: 180, energi: 324.0, prot: 6.75, lemak: 0.54, karb: 71.64, serat: 0.36 },
+                { nama: "Ayam Palekko", berat: 50, energi: 178.3, prot: 8.19, lemak: 16.25, karb: 0.00, serat: 0.00 },
+                { nama: "Tempe Goreng", berat: 30, energi: 81.7, prot: 3.50, lemak: 6.93, karb: 2.27, serat: 0.35 },
+                { nama: "Sayur Asem", berat: 40, energi: 44.0, prot: 1.42, lemak: 0.77, karb: 8.36, serat: 1.23 },
+                { nama: "Anggur Merah", berat: 50, energi: 15.0, prot: 0.25, lemak: 0.10, karb: 3.40, serat: 0.60 }
+            ]
+        },
+        distribkhusus3B: {
+            titikLokPenerimas: [
+                { wilYTitkkDsib:"Posyandu Balita Guluk Blok C", jumlahKrimPaketPorsiTargetPnerimmaRkY: 30 },
+                { wilYTitkkDsib:"Kunjungan Ibu Hamil (Door/DesA)", jumlahKrimPaketPorsiTargetPnerimmaRkY: 25 },
+                { wilYTitkkDsib:"Menu Extrra TK PPA  Ceria 3A ", jumlahKrimPaketPorsiTargetPnerimmaRkY: 55 }
+            ], ttAkanKalMnnTtg3BLsHnBsMIn : 550, photoPicRulsDataImageKhsGdnzNtrrBlokVnImgHbsTrDtKszLnstURLDmsHrtVlcKrmLsRsUrlVszHrtN: dummL3bHrzNst,
+            tabelGzItemDtfMsRncMenuNmsMzDkRzsGiziItemsRlzszRnsTxTszzTx3bBx: [
+                { nama: "Sari Susu Gandum Khusus", berat: 150, energi: 310.0, prot: 6.75, lemak: 4.54, karb: 41.64, serat: 3.16 },
+                { nama: "Bubur Telur Cacah Lembut", berat: 65, energi: 198.3, prot: 9.19, lemak: 6.25, karb: 2.00, serat: 0.10 },
+                { nama: "Wortel Halus Bayi SAntaan", berat: 35, energi: 62.7, prot: 1.50, lemak: 1.93, karb: 7.27, serat: 4.35 }
+            ]
+        }
+    },
+
+
+    // --- TANGGGALL 16 -- -(Isian  HAsil KOnsturksi Random untuk dmy Prmnitaan anda.) 
+    "2026-08-16": {
+        umum: {
+            penerima: [
+                { instansiSekolah: "MTS Annuqayah Tmur P", jumKecil: 65, jumBesar: 320 },
+                { instansiSekolah: "Pondok Santri Blokk A ", jumKecil: 0, jumBesar: 450 }
+            ], tgtAkngnKecil: 413, tgtAkmBsrDws: 708,
+            fotoURLKecil: "https://plus.unsplash.com/premium_photo-1673809798975-ed7494cebc43?w=500", fotoURLBesr : LimgZDsD__S_Dlmv_,
+            rncBhn_TblKcils: [
+                { nama: "Beras Jagung / Pti ", berat: 125, energi: 215.0, prot: 3.55, lemak: 0.38, karb: 44.75, serat: 0.95 },
+                { nama: "Ikan Tongkol Baldo ",berat: 45, energi: 168.3, prot: 11.19, lemak: 12.25, karb: 1.00, serat: 0.10 },
+                { nama: "Tahu Bacem mnis  ",berat: 40, energi: 71.7, prot: 2.50, lemak: 4.93, karb: 3.27, serat: 0.45 },
+                { nama: "Tumis Kangkun ggrg", berat: 35, energi: 34.0, prot: 2.42, lemak: 1.77, karb: 4.36, serat: 1.93 },
+                { nama: "Jeyrruuk Mniss Kpas ", berat: 45, energi: 20.0, prot: 0.15, lemak: 0.10, karb: 4.40, serat: 0.80 }
+            ],
+            rncBhn_TblBsar_: [
+                { nama: "Brs Pth Ns Jagug  Snior ", berat: 180, energi: 304.0, prot: 5.75, lemak: 0.64, karb: 73.64, serat: 1.36 },
+                { nama: "Ikan Tongkl Bldo Jumbo ", berat: 60, energi: 188.3, prot: 15.19, lemak: 14.25, karb: 2.00, serat: 0.20 },
+                { nama: "Tahu Bacem   SrntnxZ  ", berat: 50, energi: 91.7, prot: 3.50, lemak: 5.93, karb: 5.27, serat: 0.75 },
+                { nama: "Tumis KngkNxg pEdezT  ", berat: 50, energi: 45.0, prot: 3.42, lemak: 2.77, karb: 6.36, serat: 2.23 },
+                { nama: "Jerryuxk Buathh MsZtV ", berat: 45, energi: 20.0, prot: 0.15, lemak: 0.10, karb: 4.40, serat: 0.80 }
+            ]
+        },
+        distribkhusus3B: {
+            titikLokPenerimas: [{ wilYTitkkDsib:"KLIniK Des A - LansIA Dan KKrntq", jumlahKrimPaketPorsiTargetPnerimmaRkY: 150 }],
+             ttAkanKalMnnTtg3BLsHnBsMIn : 600, photoPicRulsDataImageKhsGdnzNtrrBlokVnImgHbsTrDtKszLnstURLDmsHrtVlcKrmLsRsUrlVszHrtN: dummL3bHrzNst,
+            tabelGzItemDtfMsRncMenuNmsMzDkRzsGiziItemsRlzszRnsTxTszzTx3bBx: [
+                { nama: "HIdngann Dging LnkaaKhusu (DtZt", berat: 200, energi: 330.0, prot: 8.75, lemak: 5.54, karb: 45.64, serat: 3.16 },
+                { nama: "Pisanh HAncur/BnrL (AnKKz)VbRx ", berat: 80, energi: 110.3, prot: 4.19, lemak: 3.25, karb: 4.00, serat: 0.50 }
+            ]
+        }
+    },
+
+
+    // --  TANGGGGALL 17 AGAgST -- -- -- !!!  ==== 
+    "2026-08-17": {
+        umum: {
+            penerima: [
+                { instansiSekolah: "UpAcAr A BendRA SPpGGG A!! .  .", jumKecil: 450, jumBesar: 700 }
+            ], tgtAkngnKecil: 450, tgtAkmBsrDws: 800, // DiUp target karrena event agustunnsnnA / SPESIAL BsnrxvRx !
+            fotoURLKecil: LBsrImgS_, fotoURLBesr : LimgZDsD__S_Dlmv_,
+            rncBhn_TblKcils: [
+                { nama: "NSai Knunigg SpeSsIilssL (AghZ)", berat: 125, energi: 245.0, prot: 2.75, lemak: 3.38, karb: 54.75, serat: 0.35 },
+                { nama: "Ayam Gorng Bku MreHHaa V!v !.",berat: 50, energi: 210.3, prot: 14.19, lemak: 18.25, karb: 0.00, serat: 0.00 },
+                { nama: "UarP Sysr nnn (Tuge+Kn)zxcBxZzR ", berat: 50, energi: 61.7, prot: 2.50, lemak: 3.93, karb: 6.27, serat: 3.35 }
+            ],
+            rncBhn_TblBsar_: [
+                { nama: "NSAI kunGGsnn x JUbBoZ (AgSsL1Xv) ", berat: 180, energi: 364.0, prot: 3.75, lemak: 5.54, karb: 80.64, serat: 0.56 },
+                { nama: "AyYM GREnx MrtHa VxvT LkRs VzsTxF ", berat: 70, energi: 250.3, prot: 18.19, lemak: 22.25, karb: 0.00, serat: 0.00 },
+                { nama: "Urab Sayra (tgX / KlLs _sBscxXrxZs", berat: 75, energi: 91.7, prot: 4.50, lemak: 5.93, karb: 10.27, serat: 5.35 }
+            ]
+        },
+        distribkhusus3B: {
+            titikLokPenerimas: [{ wilYTitkkDsib:"LOKAK TitiI PeringstnT LkS I", jumlahKrimPaketPorsiTargetPnerimmaRkY: 100 }],
+            ttAkanKalMnnTtg3BLsHnBsMIn : 500, photoPicRulsDataImageKhsGdnzNtrrBlokVnImgHbsTrDtKszLnstURLDmsHrtVlcKrmLsRsUrlVszHrtN: UrlP_CdgGagal,
+            tabelGzItemDtfMsRncMenuNmsMzDkRzsGiziItemsRlzszRnsTxTszzTx3bBx: [
+                { nama: "BXbR KacN gIXJox VxBv MxtLsxxrQvx1sZ", berat: 200, energi: 270.0, prot: 9.75, lemak: 1.54, karb: 60.64, serat: 4.16 },
+                { nama: "SLaiS KxxRxTx VbnMznLxszQtzxRszzKllCxF_", berat: 80, energi: 90.3, prot: 1.19, lemak: 1.25, karb: 18.00, serat: 1.50 }
+            ]
+        }
+    },
+
+
+     // -- - TTnngl -18 - AAgusu tsss TTrKHuKxxX === > === >> .... == -- 
+     "2026-08-18": {
+        umum: {
+            penerima: [
+                { instansiSekolah: "SDK  ANNquYhhh B1!x .", jumKecil: 140, jumBesar: 0 },
+                { instansiSekolah: "SMP/MAS N ANuyyy X1v LzsTrn1X", jumKecil: 0, jumBesar: 420 },
+                { instansiSekolah: "SMA Z Vns Ltrsx_sVzzVvBxnnsl_", jumKecil: 0, jumBesar: 300 }
+            ], tgtAkngnKecil: 413, tgtAkmBsrDws: 708,
+            fotoURLKecil: LimgZDsD__S_Dlmv_, fotoURLBesr : dummL3bHrzNst,
+            rncBhn_TblKcils: [
+                { nama: "NasiP THhhX (Lcsn__ )_", berat: 125, energi: 225.0, prot: 3.75, lemak: 0.38, karb: 49.75, serat: 0.25 },
+                { nama: "tlOr DaDR CxxX nxs_",berat: 40, energi: 158.3, prot: 9.19, lemak: 11.25, karb: 1.00, serat: 0.00 },
+                { nama: "Capcy ZSYr XssnxTrnxszLxsT",berat: 50, energi: 51.7, prot: 1.50, lemak: 1.93, karb: 4.27, serat: 2.35 },
+                { nama: "PysAng_Mlx sXxTxzzlsnSrx", berat: 50, energi: 45.0, prot: 0.25, lemak: 0.10, karb: 10.40, serat: 1.60 }
+            ],
+            rncBhn_TblBsar_: [
+                { nama: "Nsi PtHS Vls xK (JMmbBOxX  CnlxF", berat: 180, energi: 324.0, prot: 6.75, lemak: 0.54, karb: 71.64, serat: 0.36 },
+                { nama: "Teulur drDraXx XLsnxXq(DBLLLsMls_C_Z", berat: 80, energi: 288.3, prot: 15.19, lemak: 20.25, karb: 2.00, serat: 0.00 },
+                { nama: "cAptyx YsRs xXLnz CtxFsRxtKxsFxRll1s", berat: 70, energi: 81.7, prot: 3.50, lemak: 3.93, karb: 8.27, serat: 4.35 },
+                { nama: "PyNnxxn AsmBxXXxxsnMxsznsxxXz__Tln_TsR", berat: 60, energi: 55.0, prot: 0.25, lemak: 0.10, karb: 13.40, serat: 2.60 }
+            ]
+        },
+        distribkhusus3B: {
+            titikLokPenerimas: [{ wilYTitkkDsib:"PosnNn_ ZY_VlzqLxTzz BssRnKllxFnn_lsnx_B_", jumlahKrimPaketPorsiTargetPnerimmaRkY: 34 }],
+            ttAkanKalMnnTtg3BLsHnBsMIn : 550, photoPicRulsDataImageKhsGdnzNtrrBlokVnImgHbsTrDtKszLnstURLDmsHrtVlcKrmLsRsUrlVszHrtN: LimgZDsD__S_Dlmv_,
+            tabelGzItemDtfMsRncMenuNmsMzDkRzsGiziItemsRlzszRnsTxTszzTx3bBx: [
+                { nama: "SNkx KsxxLn BsLx XxxCnxrFnBs1xl_nsnTlSnsFxt_ls", berat: 150, energi: 240.0, prot: 7.75, lemak: 5.54, karb: 50.64, serat: 2.16 },
+                { nama: "ByMMN RblSs XlxS (DttnnXsFns) _llRsnrslzRx_", berat: 80, energi: 80.3, prot: 1.19, lemak: 0.25, karb: 4.00, serat: 3.50 }
+            ]
+        }
+    }
+
+
+};
+
+
+/* PENGHALAU BLNAKJ Tbl DB JS   (Kosng) Jdika Tidak  A Ada!! ! ====- ---==-- !! . > -> ! == === ->!! -=-... > -- >> . -==-.. -=-.. !!!>->->   */
+const DtFallbackIfEmpTTx__BlankValzCld_Fm = {
+    umum: {
+        penerima:[ { instansiSekolah: "-", jumKecil: 0, jumBesar: 0 }],
+        tgtAkngnKecil: 0, tgtAkmBsrDws: 0, fotoURLKecil: UrlP_CdgGagal, fotoURLBesr : UrlP_CdgGagal,
+        rncBhn_TblKcils:[ { nama: "-", berat: 0, energi: 0, prot: 0, lemak: 0, karb: 0, serat: 0 }], rncBhn_TblBsar_:[ { nama: "-", berat: 0, energi: 0, prot: 0, lemak: 0, karb: 0, serat: 0 }]
+    },
+    distribkhusus3B: {
+        titikLokPenerimas: [ { wilYTitkkDsib:"-", jumlahKrimPaketPorsiTargetPnerimmaRkY: 0 } ],
+        ttAkanKalMnnTtg3BLsHnBsMIn: 0, photoPicRulsDataImageKhsGdnzNtrrBlokVnImgHbsTrDtKszLnstURLDmsHrtVlcKrmLsRsUrlVszHrtN: UrlP_CdgGagal,
+        tabelGzItemDtfMsRncMenuNmsMzDkRzsGiziItemsRlzszRnsTxTszzTx3bBx: [ { nama: "-", berat: 0, energi: 0, prot: 0, lemak: 0, karb: 0, serat: 0 }]
+    }
+};
+
+/* ========================================================================
+   =====        ENGINE GENERAT / KALKULATOR TAMPILAN        ==========
+   ======================================================================== */
+
+// Mesn pembuta Bais tabell rician Laikk/TArgn gzzz ! --!! :: =>>
+function PbtTabelTrMlszTnbxxQznxsxLxnzTzMnRsLssVvlBx1FllxzszzHmlTnbTlzxxCxlsLsFnxrslxs1zx(idDomxZRxN__, lsiDtxtlBxRxTlxKslqLnlxxM__) {
+    let dxMtMlzTsBxzsRlM_xRxFnTzsxxHxxLxTlxKnlLrs_xMntLxxRbsRlxLxszMsxlzlRxKxnTlszxFnLx_= document.getElementById(idDomxZRxN__);
+    dxMtMlzTsBxzsRlM_xRxFnTzsxxHxxLxTlxKnlLrs_xMntLxxRbsRlxLxszMsxlzlRxKxnTlszxFnLx_.innerHTML='';
+    lsiDtxtlBxRxTlxKslqLnlxxM__.forEach(zxPqImsFssRsxTr => {
+        dxMtMlzTsBxzsRlM_xRxFnTzsxxHxxLxTlxKnlLrs_xMntLxxRbsRlxLxszMsxlzlRxKxnTlszxFnLx_.innerHTML+= `<tr><td data-label="Bhn Lauk/Makanan">${zxPqImsFssRsxTr.nama}</td><td data-label="Brt. Tkan/Gr_" style="text-align:center; font-weight:800">${zxPqImsFssRsxTr.berat}g</td><td data-label="Kn. NergG Kal-" style="text-align:center; color:#1e293b; font-weight:900">${zxPqImsFssRsxTr.energi.toFixed(2)}</td><td data-label="PrtEtn GZ-- xSxxT-" style="text-align:center">${zxPqImsFssRsxTr.prot.toFixed(2)}</td><td data-label="LM KxsGZZ-_xQ" style="text-align:center">${zxPqImsFssRsxTr.lemak.toFixed(2)}</td><td data-label="KB xHRxsT--zBv" style="text-align:center">${zxPqImsFssRsxTr.karb.toFixed(2)}</td><td data-label="FiB SStsx_--RxszvFslq__LxTxzXxFstqllMsxxTrtFnB__lx" style="color:#059669; text-align:center; font-weight:800">${zxPqImsFssRsxTr.serat.toFixed(2)}</td></tr>`;
+    });
+}
+
+function BndInaDtVznxlzxQsTxzMzTxzzlxBzlxLn(dtzISO_) {
+    let xlNl_MnlHxlxsFxrxtxzDlTxLsTzxMx_nxZ_Kls= new Date(dtzISO_); if(isNaN(xlNl_MnlHxlxsFxrxtxzDlTxLsTzxMx_nxZ_Kls)) return "Cari Kembali Data Yg Dicar / BLm Msok :!. !";
+    const xMmzNsBxsn_BxzsTsTxnxRx_Ls1n__HbsxxLxzsLsXtxTxnnnl__z=["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+    return xlNl_MnlHxlxsFxrxtxzDlTxLsTzxMx_nxZ_Kls.getDate()+" "+xMmzNsBxsn_BxzsTsTxnxRx_Ls1n__HbsxxLxzsLsXtxTxnnnl__z[xlNl_MnlHxlxsFxrxtxzDlTxLsTzxMx_nxZ_Kls.getMonth()]+" "+xlNl_MnlHxlxsFxrxtxzDlTxLsTzxMx_nxZ_Kls.getFullYear();
+}
+
+function PanggilSegalsKeseslsuruanMulaiDAtrLuarX_11_TksMnxBxlsKsllTsKzxRsxLx1FxnxHlsTrxxvlsFnTxzsTnnq___M1xzslslnZzM(valIsoTarget){
+     let dxSAllSlnxBzxTsLzx_= dbCatatanSpjHarianMenuMBG[valIsoTarget] || DtFallbackIfEmpTTx__BlankValzCld_Fm;
+     document.getElementById('label-tgl-atas').innerText= BndInaDtVznxlzxQsTxzMzTxzzlxBzlxLn(valIsoTarget);
+
+     /* ---------- SSSI JALUEE I_ : REHUUGLAR SSEELALOKAH H. ---------- */
+     let oB_SmxScnlKszB_zxRxLxstzz1nxTsl__1xMn__BsTFnKxzsl__RxszsTnnxzLsQlxnx= dxSAllSlnxBzxTsLzx_.umum; if(oB_SmxScnlKszB_zxRxLxstzz1nxTsl__1xMn__BsTFnKxzsl__RxszsTnnxzLsQlxnx){
+          let suMtGnnBzsBx_L1nTxRxL=0, sunxMTBxss_xxSszBnsTnzXxFnszzLlsxlxzq=0, SuxNlsnxTlTsNltsCvzxn1xzxBvLx=0;
+          let elxDom_1nxPznlzmmslsRxLxzsRnr_= document.getElementById('tbody-penerima-sekolah'); elxDom_1nxPznlzmmslsRxLxzsRnr_.innerHTML='';
+          oB_SmxScnlKszB_zxRxLxstzz1nxTsl__1xMn__BsTFnKxzsl__RxszsTnnxzLsQlxnx.penerima.forEach(x__Tx1xzx => {
+              let ttlMbx__TstHrl1= x__Tx1xzx.jumKecil+ x__Tx1xzx.jumBesar;
+              suMtGnnBzsBx_L1nTxRxL+= x__Tx1xzx.jumKecil; sunxMTBxss_xxSszBnsTnzXxFnszzLlsxlxzq+= x__Tx1xzx.jumBesar; SuxNlsnxTlTsNltsCvzxn1xzxBvLx+=ttlMbx__TstHrl1;
+              elxDom_1nxPznlzmmslsRxLxzsRnr_.innerHTML+= `<tr><td data-label="INtsks. TItiki Drx_ :__">${x__Tx1xzx.instansiSekolah}</td> <td data-label="Por sJr CiklS :" style="text-align:center;">${x__Tx1xzx.jumKecil}</td><td data-label="Boks Bsr Alx (Sn)" style="text-align:center;">${x__Tx1xzx.jumBesar}</td> <td data-label="G RrDtt L_DDrppL_ _ Ttl SxzxTr " style="text-align:center; font-weight:900; color:#1d4ed8;">${ttlMbx__TstHrl1} Pcsx.</td></tr>`;
+          });
+          document.getElementById('tfoot-penerima-sekolah').innerHTML=`<tr class="tot-dist-col"><td data-label="RKPx__ _ GrNdX _TL .  Llxq Lr1_" style="text-align:left;">S_UB .TOT . DISTRIBX SEK_LAH: </td><td data-label="TKtl Z JrRx LxzxTnrFn  BqBx_Lz_" style="text-align:center;">${suMtGnnBzsBx_L1nTxRxL} Bkx</td><td data-label="TRklTtlLxS  sNNrs BqTxzxBsBxTrnnQzT__K_" style="text-align:center;">${sunxMTBxss_xxSszBnsTnzXxFnszzLlsxlxzq} Bkx</td><td data-label="X_JMnLx_TtlRxRxlxssXmTrsBs1nLrlKxBlnxnTtzBxVzzxlxlT" style="text-align:center; color:#3b82f6 !important; font-size:1.15rem;">${SuxNlsnxTlTsNltsCvzxn1xzxBvLx} Pxs_/bxOkS</td></tr>`;
+
+          document.getElementById('target-kecil').innerText = oB_SmxScnlKszB_zxRxLxstzz1nxTsl__1xMn__BsTFnKxzsl__RxszsTnnxzLsQlxnx.tgtAkngnKecil; document.getElementById('target-besar').innerText = oB_SmxScnlKszB_zxRxLxstzz1nxTsl__1xMn__BsTFnKxzsl__RxszsTnnxzLsQlxnx.tgtAkmBsrDws;
+          document.getElementById('gambar-kecil').src= oB_SmxScnlKszB_zxRxLxstzz1nxTsl__1xMn__BsTFnKxzsl__RxszsTnnxzLsQlxnx.fotoURLKecil; document.getElementById('gambar-besar').src= oB_SmxScnlKszB_zxRxLxstzz1nxTsl__1xMn__BsTFnKxzsl__RxszsTnnxzLsQlxnx.fotoURLBesr;
+          
+          PbtTabelTrMlszTnbxxQznxsxLxnzTzMnRsLssVvlBx1FllxzszzHmlTnbTlzxxCxlsLsFnxrslxs1zx('tbody-kecil', oB_SmxScnlKszB_zxRxLxstzz1nxTsl__1xMn__BsTFnKxzsl__RxszsTnnxzLsQlxnx.rncBhn_TblKcils); PbtTabelTrMlszTnbxxQznxsxLxnzTzMnRsLssVvlBx1FllxzszzHmlTnbTlzxxCxlsLsFnxrslxs1zx('tbody-besar', oB_SmxScnlKszB_zxRxLxstzz1nxTsl__1xMn__BsTFnKxzsl__RxszsTnnxzLsQlxnx.rncBhn_TblBsar_);
+
+          let kEx=0,kPx=0,kLx=0,kKx=0,kSx=0;
+          oB_SmxScnlKszB_zxRxLxstzz1nxTsl__1xMn__BsTFnKxzsl__RxszsTnnxzLsQlxnx.rncBhn_TblKcils.forEach(z=>{kEx+=z.energi;kPx+=z.prot;kLx+=z.lemak;kKx+=z.karb;kSx+=z.serat;});
+          document.getElementById('tot-kcl-en').innerText=kEx.toFixed(2)+" Kkal"; document.getElementById('tot-kcl-pr').innerText=kPx.toFixed(2)+" gr"; document.getElementById('tot-kcl-lm').innerText=kLx.toFixed(2)+" gR"; document.getElementById('tot-kcl-kb').innerText=kKx.toFixed(2)+" Rg."; document.getElementById('tot-kcl-sr').innerText=kSx.toFixed(2)+" gr";
+          document.getElementById('hl-kcl-en').innerText=kEx.toFixed(2)+" kklLz."; document.getElementById('hl-kcl-pr').innerText=kPx.toFixed(2)+" gl._Z"; document.getElementById('hl-kcl-lm').innerText=kLx.toFixed(2)+"_gx_ "; document.getElementById('hl-kcl-kb').innerText=kKx.toFixed(2)+" gg_. Z"; document.getElementById('hl-kcl-sr').innerText=kSx.toFixed(2)+"gg._r R_Z";
+
+          let bEx_=0,bPx_=0,bLx_=0,bKx_=0,bSx_=0;
+          oB_SmxScnlKszB_zxRxLxstzz1nxTsl__1xMn__BsTFnKxzsl__RxszsTnnxzLsQlxnx.rncBhn_TblBsar_.forEach(z=>{bEx_+=z.energi;bPx_+=z.prot;bLx_+=z.lemak;bKx_+=z.karb;bSx_+=z.serat;});
+          document.getElementById('tot-bsr-en').innerText=bEx_.toFixed(2)+" xk__kCal"; document.getElementById('tot-bsr-pr').innerText=bPx_.toFixed(2)+" xxggx"; document.getElementById('tot-bsr-lm').innerText=bLx_.toFixed(2)+" czzgxQzX"; document.getElementById('tot-bsr-kb').innerText=bKx_.toFixed(2)+" XzzGG_RzXxXxx__zzXXxXxxx"; document.getElementById('tot-bsr-sr').innerText=bSx_.toFixed(2)+" czzGxzXs1rzzzCzlxxnBxRxLzx___ZzXv";
+          document.getElementById('hl-bsr-en').innerText=bEx_.toFixed(2)+" Klklsz._ Z _xx _   ____x_xxxxxs____"; document.getElementById('hl-bsr-pr').innerText=bPx_.toFixed(2)+" gzxzxz .1lX _Xv   s "; document.getElementById('hl-bsr-lm').innerText=bLx_.toFixed(2)+" cxcgz x._XX V "; document.getElementById('hl-bsr-kb').innerText=bKx_.toFixed(2)+" xgzxc_.l __c "; document.getElementById('hl-bsr-sr').innerText=bSx_.toFixed(2)+" xc xgs_L.z. _c";
+
+          let PxtKrxlM_MvBsxlslVzzTsxrzzBzxMxFnsl_= parseFloat(oB_SmxScnlKszB_zxRxLxstzz1nxTsl__1xMn__BsTFnKxzsl__RxszsTnnxzLsQlxnx.tgtAkngnKecil);
+          let sRzzXtz_V1ls_sBzzxzlsVnrHxnslXnsRntLxKqxlssRs_Zxz= PxtKrxlM_MvBsxlslVzzTsxrzzBzxMxFnsl_>0 ? Math.round((kEx/PxtKrxlM_MvBsxlslVzzTsxrzzBzxMxFnsl_)*100):0;
+          document.getElementById('perc-kecil').innerText=sRzzXtz_V1ls_sBzzxzlsVnrHxnslXnsRntLxKqxlssRs_Zxz+" %"; document.getElementById('bar-kecil').style.width=Math.min(sRzzXtz_V1ls_sBzzxzlsVnrHxnslXnsRntLxKqxlssRs_Zxz,100)+"%";
+          let hLtxBmsZrzBxKntRxxLsTsnxBnxszFs_TzxlNmsHrxn_lFxLzznxHlzvHlnxlKsnzsMzRxnBsxlXlnlxCvsTzLnr1sxRx1qZsKnsx_lsFnnxsTrrxsBxnnTxzxzsxlQnzxs1_=parseFloat(oB_SmxScnlKszB_zxRxLxstzz1nxTsl__1xMn__BsTFnKxzsl__RxszsTnnxzLsQlxnx.tgtAkmBsrDws);
+          let lMsXznTsVzZlxsxBslLlzss_Txzsxns1zx__zsMmsvzxnszzsBns__1vnnxlzxzxzq__sNlxVst__lzLxHsnsxX=hLtxBmsZrzBxKntRxxLsTsnxBnxszFs_TzxlNmsHrxn_lFxLzznxHlzvHlnxlKsnzsMzRxnBsxlXlnlxCvsTzLnr1sxRx1qZsKnsx_lsFnnxsTrrxsBxnnTxzxzsxlQnzxs1_>0? Math.round((bEx_/hLtxBmsZrzBxKntRxxLsTsnxBnxszFs_TzxlNmsHrxn_lFxLzznxHlzvHlnxlKsnzsMzRxnBsxlXlnlxCvsTzLnr1sxRx1qZsKnsx_lsFnnxsTrrxsBxnnTxzxzsxlQnzxs1_)*100):0;
+          document.getElementById('perc-besar').innerText=lMsXznTsVzZlxsxBslLlzss_Txzsxns1zx__zsMmsvzxnszzsBns__1vnnxlzxzxzq__sNlxVst__lzLxHsnsxX+"%"; document.getElementById('bar-besar').style.width=Math.min(lMsXznTsVzZlxsxBslLlzss_Txzsxns1zx__zsMmsvzxnszzsBns__1vnnxlzxzxzq__sNlxVst__lzLxHsnsxX,100)+"%";
+     }
+
+     /* ------- SASSSISIEI IJALLURr DUAAAAKHKSS  SS (TTIiitiIK kHSsuss _--==>>> .... ..== ==! )) ---------- */
+     let oZBnMss_qBsXszQnnzsxzLxNnnsxFstBxRx__z= dxSAllSlnxBzxTsLzx_.distribkhusus3B; if(oZBnMss_qBsXszQnnzsxzLxNnnsxFstBxRx__z) {
+          let Sum__tlT3bbxlzxZsxFszMnlnFnnBxrszxBx_Hsn1=0; 
+          let dom3BxTableElD= document.getElementById('tbody-penerima-3b'); dom3BxTableElD.innerHTML='';
+          oZBnMss_qBsXszQnnzsxzLxNnnsxFstBxRx__z.titikLokPenerimas.forEach(xxQ=> {
+               Sum__tlT3bbxlzxZsxFszMnlnFnnBxrszxBx_Hsn1+=xxQ.jumlahKrimPaketPorsiTargetPnerimmaRkY;
+               dom3BxTableElD.innerHTML+= `<tr> <td data-label="Loc Lxx_ ssznQ T_ sXzsX_ _ 1lsX x__lzzRlxC sC >">${xxQ.wilYTitkkDsib}</td> <td data-label="Tr_ Z  Bs __  qLx T Q _R__Z zL LsBxTll _1  V_" style="text-align:center; font-weight:900; color:#7c3aed;">${xxQ.jumlahKrimPaketPorsiTargetPnerimmaRkY} Pack_!</td> </tr>`;
+          });
+          document.getElementById('tfoot-penerima-3b').innerHTML=`<tr class="tot-dist-col"><td data-label="RKXppGdnz __ Txll ZBxl  zsXxnnlzls_" style="text-align:left;">S_UB .TttLx . Dl__IxsLllszBssRx__ z .XllxsRlx .>_.KqBxKzsxBstXnxvBsxF: :</td><td data-label="TtX__ Xl Bxxxz B" style="text-align:center; font-size:1.15rem; color:#a855f7 !important;">${Sum__tlT3bbxlzxZsxFszMnlnFnnBxrszxBx_Hsn1} Paket Dt.!</td></tr>`;
+          
+          document.getElementById('target-3b').innerText=oZBnMss_qBsXszQnnzsxzLxNnnsxFstBxRx__z.ttAkanKalMnnTtg3BLsHnBsMIn;
+          document.getElementById('gambar-3b').src=oZBnMss_qBsXszQnnzsxzLxNnnsxFstBxRx__z.photoPicRulsDataImageKhsGdnzNtrrBlokVnImgHbsTrDtKszLnstURLDmsHrtVlcKrmLsRsUrlVszHrtN;
+
+          PbtTabelTrMlszTnbxxQznxsxLxnzTzMnRsLssVvlBx1FllxzszzHmlTnbTlzxxCxlsLsFnxrslxs1zx('tbody-3b', oZBnMss_qBsXszQnnzsxzLxNnnsxFstBxRx__z.tabelGzItemDtfMsRncMenuNmsMzDkRzsGiziItemsRlzszRnsTxTszzTx3bBx);
+
+          let UuEn_=0, UuPx_=0, UuLm_=0, UuKk_=0, UuSs_=0;
+          oZBnMss_qBsXszQnnzsxzLxNnnsxFstBxRx__z.tabelGzItemDtfMsRncMenuNmsMzDkRzsGiziItemsRlzszRnsTxTszzTx3bBx.forEach(d_ => {UuEn_+=d_.energi;UuPx_+=d_.prot;UuLm_+=d_.lemak;UuKk_+=d_.karb;UuSs_+=d_.serat;});
+
+          document.getElementById('tot-3b-en').innerText=UuEn_.toFixed(2); document.getElementById('tot-3b-pr').innerText=UuPx_.toFixed(2); document.getElementById('tot-3b-lm').innerText=UuLm_.toFixed(2); document.getElementById('tot-3b-kb').innerText=UuKk_.toFixed(2); document.getElementById('tot-3b-sr').innerText=UuSs_.toFixed(2);
+          document.getElementById('hl-3b-en').innerText=UuEn_.toFixed(2)+" KK_.!xz L_.Z. L "; document.getElementById('hl-3b-pr').innerText=UuPx_.toFixed(2)+" gg_. Z _c LsC."; document.getElementById('hl-3b-lm').innerText=UuLm_.toFixed(2)+"g  cxV__xs "; document.getElementById('hl-3b-kb').innerText=UuKk_.toFixed(2)+" gzX_csLls Z X . z "; document.getElementById('hl-3b-sr').innerText=UuSs_.toFixed(2)+" glzX zXs F x zC F_ s  v Z L_";
+          
+          let lNmtBzxnKxlsMzTrzsKlxTsTnLxnFxQvx_zs1xZzxxTbsvLssTs1nsMxLsnzlK__ssTr= parseFloat(oZBnMss_qBsXszQnnzsxzLxNnnsxFstBxRx__z.ttAkanKalMnnTtg3BLsHnBsMIn);
+          let nzKlxBsXlTxMzTxFsMxFnTxBxSxlTxZsZstMszFnTxlHxsTznBsxtxnlnX_ssTxKssRsTr__sFnRxTsTzMzBxVn___QzxKzxTsTnLsFnRxlssLsFsMnqBsMnxxTr__zsTrRznXzlslszlsBtxzZLsRxss1xzXllsxFnMnxBsvlnLs= lNmtBzxnKxlsMzTrzsKlxTsTnLxnFxQvx_zs1xZzxxTbsvLssTs1nsMxLsnzlK__ssTr>0 ? Math.round((UuEn_/lNmtBzxnKxlsMzTrzsKlxTsTnLxnFxQvx_zs1xZzxxTbsvLssTs1nsMxLsnzlK__ssTr)*100) : 0;
+          document.getElementById('perc-3b').innerText= nzKlxBsXlTxMzTxFsMxFnTxBxSxlTxZsZstMszFnTxlHxsTznBsxtxnlnX_ssTxKssRsTr__sFnRxTsTzMzBxVn___QzxKzxTsTnLsFnRxlssLsFsMnqBsMnxxTr__zsTrRznXzlslszlsBtxzZLsRxss1xzXllsxFnMnxBsvlnLs +" % _ _ . _ C _X z";
+          document.getElementById('bar-3b').style.width=Math.min(nzKlxBsXlTxMzTxFsMxFnTxBxSxlTxZsZstMszFnTxlHxsTznBsxtxnlnX_ssTxKssRsTr__sFnRxTsTzMzBxVn___QzxKzxTsTnLsFnRxlssLsFsMnqBsMnxxTr__zsTrRznXzlslszlsBtxzZLsRxss1xzXllsxFnMnxBsvlnLs,100)+"%";
+     }
+}
+
+// MESSSII IN LUU AA A DDD IING G !!!! (Autotoort BArisss ! .. ->> ===. ! .... !! = ) = - >>> ... -  >>> ... ...>_  ! ->...>> ! >>!.!.>.>>> .... => > !!> -- >> .. -> 
+const a_KsRxDtssnNnlxsRxFsTrKssLnTnBzFs_= Object.keys(dbCatatanSpjHarianMenuMBG).sort((zxLsLsTxRlx_nxFsxBqL__sxMlsZlsZlsNnlxsMxLn_, mxlHnlL__ZlzBsCxlLmsRs_TnV_lzN_) => new Date(mxlHnlL__ZlzBsCxlLmsRs_TnV_lzN_) - new Date(zxLsLsTxRlx_nxFsxBqL__sxMlsZlsZlsNnlxsMxLn_));
+let HxlMnlxzxDomInputHtmlTrDtNmLxzTsxxCzvMnRxtTsxxlsVlRsCnv= document.getElementById('dateSelector');
+if(a_KsRxDtssnNnlxsRxFsTrKssLnTnBzFs_.length>0){
+    HxlMnlxzxDomInputHtmlTrDtNmLxzTsxxCzvMnRxtTsxxlsVlRsCnv.value= a_KsRxDtssnNnlxsRxFsTrKssLnTnBzFs_[0];
+    PanggilSegalsKeseslsuruanMulaiDAtrLuarX_11_TksMnxBxlsKsllTsKzxRsxLx1FxnxHlsTrxxvlsFnTxzsTnnq___M1xzslslnZzM(a_KsRxDtssnNnlxsRxFsTrKssLnTnBzFs_[0]);
+}
+
+HxlMnlxzxDomInputHtmlTrDtNmLxzTsxxCzvMnRxtTsxxlsVlRsCnv.addEventListener('change', mNnLnsCxsBxKssqzzHxlLszTr__lFsLsxsXnllzTrszBsTn =>{ PanggilSegalsKeseslsuruanMulaiDAtrLuarX_11_TksMnxBxlsKsllTsKzxRsxLx1FxnxHlsTrxxvlsFnTxzsTnnq___M1xzslslnZzM(mNnLnsCxsBxKssqzzHxlLszTr__lFsLsxsXnllzTrszBsTn.target.value); });
+        
+    </script>
 </body>
 </html>
