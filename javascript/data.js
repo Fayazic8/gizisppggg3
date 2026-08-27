@@ -84,7 +84,7 @@ const dataSpjHarian = {
     }
   },
 
-  "2026-08-17": {
+  "2026-08-18": {
     reguler: {
       sekolah: [
         { nama: "TK Al Anwar", kecil: 45, besar: 0 },
@@ -101,32 +101,6 @@ const dataSpjHarian = {
         { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
       ],
       targetKecil: 231, targetBesar: 2559,
-      fotoKecil: fotoDriveMenuB, fotoBesar: fotoDriveMenuA,
-      menuKecil: [
-        { nama: "Nasi Uduk Special Kmpd", berat: 125, energi: 240.0, prot: 4.10, lemak: 3.50, karb: 48.00, serat: 0.50 },
-        { nama: "Tongkol Ayam Goreng",    berat: 45,  energi: 150.0, prot: 7.00, lemak: 10.2, karb: 0.00,  serat: 0.00 },
-        { nama: "Tahu Bumbu Cabai",       berat: 30,  energi: 85.0,  prot: 4.50, lemak: 6.00,  karb: 3.00,  serat: 0.50 }
-      ],
-      menuBesar: [
-        { nama: "Nasi Uduk Level Besar",  berat: 180, energi: 350.0, prot: 6.50, lemak: 5.50, karb: 70.00, serat: 1.00 },
-        { nama: "Lauk Ayam Original",     berat: 55,  energi: 190.0, prot: 10.0, lemak: 12.0, karb: 0.00,  serat: 0.00 },
-        { nama: "Tahu Bumbu Besar",       berat: 35,  energi: 90.0,  prot: 5.00, lemak: 6.50, karb: 4.00,  serat: 0.80 }
-      ]
-    },
-    khusus3b: {
-      titik: [ { nama: "Posyandu Desa Melati", jumlah: 35 } ],
-      target3b: 550, foto3b: fotoDriveMenuA,
-      menu3b: [
-        { nama: "Bubur Beras Merah",  berat: 150, energi: 200.0, prot: 4.50, lemak: 1.50, karb: 40.00, serat: 2.00 },
-        { nama: "Otak-otak Ikan",     berat: 50,  energi: 130.0, prot: 10.0, lemak: 6.00, karb: 5.00,  serat: 0.50 }
-      ]
-    }
-  },
-
-  "2026-08-18": {
-    reguler: {
-      sekolah: [ { nama: "MI Al-Miftahunnajah 05", kecil: 250, besar: 320 } ],
-      targetKecil: 413, targetBesar: 708,
       fotoKecil: fotoDriveMenuA, fotoBesar: fotoDriveMenuA,
       menuKecil: [
         { nama: "Nasi Putih Bakar",  berat: 125, energi: 220.0, prot: 4.00, lemak: 0.40, karb: 48.00, serat: 0.30 },
