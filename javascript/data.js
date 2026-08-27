@@ -43,10 +43,20 @@ const dataSpjHarian = {
   "2026-08-16": {
     reguler: {
       sekolah: [
-        { nama: "SDN 2 Kebangsaan",     kecil: 150, besar: 60 },
-        { nama: "SMP Darul Faqih Cnt.", kecil: 0,   besar: 200 }
+        { nama: "TK Al Anwar", kecil: 45, besar: 0 },
+        { nama: "TK Annuqayah", kecil: 77,  besar: 0 },
+        { nama: "MI 1 Annuqayah", kecil: 44,  besar: 74 },
+        { nama: "MI 3 Annuqayah", kecil: 65, besar: 64 },
+        { nama: "MTs 1 Annuqayah", kecil: 0, besar: 838 },
+        { nama: "MTs 2 Annuqayah", kecil: 0, besar: 100 },
+        { nama: "MTs 3 Annuqayah", kecil: 0, besar: 97 },
+        { nama: "MA 1 Annuqayah", kecil: 0, besar: 430 },
+        { nama: "MA 2 Annuqayah", kecil: 0, besar: 98 },
+        { nama: "MA Tahfidh", kecil: 0, besar: 210 },
+        { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
+        { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
       ],
-      targetKecil: 413, targetBesar: 708,
+      targetKecil: 231, targetBesar: 2559,
       fotoKecil: fotoDriveMenuA, fotoBesar: fotoDriveMenuB,
       menuKecil: [
         { nama: "Nasi Campur T.S. Sari", berat: 130, energi: 240.0, prot: 4.10, lemak: 0.40, karb: 52.00, serat: 0.30 },
@@ -76,8 +86,21 @@ const dataSpjHarian = {
 
   "2026-08-17": {
     reguler: {
-      sekolah: [ { nama: "Seluruh Pos Program TK Lebel 1", kecil: 400, besar: 120 } ],
-      targetKecil: 413, targetBesar: 708,
+      sekolah: [
+        { nama: "TK Al Anwar", kecil: 45, besar: 0 },
+        { nama: "TK Annuqayah", kecil: 77,  besar: 0 },
+        { nama: "MI 1 Annuqayah", kecil: 44,  besar: 74 },
+        { nama: "MI 3 Annuqayah", kecil: 65, besar: 64 },
+        { nama: "MTs 1 Annuqayah", kecil: 0, besar: 838 },
+        { nama: "MTs 2 Annuqayah", kecil: 0, besar: 100 },
+        { nama: "MTs 3 Annuqayah", kecil: 0, besar: 97 },
+        { nama: "MA 1 Annuqayah", kecil: 0, besar: 430 },
+        { nama: "MA 2 Annuqayah", kecil: 0, besar: 98 },
+        { nama: "MA Tahfidh", kecil: 0, besar: 210 },
+        { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
+        { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
+      ],
+      targetKecil: 231, targetBesar: 2559,
       fotoKecil: fotoDriveMenuB, fotoBesar: fotoDriveMenuA,
       menuKecil: [
         { nama: "Nasi Uduk Special Kmpd", berat: 125, energi: 240.0, prot: 4.10, lemak: 3.50, karb: 48.00, serat: 0.50 },
