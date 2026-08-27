@@ -8,9 +8,16 @@ const dataSpjHarian = {
   "2026-08-15": {
     reguler: {
       sekolah: [
-        { nama: "SDN 1 Guluk-Guluk",   kecil: 120, besar: 40 },
-        { nama: "SMP Annuqayah D.2",   kecil: 0,   besar: 250 },
-        { nama: "PAUD Nurul Yaqin",    kecil: 80,  besar: 15 }
+        { nama: "TK Al Anwar", kecil: 45, besar: 0 },
+        { nama: "MI 3 Annuqayah", kecil: 65, besar: 64 },
+        { nama: "MTs 1 Annuqayah", kecil: 0, besar: 838 },
+        { nama: "MTs 2 Annuqayah", kecil: 0, besar: 100 },
+        { nama: "MTs 3 Annuqayah", kecil: 0, besar: 97 },
+        { nama: "MA 1 Annuqayah", kecil: 0, besar: 430 },
+        { nama: "MA 2 Annuqayah", kecil: 0, besar: 98 },
+        { nama: "MA Tahfidh", kecil: 0, besar: 210 },
+        { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
+        { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
       ],
       targetKecil: 413, targetBesar: 708,
       fotoKecil: fotoDriveMenuA, fotoBesar: fotoDriveMenuB,
