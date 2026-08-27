@@ -1,6 +1,6 @@
 // ========================= FOTO DEFAULT (GOOGLE DRIVE) =========================
-const fotoDriveMenuA = "https://lh3.googleusercontent.com/d/1nLNt7UjL32qCxLxWcfvm8QZKf9GE00E0";
-const fotoDriveMenuB = "https://lh3.googleusercontent.com/d/1z22G6LHGG2VTb2OPB9l92c6cT-DsPY3H";
+const fotoDriveMenuA = "https://lh3.googleusercontent.com/d/1FHP5j4gwqmDbF8DHjIfXj4PFn61t9Bq2";
+const fotoDriveMenuB = "https://lh3.googleusercontent.com/d/1FHP5j4gwqmDbF8DHjIfXj4PFn61t9Bq2";
 
 // ========================= DATABASE HARIAN SPJ MBG =========================
 // Tambahkan/ubah data per tanggal di sini. Format tanggal: "YYYY-MM-DD"
