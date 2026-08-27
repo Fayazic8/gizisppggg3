@@ -19,14 +19,14 @@ const dataSpjHarian = {
         { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
         { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
       ],
-      targetKecil: 413, targetBesar: 708,
+      targetKecil: 105, targetBesar: 2485,
       fotoKecil: fotoDriveMenuA, fotoBesar: fotoDriveMenuB,
       menuKecil: [
         { nama: "Nasi Putih",         berat: 125, energi: 225.0, prot: 3.75, lemak: 0.38,  karb: 49.75, serat: 0.25 },
         { nama: "Ayam Palekko",       berat: 50,  energi: 178.3, prot: 8.19, lemak: 16.25, karb: 0.00,  serat: 0.00 },
         { nama: "Tempe Goreng",       berat: 30,  energi: 81.7,  prot: 3.50, lemak: 6.93,  karb: 2.27,  serat: 0.35 },
         { nama: "Mix Sayur Asem",     berat: 40,  energi: 44.0,  prot: 1.42, lemak: 0.77,  karb: 8.36,  serat: 1.23 },
-        { nama: "Pencuci Mulut Anggur", berat: 50, energi: 15.0, prot: 0.25, lemak: 0.10,  karb: 3.40,  serat: 0.60 }
+        { nama: "Anggur Merah", berat: 50, energi: 15.0, prot: 0.25, lemak: 0.10,  karb: 3.40,  serat: 0.60 }
       ],
       menuBesar: [
         { nama: "Nasi Putih XXL",     berat: 180, energi: 324.0, prot: 6.75, lemak: 0.54,  karb: 71.64, serat: 0.36 },
