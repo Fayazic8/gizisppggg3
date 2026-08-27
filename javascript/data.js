@@ -36,19 +36,6 @@ const dataSpjHarian = {
         { nama: "Pencuci Mulut Anggur", berat: 50, energi: 15.0, prot: 0.25, lemak: 0.10,  karb: 3.40,  serat: 0.60 }
       ]
     },
-    khusus3b: {
-      titik: [
-        { nama: "Posyandu Balita Desa A", jumlah: 30 },
-        { nama: "Kunjungan Khusus Lansia", jumlah: 25 },
-        { nama: "TK Kartika Asri",         jumlah: 55 }
-      ],
-      target3b: 550, foto3b: fotoDriveMenuA,
-      menu3b: [
-        { nama: "Sereal Susu Gandum 3B", berat: 150, energi: 310.0, prot: 6.75, lemak: 4.54, karb: 41.64, serat: 3.16 },
-        { nama: "Telur Ayam Kampung",     berat: 65,  energi: 198.3, prot: 9.19, lemak: 6.25, karb: 2.00,  serat: 0.10 },
-        { nama: "Mix Sayur Bayam",        berat: 35,  energi: 62.7,  prot: 1.50, lemak: 1.93, karb: 7.27,  serat: 4.35 }
-      ]
-    }
   },
 
   "2026-08-16": {
