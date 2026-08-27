@@ -21,7 +21,7 @@ const dataSpjHarian = {
         { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
         { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
       ],
-      targetKecil: 105, targetBesar: 2485,
+      targetKecil: 231, targetBesar: 2559,
       fotoKecil: fotoDriveMenuA, fotoBesar: fotoDriveMenuB,
       menuKecil: [
         { nama: "Nasi Putih",         berat: 125, energi: 225.0, prot: 3.75, lemak: 0.38,  karb: 49.75, serat: 0.25 },
