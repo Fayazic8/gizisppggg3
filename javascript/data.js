@@ -9,6 +9,8 @@ const dataSpjHarian = {
     reguler: {
       sekolah: [
         { nama: "TK Al Anwar", kecil: 45, besar: 0 },
+        { nama: "TK Annuqayah", kecil: 77,  besar: 0 },
+        { nama: "MI 1 Annuqayah", kecil: 44,  besar: 74 },
         { nama: "MI 3 Annuqayah", kecil: 65, besar: 64 },
         { nama: "MTs 1 Annuqayah", kecil: 0, besar: 838 },
         { nama: "MTs 2 Annuqayah", kecil: 0, besar: 100 },
