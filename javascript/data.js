@@ -1,5 +1,5 @@
 // ========================= FOTO DEFAULT (GOOGLE DRIVE) =========================
-const fotoDriveMenuA = "https://lh3.googleusercontent.com/d/1FHP5j4gwqmDbF8DHjIfXj4PFn61t9Bq2";
+const fotoDriveMenuA = "https://lh3.googleusercontent.com/d/1TAYmJ2iHCoxgwCZCRZL46KjFDqcSI1m0";
 const fotoDriveMenuB = "https://lh3.googleusercontent.com/d/1FHP5j4gwqmDbF8DHjIfXj4PFn61t9Bq2";
 
 // ========================= DATABASE HARIAN SPJ MBG =========================
