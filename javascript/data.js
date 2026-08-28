@@ -113,49 +113,8 @@ const dataSpjHarian = {
     }
   },
 
-  "2026-08-29": {
-    reguler: {
-      sekolah: [
-        { nama: "TK Al Anwar", kecil: 45, besar: 0 },
-        { nama: "TK Annuqayah", kecil: 77,  besar: 0 },
-        { nama: "MI 1 Annuqayah", kecil: 44,  besar: 74 },
-        { nama: "MI 3 Annuqayah", kecil: 65, besar: 64 },
-        { nama: "MTs 1 Annuqayah", kecil: 0, besar: 838 },
-        { nama: "MTs 2 Annuqayah", kecil: 0, besar: 100 },
-        { nama: "MTs 3 Annuqayah", kecil: 0, besar: 97 },
-        { nama: "MA 1 Annuqayah", kecil: 0, besar: 430 },
-        { nama: "MA 2 Annuqayah", kecil: 0, besar: 98 },
-        { nama: "MA Tahfidh", kecil: 0, besar: 210 },
-        { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
-        { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
-      ],
-      targetKecil: 231, targetBesar: 2559,
-      fotoKecil: fotoDriveMenuA, fotoBesar: fotoDriveMenuA,
-      menuKecil: [
-        { nama: "Nasi Putih Bakar",  berat: 125, energi: 220.0, prot: 4.00, lemak: 0.40, karb: 48.00, serat: 0.30 },
-        { nama: "Omelet Telur",      berat: 45,  energi: 120.0, prot: 8.50, lemak: 9.00, karb: 1.00,  serat: 0.10 },
-        { nama: "Tempe Bacem",       berat: 20,  energi: 60.0,  prot: 3.50, lemak: 4.50, karb: 2.00,  serat: 0.20 },
-        { nama: "Sayur Kangkung",    berat: 45,  energi: 25.0,  prot: 1.00, lemak: 0.50, karb: 5.00,  serat: 1.50 },
-        { nama: "Jeruk Manis",       berat: 60,  energi: 35.0,  prot: 0.50, lemak: 0.10, karb: 8.00,  serat: 2.00 }
-      ],
-      menuBesar: [
-        { nama: "Nasi Putih Porsi Besar", berat: 180, energi: 310.0, prot: 6.00, lemak: 0.80, karb: 65.00, serat: 0.50 },
-        { nama: "Omelet Telur Jumbo",     berat: 65,  energi: 160.0, prot: 11.5, lemak: 11.5, karb: 1.50,  serat: 0.20 },
-        { nama: "Tempe Bacem Besar",      berat: 30,  energi: 85.0,  prot: 5.00, lemak: 6.50, karb: 3.50,  serat: 0.30 },
-        { nama: "Sayur Kangkung",         berat: 60,  energi: 35.0,  prot: 1.50, lemak: 0.80, karb: 6.50,  serat: 2.20 },
-        { nama: "Jeruk Manis",            berat: 80,  energi: 45.0,  prot: 0.80, lemak: 0.20, karb: 10.0,  serat: 2.50 }
-      ]
-    },
-    khusus3b: {
-      titik: [ { nama: "SDN 5 Lokasi Terpadu", jumlah: 30 } ],
-      target3b: 550, foto3b: fotoDriveMenuA,
-      menu3b: [
-        { nama: "Bubur Ayam Halus",  berat: 120, energi: 150.0, prot: 2.00, lemak: 0.50, karb: 30.00, serat: 1.00 },
-        { nama: "Kaas Telur",        berat: 65,  energi: 160.0, prot: 11.0, lemak: 11.0, karb: 1.50,  serat: 0.20 },
-        { nama: "Sayur Bening",      berat: 40,  energi: 20.0,  prot: 1.00, lemak: 0.50, karb: 4.00,  serat: 1.50 }
-      ]
-    }
-  }
+
+  
 };
 
 const dataKosong = {
