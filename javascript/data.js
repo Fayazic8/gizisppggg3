@@ -113,6 +113,42 @@ const dataSpjHarian = {
     }
   },
 
+  "2026-08-29": {
+    reguler: {
+      sekolah: [
+        { nama: "TK Al Anwar", kecil: 45, besar: 0 },
+        { nama: "TK Annuqayah", kecil: 77, besar: 0 },
+        { nama: "MI 1 Annuqayah", kecil: 44, besar: 74 },
+        { nama: "MI 3 Annuqayah", kecil: 65, besar: 64 },
+        { nama: "MTs 1 Annuqayah", kecil: 0, besar: 838 },
+        { nama: "MTs 2 Annuqayah", kecil: 0, besar: 100 },
+        { nama: "MTs 3 Annuqayah", kecil: 0, besar: 97 },
+        { nama: "MA 1 Annuqayah", kecil: 0, besar: 430 },
+        { nama: "MA 2 Annuqayah", kecil: 0, besar: 98 },
+        { nama: "MA Tahfidh", kecil: 0, besar: 210 },
+        { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
+        { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
+      ],
+      targetKecil: 231, targetBesar: 2559,
+      fotoKecil: "https://lh3.googleusercontent.com/d/1Ap0owESD7pJhIigLEF2ACE-s04poMZI3",
+      fotoBesar: "https://lh3.googleusercontent.com/d/1z22G6LHGG2VTb2OPB9l92c6cT-DsPY3H",
+      menuKecil: [
+        { nama: "Nasi Putih",          berat: 125, energi: 225.0,  prot: 3.75,  lemak: 0.38,  karb: 49.75, serat: 0.25 },
+        { nama: "Telur Saus Bolognese", berat: 65,  energi: 165.45, prot: 8.50,  lemak: 12.30, karb: 5.10,  serat: 0.40 },
+        { nama: "Tempe Tepung",        berat: 50,  energi: 142.50, prot: 4.20,  lemak: 8.90,  karb: 11.20, serat: 1.10 },
+        { nama: "Tumis Pakcoy Jagung",  berat: 40,  energi: 57.70,  prot: 1.12,  lemak: 4.50,  karb: 3.56,  serat: 0.28 },
+        { nama: "Apel Fuji",           berat: 75,  energi: 80.00,  prot: 0.50,  lemak: 0.05,  karb: 23.00, serat: 2.40 }
+      ],
+      menuBesar: [
+        { nama: "Nasi Putih",          berat: 180, energi: 324.0,  prot: 6.75,  lemak: 0.54,  karb: 71.64, serat: 0.36 },
+        { nama: "Telur Saus Bolognese", berat: 65,  energi: 165.45, prot: 8.50,  lemak: 12.30, karb: 5.10,  serat: 0.40 },
+        { nama: "Tempe Tepung",        berat: 50,  energi: 142.50, prot: 4.20,  lemak: 8.90,  karb: 11.20, serat: 1.10 },
+        { nama: "Tumis Pakcoy Jagung",  berat: 40,  energi: 57.70,  prot: 1.12,  lemak: 4.50,  karb: 3.56,  serat: 0.28 },
+        { nama: "Apel Fuji",           berat: 75,  energi: 80.00,  prot: 0.49,  lemak: 0.05,  karb: 23.00, serat: 2.40 }
+      ]
+    }
+  }
+
 
   
 };
