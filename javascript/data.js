@@ -1,7 +1,3 @@
-// ========================= FOTO DEFAULT (GOOGLE DRIVE) =========================
-const fotoDriveMenuA = "https://lh3.googleusercontent.com/d/1TAYmJ2iHCoxgwCZCRZL46KjFDqcSI1m0";
-const fotoDriveMenuB = "https://lh3.googleusercontent.com/d/1FHP5j4gwqmDbF8DHjIfXj4PFn61t9Bq2";
-
 // ========================= DATABASE HARIAN SPJ MBG =========================
 // Tambahkan/ubah data per tanggal di sini. Format tanggal: "YYYY-MM-DD"
 const dataSpjHarian = {
@@ -22,7 +18,8 @@ const dataSpjHarian = {
         { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
       ],
       targetKecil: 231, targetBesar: 2559,
-      fotoKecil: fotoDriveMenuA, fotoBesar: fotoDriveMenuB,
+      fotoKecil: "",
+      fotoBesar: "https://lh3.googleusercontent.com/d/1TAYmJ2iHCoxgwCZCRZL46KjFDqcSI1m0",
       menuKecil: [
         { nama: "Nasi Putih",         berat: 125, energi: 225.0, prot: 3.75, lemak: 0.38,  karb: 49.75, serat: 0.25 },
         { nama: "Ayam Palekko",       berat: 50,  energi: 178.3, prot: 8.19, lemak: 16.25, karb: 0.00,  serat: 0.00 },
@@ -84,7 +81,7 @@ const dataSpjHarian = {
     }
   },
 
-  "2026-08-18": {
+  "2026-08-29": {
     reguler: {
       sekolah: [
         { nama: "TK Al Anwar", kecil: 45, besar: 0 },
@@ -131,11 +128,11 @@ const dataSpjHarian = {
 
 const dataKosong = {
   reguler: { sekolah: [{ nama: "Kosong", kecil: 0, besar: 0 }], targetKecil: 0, targetBesar: 0,
-    fotoKecil: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500",
-    fotoBesar: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500",
+    fotoKecil: "https://lh3.googleusercontent.com/d/1FHP5j4gwqmDbF8DHjIfXj4PFn61t9Bq2",
+    fotoBesar: "https://lh3.googleusercontent.com/d/1FHP5j4gwqmDbF8DHjIfXj4PFn61t9Bq2",
     menuKecil: [{ nama: "-", berat: 0, energi: 0, prot: 0, lemak: 0, karb: 0, serat: 0 }],
     menuBesar: [{ nama: "-", berat: 0, energi: 0, prot: 0, lemak: 0, karb: 0, serat: 0 }] },
   khusus3b: { titik: [{ nama: "-", jumlah: 0 }], target3b: 0,
-    foto3b: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500",
+    foto3b: "https://lh3.googleusercontent.com/d/1FHP5j4gwqmDbF8DHjIfXj4PFn61t9Bq2",
     menu3b: [{ nama: "-", berat: 0, energi: 0, prot: 0, lemak: 0, karb: 0, serat: 0 }] }
 };
