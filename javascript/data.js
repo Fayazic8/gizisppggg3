@@ -92,8 +92,8 @@ const dataSpjHarian = {
         { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
       ],
       targetKecil: 231, targetBesar: 2559,
-      fotoKecil: "https://lh3.googleusercontent.com/d/",
-      fotoBesar: "https://lh3.googleusercontent.com/d/",
+      fotoKecil: "https://lh3.googleusercontent.com/d/1XG8mjSBo7ErESlyPgzcNHwCtk8JXC4QY",
+      fotoBesar: "https://lh3.googleusercontent.com/d/1aq8uNkk5KDlGr6A0pSjCRnOi3uOZtfKu",
       menuKecil: [
         { nama: "Nasi Putih",                berat: 125, energi: 225.0,  prot: 3.75, lemak: 0.38,  karb: 49.75, serat: 0.25 },
         { nama: "Telur Ceplok Bumbu Rempah", berat: 65,  energi: 132.45, prot: 7.11, lemak: 11.59, karb: 0.83,  serat: 0.00 },
