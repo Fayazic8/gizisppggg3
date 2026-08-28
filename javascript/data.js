@@ -19,7 +19,7 @@ const dataSpjHarian = {
       ],
       targetKecil: 231, targetBesar: 2559,
       fotoKecil: "https://lh3.googleusercontent.com/d/1Ap0owESD7pJhIigLEF2ACE-s04poMZI3",
-      fotoBesar: "https://lh3.googleusercontent.com/d/1TAYmJ2iHCoxgwCZCRZL46KjFDqcSI1m0",
+      fotoBesar: "https://lh3.googleusercontent.com/d/1z22G6LHGG2VTb2OPB9l92c6cT-DsPY3H",
       menuKecil: [
         { nama: "Nasi Putih",         berat: 125, energi: 225.0, prot: 3.75, lemak: 0.38,  karb: 49.75, serat: 0.25 },
         { nama: "Ayam Palekko",       berat: 50,  energi: 178.3, prot: 8.19, lemak: 16.25, karb: 0.00,  serat: 0.00 },
