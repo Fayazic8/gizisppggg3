@@ -54,8 +54,8 @@ const dataSpjHarian = {
         { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
       ],
       targetKecil: 231, targetBesar: 2559,
-      fotoKecil: "https://lh3.googleusercontent.com/d/1Ap0owESD7pJhIigLEF2ACE-s04poMZI3",
-      fotoBesar: "https://lh3.googleusercontent.com/d/1z22G6LHGG2VTb2OPB9l92c6cT-DsPY3H",
+      fotoKecil: "https://lh3.googleusercontent.com/d/1A7rO9aNyQXLdqrL1Bin3kKZvHRxSpPFW",
+      fotoBesar: "https://lh3.googleusercontent.com/d/1TAYmJ2iHCoxgwCZCRZL46KjFDqcSI1m0",
       menuKecil: [
         { nama: "Nasi Putih",       berat: 125, energi: 225.0, prot: 3.75, lemak: 0.38,  karb: 49.75, serat: 0.25 },
         { nama: "Ayam Geprek",      berat: 70,  energi: 244.9, prot: 9.99, lemak: 16.45, karb: 15.44, serat: 0.06 },
@@ -92,8 +92,8 @@ const dataSpjHarian = {
         { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
       ],
       targetKecil: 231, targetBesar: 2559,
-      fotoKecil: "https://lh3.googleusercontent.com/d/1A7rO9aNyQXLdqrL1Bin3kKZvHRxSpPFW",
-      fotoBesar: "https://lh3.googleusercontent.com/d/1TAYmJ2iHCoxgwCZCRZL46KjFDqcSI1m0",
+      fotoKecil: "https://lh3.googleusercontent.com/d/",
+      fotoBesar: "https://lh3.googleusercontent.com/d/",
       menuKecil: [
         { nama: "Nasi Putih",                berat: 125, energi: 225.0,  prot: 3.75, lemak: 0.38,  karb: 49.75, serat: 0.25 },
         { nama: "Telur Ceplok Bumbu Rempah", berat: 65,  energi: 132.45, prot: 7.11, lemak: 11.59, karb: 0.83,  serat: 0.00 },
