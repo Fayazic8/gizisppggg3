@@ -130,8 +130,8 @@ const dataSpjHarian = {
         { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
       ],
       targetKecil: 231, targetBesar: 2559,
-      fotoKecil: "https://lh3.googleusercontent.com/d/1Ap0owESD7pJhIigLEF2ACE-s04poMZI3",
-      fotoBesar: "https://lh3.googleusercontent.com/d/1z22G6LHGG2VTb2OPB9l92c6cT-DsPY3H",
+      fotoKecil: "https://lh3.googleusercontent.com/d/184imHQFUqUeJ1CC9qDsGfoRoAczWQpIj",
+      fotoBesar: "https://lh3.googleusercontent.com/d/1o_LY49qLrgU9VnCBnMvEPXp-LQym-89x",
       menuKecil: [
         { nama: "Nasi Putih",          berat: 125, energi: 225.0,  prot: 3.75,  lemak: 0.38,  karb: 49.75, serat: 0.25 },
         { nama: "Telur Saus Bolognese", berat: 65,  energi: 165.45, prot: 8.50,  lemak: 12.30, karb: 5.10,  serat: 0.40 },
