@@ -17,7 +17,7 @@ const dataSpjHarian = {
         { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
         { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
       ],
-      targetKecil: 231, targetBesar: 2559,
+      targetKecil: 413, targetBesar: 708,
       fotoKecil: "https://lh3.googleusercontent.com/d/1Ap0owESD7pJhIigLEF2ACE-s04poMZI3",
       fotoBesar: "https://lh3.googleusercontent.com/d/1z22G6LHGG2VTb2OPB9l92c6cT-DsPY3H",
       menuKecil: [
@@ -53,7 +53,7 @@ const dataSpjHarian = {
         { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
         { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
       ],
-      targetKecil: 231, targetBesar: 2559,
+      targetKecil: 413, targetBesar: 708, // DIPERBAIKI: sebelumnya 231/2559 (copy dari tgl 15 Agt, salah — sudah dicocokkan ke spreadsheet AKG tgl 18 Agt)
       fotoKecil: "https://lh3.googleusercontent.com/d/1A7rO9aNyQXLdqrL1Bin3kKZvHRxSpPFW",
       fotoBesar: "https://lh3.googleusercontent.com/d/1TAYmJ2iHCoxgwCZCRZL46KjFDqcSI1m0",
       menuKecil: [
@@ -91,7 +91,7 @@ const dataSpjHarian = {
         { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
         { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
       ],
-      targetKecil: 231, targetBesar: 2559,
+      targetKecil: 413, targetBesar: 708,
       fotoKecil: "https://lh3.googleusercontent.com/d/1XG8mjSBo7ErESlyPgzcNHwCtk8JXC4QY",
       fotoBesar: "https://lh3.googleusercontent.com/d/1aq8uNkk5KDlGr6A0pSjCRnOi3uOZtfKu",
       menuKecil: [
@@ -129,7 +129,7 @@ const dataSpjHarian = {
         { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
         { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
       ],
-      targetKecil: 231, targetBesar: 2559,
+      targetKecil: 413, targetBesar: 708,
       fotoKecil: "https://lh3.googleusercontent.com/d/184imHQFUqUeJ1CC9qDsGfoRoAczWQpIj",
       fotoBesar: "https://lh3.googleusercontent.com/d/1o_LY49qLrgU9VnCBnMvEPXp-LQym-89x",
       menuKecil: [
