@@ -154,7 +154,7 @@ const dataSpjHarian = {
         { nama: "Kaas Telur",        berat: 65,  energi: 160.0, prot: 11.0, lemak: 11.0, karb: 1.50,  serat: 0.20 },
         { nama: "Sayur Bening",      berat: 40,  energi: 20.0,  prot: 1.00, lemak: 0.50, karb: 4.00,  serat: 1.50 }
       ]
-}
+     }
     }
   }
 
