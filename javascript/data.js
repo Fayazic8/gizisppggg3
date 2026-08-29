@@ -145,7 +145,16 @@ const dataSpjHarian = {
         { nama: "Tempe Tepung",        berat: 50,  energi: 142.50, prot: 4.20,  lemak: 8.90,  karb: 11.20, serat: 1.10 },
         { nama: "Tumis Pakcoy Jagung",  berat: 40,  energi: 57.70,  prot: 1.12,  lemak: 4.50,  karb: 3.56,  serat: 0.28 },
         { nama: "Apel Fuji",           berat: 75,  energi: 80.00,  prot: 0.49,  lemak: 0.05,  karb: 23.00, serat: 2.40 }
+      ],
+      khusus3b: {
+      titik: [ { nama: "SDN 5 Lokasi Terpadu", jumlah: 30 } ],
+      target3b: 550, foto3b: fotoDriveMenuA,
+      menu3b: [
+        { nama: "Bubur Ayam Halus",  berat: 120, energi: 150.0, prot: 2.00, lemak: 0.50, karb: 30.00, serat: 1.00 },
+        { nama: "Kaas Telur",        berat: 65,  energi: 160.0, prot: 11.0, lemak: 11.0, karb: 1.50,  serat: 0.20 },
+        { nama: "Sayur Bening",      berat: 40,  energi: 20.0,  prot: 1.00, lemak: 0.50, karb: 4.00,  serat: 1.50 }
       ]
+}
     }
   }
 
