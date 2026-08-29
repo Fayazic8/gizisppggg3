@@ -98,7 +98,7 @@ function tampilkanData(tanggal) {
   isiProgress('besar', totalBesar.energi, reg.targetBesar);
 
   // --- Bagian Khusus 3B ---
-  const k3b = data.khusus3b;
+  const k3b = data.khusus3b || dataKosong.khusus3b; // PERBAIKAN: cegah error jika data 3B tanggal ini belum diisi
   let totalPaket3b = 0;
   const tbody3b = document.getElementById('tbody-penerima-3b');
   tbody3b.innerHTML = '';
