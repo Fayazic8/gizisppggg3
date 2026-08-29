@@ -1,106 +1,151 @@
-// ==========================================
-// 1. FUNGSI JAM REALTIME & TAHUN OTOMATIS
-// ==========================================
-function jalankanJam() {
-    const waktu = new Date();
-    const jam = waktu.getHours().toString().padStart(2, '0');
-    const menit = waktu.getMinutes().toString().padStart(2, '0');
-    const detik = waktu.getSeconds().toString().padStart(2, '0');
-    
-    // Memasukkan ke id="jam-realtime" di HTML
-    document.getElementById("jam-realtime").innerText = `${jam}:${menit}:${detik}`;
+// ========================= JAM & TAHUN FOOTER =========================
+document.getElementById('tahun-aktif').innerText = new Date().getFullYear();
+function perbaruiJam(){
+  document.getElementById('jam-realtime').innerText = new Date().toLocaleTimeString('id-ID');
 }
-setInterval(jalankanJam, 1000); // Update setiap 1 detik
-jalankanJam(); 
+perbaruiJam();
+setInterval(perbaruiJam, 1000);
 
-// Update tahun footer otomatis
-document.getElementById("tahun-aktif").innerText = new Date().getFullYear();
-
-
-// ==========================================
-// 2. FUNGSI BUKA-TUTUP TABEL (ACCORDION)
-// ==========================================
-// Fungsi ini dipanggil dari HTML: onclick="toggleTabel('umum')"
-function toggleTabel(kategori) {
-    const areaTabel = document.getElementById(`area-tabel-${kategori}`);
-    const ikonPanah = document.getElementById(`panah-${kategori}`);
-
-    // Cek apakah tabel sedang sembunyi (punya class tabel-area-hilang)
-    if (areaTabel.classList.contains("tabel-area-hilang")) {
-        areaTabel.classList.remove("tabel-area-hilang"); // Munculkan tabel
-        ikonPanah.classList.add("lipat-aktif");          // Putar panah ke atas
-    } else {
-        areaTabel.classList.add("tabel-area-hilang");    // Sembunyikan tabel
-        ikonPanah.classList.remove("lipat-aktif");       // Putar panah ke bawah
-    }
+// ========================= TOGGLE TABEL DAFTAR PENERIMA =========================
+function toggleTabel(kunci){
+  document.getElementById('area-tabel-' + kunci).classList.toggle('tabel-area-hilang');
+  document.getElementById('panah-' + kunci).classList.toggle('lipat-aktif');
 }
 
+// ========================= FUNGSI BANTUAN KALKULATOR & RENDER =========================
+function renderTabelMenu(idTbody, daftarItem) {
+  const el = document.getElementById(idTbody);
+  el.innerHTML = '';
+  daftarItem.forEach(item => {
+    el.innerHTML += `<tr>
+      <td data-label="Bahan">${item.nama}</td>
+      <td data-label="Takaran" style="text-align:center; font-weight:800;">${item.berat}g</td>
+      <td data-label="Energi" style="text-align:center;">${item.energi.toFixed(2)}</td>
+      <td data-label="Protein" style="text-align:center;">${item.prot.toFixed(2)}</td>
+      <td data-label="Lemak" style="text-align:center;">${item.lemak.toFixed(2)}</td>
+      <td data-label="Karbo" style="text-align:center;">${item.karb.toFixed(2)}</td>
+      <td data-label="Serat" style="text-align:center; color:#059669; font-weight:800;">${item.serat.toFixed(2)}</td>
+    </tr>`;
+  });
+}
 
-// ==========================================
-// 3. FUNGSI INPUT TANGGAL (DATE PICKER)
-// ==========================================
-const inputTanggal = document.getElementById("dateSelector");
-const labelTanggalAtas = document.getElementById("label-tgl-atas");
+function jumlahkanGizi(daftarItem) {
+  return daftarItem.reduce((tot, x) => {
+    tot.energi += x.energi; tot.prot += x.prot; tot.lemak += x.lemak; tot.karb += x.karb; tot.serat += x.serat;
+    return tot;
+  }, { energi: 0, prot: 0, lemak: 0, karb: 0, serat: 0 });
+}
 
-// Saat user memilih tanggal baru
-inputTanggal.addEventListener("change", function(event) {
-    const tanggalDipilih = event.target.value; // Format: YYYY-MM-DD
-    labelTanggalAtas.innerText = tanggalDipilih;
-    
-    // Di sini nanti tempat memanggil fungsi dari data.js
-    // contoh: muatDataGiziBerdasarkanTanggal(tanggalDipilih);
+function isiRingkasanGizi(prefix, total) {
+  document.getElementById('tot-' + prefix + '-en').innerText = total.energi.toFixed(2);
+  document.getElementById('tot-' + prefix + '-pr').innerText = total.prot.toFixed(2) + "g";
+  document.getElementById('tot-' + prefix + '-lm').innerText = total.lemak.toFixed(2) + "g";
+  document.getElementById('tot-' + prefix + '-kb').innerText = total.karb.toFixed(2) + "g";
+  document.getElementById('tot-' + prefix + '-sr').innerText = total.serat.toFixed(2) + "g";
+
+  document.getElementById('hl-' + prefix + '-en').innerText = total.energi.toFixed(2) + "kkal";
+  document.getElementById('hl-' + prefix + '-kb').innerText = total.karb.toFixed(2) + "g";
+  document.getElementById('hl-' + prefix + '-pr').innerText = total.prot.toFixed(2) + "g";
+  document.getElementById('hl-' + prefix + '-lm').innerText = total.lemak.toFixed(2) + "g";
+  document.getElementById('hl-' + prefix + '-sr').innerText = total.serat.toFixed(2) + "g";
+}
+
+function isiProgress(prefix, energiTerkumpul, target) {
+  const persen = target > 0 ? Math.round((energiTerkumpul / target) * 100) : 0;
+  document.getElementById('perc-' + prefix).innerText = persen + "%";
+  document.getElementById('bar-' + prefix).style.width = Math.min(persen, 100) + "%";
+}
+
+// ========================= FUNGSI UTAMA: TAMPILKAN DATA 1 HARI =========================
+function tampilkanData(tanggal) {
+  const data = dataSpjHarian[tanggal] || dataKosong;
+
+  // --- Bagian Reguler (Sekolah) ---
+  const reg = data.reguler;
+  let totalSekolahKecil = 0, totalSekolahBesar = 0, totalSekolahGabungan = 0;
+  const tbodySekolah = document.getElementById('tbody-penerima-sekolah');
+  tbodySekolah.innerHTML = '';
+  reg.sekolah.forEach(s => {
+    const subtotal = s.kecil + s.besar;
+    totalSekolahKecil += s.kecil; totalSekolahBesar += s.besar; totalSekolahGabungan += subtotal;
+    tbodySekolah.innerHTML += `<tr>
+      <td data-label="Sekolah">${s.nama}</td>
+      <td data-label="Kecil" style="text-align:center;">${s.kecil}</td>
+      <td data-label="Besar" style="text-align:center;">${s.besar}</td>
+      <td data-label="Total" style="text-align:center; font-weight:800; color:#2563eb;">${subtotal}</td>
+    </tr>`;
+  });
+  document.getElementById('tfoot-penerima-sekolah').innerHTML =
+    `<tr class="tot-dist-col"><td data-label="Total Sekolah">TOTAL SELURUH SEKOLAH</td>
+      <td data-label="T. Kecil" style="text-align:center;">${totalSekolahKecil}</td>
+      <td data-label="T. Besar" style="text-align:center;">${totalSekolahBesar}</td>
+      <td data-label="Grand Total" style="text-align:center; color:#3b82f6 !important;">${totalSekolahGabungan} Pack</td>
+    </tr>`;
+
+  document.getElementById('target-kecil').innerText = reg.targetKecil;
+  document.getElementById('target-besar').innerText = reg.targetBesar;
+  document.getElementById('gambar-kecil').src = reg.fotoKecil;
+  document.getElementById('gambar-besar').src = reg.fotoBesar;
+
+  renderTabelMenu('tbody-kecil', reg.menuKecil);
+  renderTabelMenu('tbody-besar', reg.menuBesar);
+
+  const totalKecil = jumlahkanGizi(reg.menuKecil);
+  const totalBesar = jumlahkanGizi(reg.menuBesar);
+  isiRingkasanGizi('kcl', totalKecil);
+  isiRingkasanGizi('bsr', totalBesar);
+  isiProgress('kecil', totalKecil.energi, reg.targetKecil);
+  isiProgress('besar', totalBesar.energi, reg.targetBesar);
+
+  // --- Bagian Khusus 3B ---
+  const k3b = data.khusus3b;
+  let totalPaket3b = 0;
+  const tbody3b = document.getElementById('tbody-penerima-3b');
+  tbody3b.innerHTML = '';
+  k3b.titik.forEach(t => {
+    totalPaket3b += t.jumlah;
+    tbody3b.innerHTML += `<tr>
+      <td data-label="Titik/Posko" style="text-align:left;">${t.nama}</td>
+      <td data-label="Jumlah Paket" style="text-align:center; font-weight:800; color:#7c3aed;">${t.jumlah} Paket</td>
+    </tr>`;
+  });
+  document.getElementById('tfoot-penerima-3b').innerHTML =
+    `<tr class="tot-dist-col"><td data-label="Total 3B" style="text-align:left;">TOTAL SELURUH POSKO 3B</td>
+      <td data-label="Total Paket" style="text-align:center; font-size:1.1rem; color:#a855f7 !important;">${totalPaket3b} Paket</td>
+    </tr>`;
+
+  document.getElementById('target-3b').innerText = k3b.target3b;
+  document.getElementById('gambar-3b').src = k3b.foto3b;
+  renderTabelMenu('tbody-3b', k3b.menu3b);
+  const total3b = jumlahkanGizi(k3b.menu3b);
+  isiRingkasanGizi('3b', total3b);
+  isiProgress('3b', total3b.energi, k3b.target3b);
+
+  // --- Badge Total Porsi (header) ---
+  document.getElementById('label-total-porsi').innerText = totalSekolahGabungan + totalPaket3b;
+}
+
+// ========================= PEMILIH TANGGAL & INISIALISASI =========================
+const namaBulanPendek = ["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agt","Sep","Okt","Nov","Des"];
+const namaBulanPanjang = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+
+function formatTanggalTampil(tanggalIso, daftarBulan) {
+  const d = new Date(tanggalIso);
+  return isNaN(d) ? "--" : `${d.getDate()} ${daftarBulan[d.getMonth()]} ${d.getFullYear()}`;
+}
+
+const daftarTanggalUrut = Object.keys(dataSpjHarian).sort((a, b) => new Date(b) - new Date(a));
+const inputTanggal = document.getElementById('dateSelector');
+
+if (daftarTanggalUrut.length > 0) {
+  const tanggalTerbaru = daftarTanggalUrut[0];
+  inputTanggal.value = tanggalTerbaru;
+  document.getElementById('label-tgl-atas').innerText = formatTanggalTampil(tanggalTerbaru, namaBulanPendek);
+  tampilkanData(tanggalTerbaru);
+}
+
+inputTanggal.addEventListener('change', (e) => {
+  const tanggalDipilih = e.target.value;
+  document.getElementById('label-tgl-atas').innerText = formatTanggalTampil(tanggalDipilih, namaBulanPanjang);
+  tampilkanData(tanggalDipilih);
 });
-
-// Set tanggal hari ini sebagai default saat web dibuka
-const hariIni = new Date().toISOString().split('T')[0];
-inputTanggal.value = hariIni;
-labelTanggalAtas.innerText = hariIni;
-
-
-// ==========================================
-// 4. CONTOH CARA MENGISI DATA KE TABEL & GIZI
-// ==========================================
-// Ini contoh agar kamu tahu cara mengisi tabel dan nilai gizinya
-
-function contohIsiDataBoksKecil() {
-    // 1. Mengubah Highlight Gizi Boks Kecil
-    document.getElementById("hl-kcl-kb").innerText = "45g"; // Karbo
-    document.getElementById("hl-kcl-pr").innerText = "15g"; // Protein
-    document.getElementById("hl-kcl-lm").innerText = "10g"; // Lemak
-    document.getElementById("hl-kcl-sr").innerText = "5g";  // Serat
-    document.getElementById("hl-kcl-en").innerText = "400kkal"; // Energi Total
-    
-    // 2. Mengubah Target dan Persentase
-    document.getElementById("target-kecil").innerText = "400";
-    document.getElementById("perc-kecil").innerText = "100%";
-    document.getElementById("bar-kecil").style.width = "100%"; // Memanjangkan bar warna
-
-    // 3. Menambahkan baris ke dalam Tabel Menu Boks Kecil
-    const tbodyKecil = document.getElementById("tbody-kecil");
-    tbodyKecil.innerHTML = `
-        <tr>
-            <td data-label="Nama Lauk">Nasi Putih</td>
-            <td data-label="Takaran(g)">100</td>
-            <td data-label="Energi(kal)">130</td>
-            <td data-label="Prot(g)">3</td>
-            <td data-label="Lemak(g)">0.3</td>
-            <td data-label="Karbo(g)">28</td>
-            <td data-label="Serat(g)">0.4</td>
-        </tr>
-        <tr>
-            <td data-label="Nama Lauk">Ayam Goreng</td>
-            <td data-label="Takaran(g)">50</td>
-            <td data-label="Energi(kal)">120</td>
-            <td data-label="Prot(g)">10</td>
-            <td data-label="Lemak(g)">8</td>
-            <td data-label="Karbo(g)">0</td>
-            <td data-label="Serat(g)">0</td>
-        </tr>
-    `;
-    
-    // 4. Mengubah Angka Total Porsi (di bagian paling atas)
-    document.getElementById("label-total-porsi").innerText = "1.250";
-}
-
-// Jalankan fungsi contoh agar muncul di web
-contohIsiDataBoksKecil();
