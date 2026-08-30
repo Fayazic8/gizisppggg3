@@ -147,7 +147,44 @@ const dataSpjHarian = {
         { nama: "Apel Fuji",           berat: 75,  energi: 80.00,  prot: 0.49,  lemak: 0.05,  karb: 23.00, serat: 2.40 }
       ]
     }
+  },
+
+  "2026-08-31": {
+    reguler: {
+      sekolah: [
+        { nama: "TK Al Anwar", kecil: 45, besar: 0 },
+        { nama: "TK Annuqayah", kecil: 77, besar: 0 },
+        { nama: "MI 1 Annuqayah", kecil: 44, besar: 74 },
+        { nama: "MI 3 Annuqayah", kecil: 65, besar: 64 },
+        { nama: "MTs 1 Annuqayah", kecil: 0, besar: 838 },
+        { nama: "MTs 2 Annuqayah", kecil: 0, besar: 100 },
+        { nama: "MTs 3 Annuqayah", kecil: 0, besar: 97 },
+        { nama: "MA 1 Annuqayah", kecil: 0, besar: 430 },
+        { nama: "MA 2 Annuqayah", kecil: 0, besar: 98 },
+        { nama: "MA Tahfidh", kecil: 0, besar: 210 },
+        { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
+        { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
+      ],
+      targetKecil: 413, targetBesar: 708,
+      fotoKecil: "https://lh3.googleusercontent.com/d/1RYLICm5k1NaeiW396eZfW4I4a0TbYNzg",
+      fotoBesar: "https://lh3.googleusercontent.com/d/15Q-eCX-1mlhj1HfzqrpMfo_DHfN1KTAr",
+      menuKecil: [
+        { nama: "Nasi Putih",                berat: 125, energi: 225.0,  prot: 3.75,  lemak: 0.375, karb: 49.75, serat: 0.25 },
+        { nama: "Ayam Semur",                berat: 55,  energi: 181.85, prot: 8.475, lemak: 16.90,  karb: 0.45,  serat: 0.00 },
+        { nama: "Tempe Crispy Daun Jeruk",   berat: 40,  energi: 115.0,  prot: 4.40,  lemak: 7.03,   karb: 9.995, serat: 0.38 },
+        { nama: "Tumis Sawi Kembang Kol",    berat: 30,  energi: 49.5,   prot: 0.435, lemak: 5.05,   karb: 0.925, serat: 0.49 },
+        { nama: "Anggur Hijau",              berat: 50,  energi: 15.0,   prot: 0.25,  lemak: 0.10,   karb: 3.40,  serat: 0.60 }
+      ],
+      menuBesar: [
+        { nama: "Nasi Putih",                berat: 180, energi: 324.0,  prot: 6.75,  lemak: 0.54,   karb: 71.64, serat: 0.36 },
+        { nama: "Ayam Semur",                berat: 55,  energi: 181.85, prot: 8.475, lemak: 16.90,  karb: 0.45,  serat: 0.00 },
+        { nama: "Tempe Crispy Daun Jeruk",   berat: 40,  energi: 115.0,  prot: 4.40,  lemak: 7.03,   karb: 9.995, serat: 0.38 },
+        { nama: "Tumis Sawi Kembang Kol",    berat: 30,  energi: 49.5,   prot: 0.435, lemak: 5.05,   karb: 0.925, serat: 0.49 },
+        { nama: "Anggur Hijau",              berat: 50,  energi: 15.0,   prot: 0.25,  lemak: 0.10,   karb: 3.40,  serat: 0.60 }
+      ]
+    }
   }
+
 
 
   
