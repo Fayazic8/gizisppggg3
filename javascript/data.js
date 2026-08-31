@@ -213,7 +213,12 @@ const dataSpjHarian = {
         { nama: "Kelengkeng",              berat: 20,  energi: 30.0,   prot: 0.66,  lemak: 0.05,  karb: 7.57,  serat: 0.00 }
       ],
       menuBesar: [
-        // Rincian menu besar akan kita susun di langkah berikutnya
+        { nama: "Nasi Putih",              berat: 180, energi: 324.0,  prot: 6.75,  lemak: 0.54,  karb: 71.64, serat: 0.36 },
+        { nama: "Telur Dadar Saus Padang", berat: 68,  energi: 154.71, prot: 7.12,  lemak: 10.43, karb: 1.275, serat: 0.00 },
+        { nama: "Tahu Goreng",             berat: 60,  energi: 88.2,   prot: 5.99,  lemak: 5.11,  karb: 0.44,  serat: 0.04 },
+        { nama: "Sayur Bening",            berat: 27,  energi: 48.08,  prot: 0.186, lemak: 5.064, karb: 0.782, serat: 0.226 },
+        { nama: "Susu",                    berat: 125, energi: 76.25,  prot: 4.00,  lemak: 4.375, karb: 5.375, serat: 0.00 },
+        { nama: "Kelengkeng",              berat: 20,  energi: 30.0,   prot: 0.66,  lemak: 0.05,  karb: 7.57,  serat: 0.00 }
       ]
     }
   }
