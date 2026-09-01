@@ -221,7 +221,44 @@ const dataSpjHarian = {
         { nama: "Kelengkeng",              berat: 20,  energi: 30.0,   prot: 0.66,  lemak: 0.05,  karb: 7.57,  serat: 0.00 }
       ]
     }
+  },
+
+  "2026-09-02": {
+    reguler: {
+      sekolah: [
+        { nama: "TK Al Anwar", kecil: 45, besar: 0 },
+        { nama: "TK Annuqayah", kecil: 77, besar: 0 },
+        { nama: "MI 1 Annuqayah", kecil: 44, besar: 74 },
+        { nama: "MI 3 Annuqayah", kecil: 65, besar: 64 },
+        { nama: "MTs 1 Annuqayah", kecil: 0, besar: 838 },
+        { nama: "MTs 2 Annuqayah", kecil: 0, besar: 100 },
+        { nama: "MTs 3 Annuqayah", kecil: 0, besar: 97 },
+        { nama: "MA 1 Annuqayah", kecil: 0, besar: 430 },
+        { nama: "MA 2 Annuqayah", kecil: 0, besar: 98 },
+        { nama: "MA Tahfidh", kecil: 0, besar: 210 },
+        { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
+        { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
+      ],
+      targetKecil: 231, targetBesar: 2559,
+      fotoKecil: "https://lh3.googleusercontent.com/d/LINK_FOTO_KECIL",
+      fotoBesar: "https://lh3.googleusercontent.com/d/LINK_FOTO_BESAR",
+      menuKecil: [
+        { nama: "Nasi Putih",          berat: 125, energi: 225.0,  prot: 3.75,  lemak: 0.375, karb: 49.75, serat: 0.25 },
+        { nama: "Ayam Bumbu Merah",    berat: 50,  energi: 178.3,  prot: 8.19,  lemak: 16.25, karb: 0.0,   serat: 0.0 },
+        { nama: "Tempe Kecap",         berat: 35,  energi: 85.25,  prot: 3.785, lemak: 7.58,  karb: 2.725, serat: 0.35 },
+        { nama: "Timun, Selada",       berat: 23,  energi: 2.79,   prot: 0.171, lemak: 0.031, karb: 0.517, serat: 0.249 },
+        { nama: "Anggur Merah",        berat: 50,  energi: 15.0,   prot: 0.25,  lemak: 0.1,   karb: 3.4,   serat: 0.6 }
+      ],
+      menuBesar: [
+        { nama: "Nasi Putih",          berat: 180, energi: 324.0,  prot: 6.75,  lemak: 0.54,  karb: 71.64, serat: 0.36 },
+        { nama: "Ayam Bumbu Merah",    berat: 50,  energi: 178.3,  prot: 8.19,  lemak: 16.25, karb: 0.0,   serat: 0.0 },
+        { nama: "Tempe Kecap",         berat: 35,  energi: 85.25,  prot: 3.785, lemak: 7.58,  karb: 2.725, serat: 0.35 },
+        { nama: "Timun, Selada",       berat: 23,  energi: 2.79,   prot: 0.171, lemak: 0.031, karb: 0.517, serat: 0.249 },
+        { nama: "Anggur Merah",        berat: 50,  energi: 15.0,   prot: 0.25,  lemak: 0.1,   karb: 3.4,   serat: 0.6 }
+      ]
+    }
   }
+
 
 
   
