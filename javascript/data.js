@@ -257,8 +257,43 @@ const dataSpjHarian = {
         { nama: "Anggur Merah",        berat: 50,  energi: 15.0,   prot: 0.25,  lemak: 0.1,   karb: 3.4,   serat: 0.6 }
       ]
     }
-  }
+  },
 
+  "2026-09-03": {
+    reguler: {
+      sekolah: [
+        { nama: "TK Al Anwar", kecil: 45, besar: 0 },
+        { nama: "TK Annuqayah", kecil: 77, besar: 0 },
+        { nama: "MI 1 Annuqayah", kecil: 44, besar: 74 },
+        { nama: "MI 3 Annuqayah", kecil: 65, besar: 64 },
+        { nama: "MTs 1 Annuqayah", kecil: 0, besar: 838 },
+        { nama: "MTs 2 Annuqayah", kecil: 0, besar: 100 },
+        { nama: "MTs 3 Annuqayah", kecil: 0, besar: 97 },
+        { nama: "MA 1 Annuqayah", kecil: 0, besar: 430 },
+        { nama: "MA 2 Annuqayah", kecil: 0, besar: 98 },
+        { nama: "MA Tahfidh", kecil: 0, besar: 210 },
+        { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
+        { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
+      ],
+      targetKecil: 231, targetBesar: 2559,
+      fotoKecil: "https://lh3.googleusercontent.com/d/1izVFqsKHpT8yEoXbT7WnyZ60nLtMKMjL",
+      fotoBesar: "https://lh3.googleusercontent.com/d/14q1sfvrkGovyyZhxxx4qW9WAA8P5h4mT",
+      menuKecil: [
+        { nama: "Nasi Putih",            berat: 125, energi: 225.0,  prot: 3.75,  lemak: 0.375, karb: 49.75, serat: 0.25 },
+        { nama: "Daging Kentang Gongso", berat: 65,  energi: 137.45, prot: 7.815, lemak: 11.33,  karb: 5.85,  serat: 0.20 },
+        { nama: "Tahu Goreng",           berat: 60,  energi: 88.2,   prot: 5.99,  lemak: 5.11,   karb: 0.44,  serat: 0.04 },
+        { nama: "Acar Kuning",           berat: 30,  energi: 50.4,   prot: 0.17,  lemak: 5.11,   karb: 1.32,  serat: 0.18 },
+        { nama: "Jeruk Manis",           berat: 130, energi: 58.5,   prot: 1.17,  lemak: 0.26,   karb: 14.56, serat: 1.82 }
+      ],
+      menuBesar: [
+        { nama: "Nasi Putih",            berat: 180, energi: 324.0,  prot: 6.75,  lemak: 0.54,   karb: 71.64, serat: 0.36 },
+        { nama: "Daging Kentang Gongso", berat: 65,  energi: 137.45, prot: 7.815, lemak: 11.33,  karb: 5.85,  serat: 0.20 },
+        { nama: "Tahu Goreng",           berat: 60,  energi: 88.2,   prot: 5.99,  lemak: 5.11,   karb: 0.44,  serat: 0.04 },
+        { nama: "Acar Kuning",           berat: 30,  energi: 50.4,   prot: 0.17,  lemak: 5.11,   karb: 1.32,  serat: 0.18 },
+        { nama: "Jeruk Manis",           berat: 130, energi: 58.5,   prot: 1.17,  lemak: 0.26,   karb: 14.56, serat: 1.82 }
+      ]
+    }
+  }
 
 
   
