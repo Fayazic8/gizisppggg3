@@ -301,7 +301,7 @@ const dataSpjHarian = {
 
 const dataKosong = {
   reguler: { sekolah: [{ nama: "Kosong", kecil: 0, besar: 0 }], targetKecil: 0, targetBesar: 0,
-    fotoKecil: "https://lh3.googleusercontent.com/d/1FHP5j4gwqmDbF8DHjIfXj4PFn61t9Bq2",
+    fotoKecil: "https://lh3.googleusercontent.com/d/1izVFqsKHpT8yEoXbT7WnyZ60nLtMKMjL",
     fotoBesar: "https://lh3.googleusercontent.com/d/1FHP5j4gwqmDbF8DHjIfXj4PFn61t9Bq2",
     menuKecil: [{ nama: "-", berat: 0, energi: 0, prot: 0, lemak: 0, karb: 0, serat: 0 }],
     menuBesar: [{ nama: "-", berat: 0, energi: 0, prot: 0, lemak: 0, karb: 0, serat: 0 }] },
