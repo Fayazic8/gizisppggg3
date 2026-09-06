@@ -31,6 +31,8 @@ h1 { font-size: 1.15rem; font-weight: 900; color: #0f172a; margin-bottom: 2px; }
 .brosur-kecil { outline: 3px solid #f43f5e; outline-offset: -3px; }
 .brosur-besar { outline: 3px solid #0284c7; outline-offset: -3px; }
 .brosur-3b    { outline: 3px solid #8b5cf6; outline-offset: -3px; }
+.brosur-balita { outline: 3px solid #f97316; outline-offset: -3px; }
+.brosur-bumil  { outline: 3px solid #ec4899; outline-offset: -3px; }
 
 .stat-row { display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; font-weight: 800; color: #1e293b; padding: 8px 0; border-bottom: 1px dashed #cbd5e1; }
 .stat-row:last-child { border-bottom: none; font-size: 1.2rem; margin-top: 5px; }
@@ -38,6 +40,8 @@ h1 { font-size: 1.15rem; font-weight: 900; color: #0f172a; margin-bottom: 2px; }
 .bullet-merah::before { content: "●"; color: #f43f5e; margin-right: 10px; }
 .bullet-biru::before  { content: "●"; color: #0ea5e9; margin-right: 10px; }
 .bullet-ungu::before  { content: "●"; color: #8b5cf6; margin-right: 10px; }
+.bullet-oranye::before { content: "●"; color: #f97316; margin-right: 10px; }
+.bullet-pink::before   { content: "●"; color: #ec4899; margin-right: 10px; }
 .stat-val { color: #0f172a; text-align: right; }
 
 table { width: 100%; border-collapse: collapse; margin-top: 15px; }
