@@ -311,7 +311,7 @@ const dataSpjHarian = {
         { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
         { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
       ],
-      targetKecil: 231, targetBesar: 2559,
+      targetKecil: 413, targetBesar: 708, // DIPERBAIKI: sebelumnya 231/2559 (itu jumlah siswa, bukan target AKG kkal)
       fotoKecil: "GANTI_LINK_FOTO_KECIL_7SEP",
       fotoBesar: "GANTI_LINK_FOTO_BESAR_7SEP",
       menuKecil: [
@@ -339,7 +339,7 @@ const dataSpjHarian = {
         { nama: "Gulteng Selatan", balita: 18, bumilBusui: 12 }
       ],
       balita: {
-        target: 178,
+        target: 405, // DIPERBAIKI: sebelumnya 178 (itu jumlah sasaran balita, bukan target AKG kkal)
         foto: "GANTI_LINK_FOTO_BALITA_7SEP",
         menu: [
           { nama: "Nasi Putih",           berat: 100,  energi: 180.0,  prot: 3.0,   lemak: 0.3,    karb: 39.8,  serat: 0.2 },
@@ -349,7 +349,7 @@ const dataSpjHarian = {
         ]
       },
       bumilBusui: {
-        target: 134,
+        target: 833, // DIPERBAIKI: sebelumnya 134 (itu jumlah sasaran bumil/busui, bukan target AKG kkal)
         foto: "GANTI_LINK_FOTO_BUMIL_7SEP",
         menu: [
           { nama: "Nasi Putih",           berat: 250, energi: 450.0,  prot: 7.5,   lemak: 0.75,  karb: 99.5,  serat: 0.5 },
@@ -376,7 +376,17 @@ const dataKosong = {
     fotoBesar: "https://lh3.googleusercontent.com/d/1FHP5j4gwqmDbF8DHjIfXj4PFn61t9Bq2",
     menuKecil: [{ nama: "-", berat: 0, energi: 0, prot: 0, lemak: 0, karb: 0, serat: 0 }],
     menuBesar: [{ nama: "-", berat: 0, energi: 0, prot: 0, lemak: 0, karb: 0, serat: 0 }] },
-  khusus3b: { titik: [{ nama: "-", jumlah: 0 }], target3b: 0,
-    foto3b: "https://lh3.googleusercontent.com/d/1FHP5j4gwqmDbF8DHjIfXj4PFn61t9Bq2",
-    menu3b: [{ nama: "-", berat: 0, energi: 0, prot: 0, lemak: 0, karb: 0, serat: 0 }] }
+  khusus3b: {
+    titik: [{ nama: "-", balita: 0, bumilBusui: 0 }],
+    balita: {
+      target: 0,
+      foto: "https://lh3.googleusercontent.com/d/1FHP5j4gwqmDbF8DHjIfXj4PFn61t9Bq2",
+      menu: [{ nama: "-", berat: 0, energi: 0, prot: 0, lemak: 0, karb: 0, serat: 0 }]
+    },
+    bumilBusui: {
+      target: 0,
+      foto: "https://lh3.googleusercontent.com/d/1FHP5j4gwqmDbF8DHjIfXj4PFn61t9Bq2",
+      menu: [{ nama: "-", berat: 0, energi: 0, prot: 0, lemak: 0, karb: 0, serat: 0 }]
+    }
+  }
 };
