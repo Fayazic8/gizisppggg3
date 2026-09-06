@@ -56,6 +56,20 @@ function isiProgress(prefix, energiTerkumpul, target) {
   document.getElementById('bar-' + prefix).style.width = Math.min(persen, 100) + "%";
 }
 
+// Render 1 "boks menu" gizi lengkap (dipakai berulang untuk kecil/besar/balita/bumil)
+// prefix -> dipakai untuk semua id terkait (tot-PREFIX-*, hl-PREFIX-*, perc-PREFIX, bar-PREFIX)
+// idTbody -> id tbody tabel resep
+// idGambar -> id elemen <img>
+// idTarget -> id elemen span target AKG
+function renderBoksMenu(prefix, idTbody, idGambar, idTarget, dataMenuObj) {
+  document.getElementById(idTarget).innerText = dataMenuObj.target;
+  document.getElementById(idGambar).src = dataMenuObj.foto;
+  renderTabelMenu(idTbody, dataMenuObj.menu);
+  const total = jumlahkanGizi(dataMenuObj.menu);
+  isiRingkasanGizi(prefix, total);
+  isiProgress(prefix, total.energi, dataMenuObj.target);
+}
+
 // ========================= FUNGSI UTAMA: TAMPILKAN DATA 1 HARI =========================
 function tampilkanData(tanggal) {
   const data = dataSpjHarian[tanggal] || dataKosong;
@@ -82,23 +96,14 @@ function tampilkanData(tanggal) {
       <td data-label="Grand Total" style="text-align:center; color:#3b82f6 !important;">${totalSekolahGabungan} Pack</td>
     </tr>`;
 
-  document.getElementById('target-kecil').innerText = reg.targetKecil;
-  document.getElementById('target-besar').innerText = reg.targetBesar;
-  document.getElementById('gambar-kecil').src = reg.fotoKecil;
-  document.getElementById('gambar-besar').src = reg.fotoBesar;
+  renderBoksMenu('kcl', 'tbody-kecil', 'gambar-kecil', 'target-kecil',
+    { target: reg.targetKecil, foto: reg.fotoKecil, menu: reg.menuKecil });
+  renderBoksMenu('bsr', 'tbody-besar', 'gambar-besar', 'target-besar',
+    { target: reg.targetBesar, foto: reg.fotoBesar, menu: reg.menuBesar });
 
-  renderTabelMenu('tbody-kecil', reg.menuKecil);
-  renderTabelMenu('tbody-besar', reg.menuBesar);
+  // --- Bagian Khusus 3B (Posko) ---
+  const k3b = data.khusus3b || dataKosong.khusus3b; // cegah error jika data 3B tanggal ini belum diisi
 
-  const totalKecil = jumlahkanGizi(reg.menuKecil);
-  const totalBesar = jumlahkanGizi(reg.menuBesar);
-  isiRingkasanGizi('kcl', totalKecil);
-  isiRingkasanGizi('bsr', totalBesar);
-  isiProgress('kecil', totalKecil.energi, reg.targetKecil);
-  isiProgress('besar', totalBesar.energi, reg.targetBesar);
-
-  // --- Bagian Khusus 3B ---
-  const k3b = data.khusus3b || dataKosong.khusus3b; // PERBAIKAN: cegah error jika data 3B tanggal ini belum diisi
   let totalPaket3b = 0;
   const tbody3b = document.getElementById('tbody-penerima-3b');
   tbody3b.innerHTML = '';
@@ -114,12 +119,11 @@ function tampilkanData(tanggal) {
       <td data-label="Total Paket" style="text-align:center; font-size:1.1rem; color:#a855f7 !important;">${totalPaket3b} Paket</td>
     </tr>`;
 
-  document.getElementById('target-3b').innerText = k3b.target3b;
-  document.getElementById('gambar-3b').src = k3b.foto3b;
-  renderTabelMenu('tbody-3b', k3b.menu3b);
-  const total3b = jumlahkanGizi(k3b.menu3b);
-  isiRingkasanGizi('3b', total3b);
-  isiProgress('3b', total3b.energi, k3b.target3b);
+  // --- Menu Balita (terpisah, AKG sendiri) ---
+  renderBoksMenu('balita', 'tbody-balita', 'gambar-balita', 'target-balita', k3b.balita);
+
+  // --- Menu Bumil/Busui (terpisah, AKG sendiri) ---
+  renderBoksMenu('bumil', 'tbody-bumil', 'gambar-bumil', 'target-bumil', k3b.bumilBusui);
 
   // --- Badge Total Porsi (header) ---
   document.getElementById('label-total-porsi').innerText = totalSekolahGabungan + totalPaket3b;
