@@ -294,7 +294,7 @@ const dataSpjHarian = {
       ]
     },
     khusus3b: {
-      posyandu: [
+      titik: [
         { nama: "Congapan", porsi: 43 },
         { nama: "Patapan", porsi: 64 },
         { nama: "Minomih", porsi: 41 },
