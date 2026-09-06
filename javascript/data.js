@@ -312,8 +312,8 @@ const dataSpjHarian = {
         { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
       ],
       targetKecil: 413, targetBesar: 708,
-      fotoKecil: "LINK_FOTO_KECIL_7SEP",
-      fotoBesar: "LINK_FOTO_BESAR_7SEP",
+      fotoKecil: "https://lh3.googleusercontent.com/d/1W2CkFvWn_oKmXY2s-QJvILIR76N98202",
+      fotoBesar: "https://lh3.googleusercontent.com/d/1o4TVNTRJ6Sm1tQqxRN0atUughpnpIx0d",
       menuKecil: [
         { nama: "Nasi Putih",        berat: 125, energi: 225.0,  prot: 3.75,  lemak: 0.375, karb: 49.75, serat: 0.25 },
         { nama: "Ayam Kungpao",      berat: 58,  energi: 198.77, prot: 9.24,  lemak: 18.232,karb: 1.215, serat: 0.084 },
@@ -340,7 +340,7 @@ const dataSpjHarian = {
         { nama: "Guluk-Guluk Tengah Selatan", jumlah: 30 }
       ],
       target3b: 312,
-      foto3b: "LINK_FOTO_3B_7SEP",
+      foto3b: "https://lh3.googleusercontent.com/d/",
       menu3b: [
         { nama: "Nasi Putih",           berat: 100,  energi: 180.0,  prot: 3.0,   lemak: 0.3,    karb: 39.8,  serat: 0.2 },
         { nama: "Ayam Garlic Butter",   berat: 50,   energi: 137.65, prot: 8.475, lemak: 11.9,   karb: 0.45,  serat: 0.0 },
