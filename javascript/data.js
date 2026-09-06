@@ -313,8 +313,61 @@ const dataSpjHarian = {
         { nama: "Jeruk Manis", berat: 130, energi: 58.5,   prot: 1.17, lemak: 0.26, karb: 14.56, serat: 1.82 }
       ]
     }
-  }
+  },
 
+  "2026-09-07": {
+    reguler: {
+      sekolah: [
+        { nama: "TK Al Anwar", kecil: 45, besar: 0 },
+        { nama: "TK Annuqayah", kecil: 77, besar: 0 },
+        { nama: "MI 1 Annuqayah", kecil: 44, besar: 74 },
+        { nama: "MI 3 Annuqayah", kecil: 65, besar: 64 },
+        { nama: "MTs 1 Annuqayah", kecil: 0, besar: 838 },
+        { nama: "MTs 2 Annuqayah", kecil: 0, besar: 100 },
+        { nama: "MTs 3 Annuqayah", kecil: 0, besar: 97 },
+        { nama: "MA 1 Annuqayah", kecil: 0, besar: 430 },
+        { nama: "MA 2 Annuqayah", kecil: 0, besar: 98 },
+        { nama: "MA Tahfidh", kecil: 0, besar: 210 },
+        { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
+        { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
+      ],
+      targetKecil: 231, targetBesar: 2559,
+      fotoKecil: "LINK_FOTO_KECIL_7SEP",
+      fotoBesar: "LINK_FOTO_BESAR_7SEP",
+      menuKecil: [
+        { nama: "Nasi Putih",        berat: 125, energi: 225.0,  prot: 3.75,  lemak: 0.375, karb: 49.75, serat: 0.25 },
+        { nama: "Ayam Kungpao",      berat: 58,  energi: 198.77, prot: 9.24,  lemak: 18.232,karb: 1.215, serat: 0.084 },
+        { nama: "Tahu Goreng",       berat: 60,  energi: 88.2,   prot: 5.99,  lemak: 5.11,  karb: 0.44,  serat: 0.04 },
+        { nama: "Tumis Wortel Sawi", berat: 35,  energi: 50.95,  prot: 0.30,  lemak: 5.105, karb: 1.435, serat: 0.27 },
+        { nama: "Jeruk Manis",       berat: 130, energi: 58.5,   prot: 1.17,  lemak: 0.26,  karb: 14.56, serat: 1.82 }
+      ],
+      menuBesar: [
+        { nama: "Nasi Putih",        berat: 180, energi: 324.0,  prot: 6.75,  lemak: 0.54,  karb: 71.64, serat: 0.36 },
+        { nama: "Ayam Kungpao",      berat: 58,  energi: 198.77, prot: 9.24,  lemak: 18.232,karb: 1.215, serat: 0.084 },
+        { nama: "Tahu Goreng",       berat: 60,  energi: 88.2,   prot: 5.99,  lemak: 5.11,  karb: 0.44,  serat: 0.04 },
+        { nama: "Tumis Wortel Sawi", berat: 35,  energi: 50.95,  prot: 0.30,  lemak: 5.105, karb: 1.435, serat: 0.27 },
+        { nama: "Jeruk Manis",       berat: 130, energi: 58.5,   prot: 1.17,  lemak: 0.26,  karb: 14.56, serat: 1.82 }
+      ]
+    },
+    khusus3b: {
+      titik: [
+        { nama: "Congapan",               jumlah: 43 },
+        { nama: "Patapan",                jumlah: 66 },
+        { nama: "Minomih",                jumlah: 44 },
+        { nama: "Gultim Selatan & Utara", jumlah: 62 },
+        { nama: "Gulteng Utara",          jumlah: 67 },
+        { nama: "Gulteng Selatan",        jumlah: 30 }
+      ],
+      target3b: 312,
+      foto3b: "LINK_FOTO_3B_7SEP",
+      menu3b: [
+        { nama: "Nasi Putih",           berat: 100,  energi: 180.0,  prot: 3.0,   lemak: 0.3,    karb: 39.8,  serat: 0.2 },
+        { nama: "Ayam Garlic Butter",   berat: 50,   energi: 137.65, prot: 8.475, lemak: 11.9,   karb: 0.45,  serat: 0.0 },
+        { nama: "Sup Tahu Wortel Sawi", berat: 62.5, energi: 149.32, prot: 6.755, lemak: 11.442, karb: 1.205, serat: 0.124 },
+        { nama: "Jeruk Manis",          berat: 130,  energi: 5.4,    prot: 0.15,  lemak: 0.09,   karb: 1.18,  serat: 0.15 }
+      ]
+    }
+  }
 
   
 };
