@@ -104,24 +104,19 @@ function tampilkanData(tanggal) {
   // --- Bagian Khusus 3B (Posko) ---
   const k3b = data.khusus3b || dataKosong.khusus3b; // cegah error jika data 3B tanggal ini belum diisi
 
-  let totalBalita3b = 0, totalBumil3b = 0, totalPaket3b = 0;
+  let totalPaket3b = 0;
   const tbody3b = document.getElementById('tbody-penerima-3b');
   tbody3b.innerHTML = '';
   k3b.titik.forEach(t => {
-    const subtotal = t.balita + t.bumilBusui;
-    totalBalita3b += t.balita; totalBumil3b += t.bumilBusui; totalPaket3b += subtotal;
+    totalPaket3b += t.jumlah;
     tbody3b.innerHTML += `<tr>
       <td data-label="Titik/Posko" style="text-align:left;">${t.nama}</td>
-      <td data-label="Balita" style="text-align:center;">${t.balita}</td>
-      <td data-label="Bumil/Busui" style="text-align:center;">${t.bumilBusui}</td>
-      <td data-label="Total" style="text-align:center; font-weight:800; color:#7c3aed;">${subtotal} Paket</td>
+      <td data-label="Jumlah Paket" style="text-align:center; font-weight:800; color:#7c3aed;">${t.jumlah} Paket</td>
     </tr>`;
   });
   document.getElementById('tfoot-penerima-3b').innerHTML =
     `<tr class="tot-dist-col"><td data-label="Total 3B" style="text-align:left;">TOTAL SELURUH POSKO 3B</td>
-      <td data-label="T. Balita" style="text-align:center;">${totalBalita3b}</td>
-      <td data-label="T. Bumil/Busui" style="text-align:center;">${totalBumil3b}</td>
-      <td data-label="Grand Total" style="text-align:center; font-size:1.1rem; color:#a855f7 !important;">${totalPaket3b} Paket</td>
+      <td data-label="Total Paket" style="text-align:center; font-size:1.1rem; color:#a855f7 !important;">${totalPaket3b} Paket</td>
     </tr>`;
 
   // --- Menu Balita (terpisah, AKG sendiri) ---
