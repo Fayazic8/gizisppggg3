@@ -331,12 +331,12 @@ const dataSpjHarian = {
     },
     khusus3b: {
       titik: [
-        { nama: "Congapan",               balita: 28, bumilBusui: 15 },
-        { nama: "Patapan",                balita: 39, bumilBusui: 27 },
-        { nama: "Minomih",                balita: 16, bumilBusui: 28 },
+        { nama: "Congapan", balita: 28, bumilBusui: 15 },
+        { nama: "Patapan", balita: 39, bumilBusui: 27 },
+        { nama: "Minomih", balita: 16, bumilBusui: 28 },
         { nama: "Gultim Selatan & Utara", balita: 38, bumilBusui: 24 },
-        { nama: "Gulteng Utara",          balita: 39, bumilBusui: 28 },
-        { nama: "Gulteng Selatan",        balita: 18, bumilBusui: 12 }
+        { nama: "Gulteng Utara", balita: 39, bumilBusui: 28 },
+        { nama: "Gulteng Selatan", balita: 18, bumilBusui: 12 }
       ],
       balita: {
         target: 178,
