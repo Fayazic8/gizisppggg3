@@ -293,7 +293,7 @@ const dataSpjHarian = {
         { nama: "Jeruk Manis",           berat: 130, energi: 58.5,   prot: 1.17,  lemak: 0.26,   karb: 14.56, serat: 1.82 }
       ]
     },
-    khusus3b: {
+    b3: {
       posyandu: [
         { nama: "Congapan", porsi: 43 },
         { nama: "Patapan", porsi: 64 },
