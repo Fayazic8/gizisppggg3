@@ -295,17 +295,17 @@ const dataSpjHarian = {
     },
     khusus3b: {
       titik: [
-        { nama: "Congapan", porsi: 43 },
-        { nama: "Patapan", porsi: 64 },
-        { nama: "Minomih", porsi: 41 },
-        { nama: "Guluk-Guluk Timur Selatan", porsi: 43 },
-        { nama: "Guluk-Guluk Timur Utara", porsi: 19 },
-        { nama: "Guluk-Guluk Tengah Utara", porsi: 65 },
-        { nama: "Guluk-Guluk Tengah Selatan", porsi: 30 }
+        { nama: "Congapan", jumlah: 43 },
+        { nama: "Patapan", jumlah: 64 },
+        { nama: "Minomih", jumlah: 41 },
+        { nama: "Guluk-Guluk Timur Selatan", jumlah: 43 },
+        { nama: "Guluk-Guluk Timur Utara", jumlah: 19 },
+        { nama: "Guluk-Guluk Tengah Utara", jumlah: 65 },
+        { nama: "Guluk-Guluk Tengah Selatan", jumlah: 30 }
       ],
-      targetB3: 305,
-      fotoB3: "https://lh3.googleusercontent.com/d/LINK_FOTO_B3",
-      menuB3: [
+      target3b: 305,
+      foto3b: "https://lh3.googleusercontent.com/d/LINK_FOTO_B3", // ganti dengan link asli
+      menu3b: [
         { nama: "Nasi Putih", berat: 125, energi: 225.0,  prot: 3.75,  lemak: 0.375, karb: 49.75, serat: 0.25 },
         { nama: "Daging Kentang Gongso", berat: 65,  energi: 137.45, prot: 7.815, lemak: 11.33,  karb: 5.85,  serat: 0.20 },
         { nama: "Tahu Goreng", berat: 60,  energi: 88.2,   prot: 5.99,  lemak: 5.11, karb: 0.44, serat: 0.04 },
