@@ -129,7 +129,7 @@
     </div>
   </div>
 
-  <!-- =====================  JALUR 2: ZONA SPESIAL KHUSUS (3B: BALITA & BUMIL/BUSUI)  ===================== -->
+  <!-- =====================  JALUR 2: ZONA SPESIAL KHUSUS (3B)  ===================== -->
   <div class="section-header bg-3b">🏥 Wilayah Distribusi : Khusus (Menu 3B)</div>
 
   <div class="card">
@@ -149,69 +149,35 @@
     </div>
   </div>
 
-  <!-- ---------- Sub-Boks: Menu Khusus Balita (AKG sendiri, target lebih rendah) ---------- -->
   <div class="card">
-    <h3 style="font-size: 1.5rem; font-weight: 900; color: #1e293b; margin-bottom: 5px;">Boks Menu Khusus : Balita</h3>
+    <h3 style="font-size: 1.5rem; font-weight: 900; color: #1e293b; margin-bottom: 5px;">Boks Menu Khusus : Varian 3B</h3>
     <div class="visual-container">
-      <div class="img-wrapper"><img id="gambar-balita" src="" alt="Foto menu balita (cek koneksi internet)"></div>
-      <div class="brosur-highlight" style="border-left: 5px solid #f97316;">
-        <h3 style="color:#f97316; margin-bottom:20px; font-size:1.3rem; font-weight:900; border-bottom:3px solid #f97316; padding-bottom:5px; display:inline-block;">Rincian Nilai Menu Balita</h3>
-        <div class="stat-row"><span class="bullet-box" style="background-color:#f97316;">Karbohidrat</span><span class="stat-val" id="hl-balita-kb">0g</span></div>
-        <div class="stat-row"><span class="bullet-box" style="background-color:#f97316;">Serat</span><span class="stat-val" id="hl-balita-sr">0g</span></div>
-        <div class="stat-row"><span class="bullet-box" style="background-color:#f97316;">Protein</span><span class="stat-val" id="hl-balita-pr">0g</span></div>
-        <div class="stat-row"><span class="bullet-box" style="background-color:#f97316;">Lemak</span><span class="stat-val" id="hl-balita-lm">0g</span></div>
-        <div class="stat-row" style="color:#c2410c; margin-top:8px;"><span class="bullet-box" style="background-color:#f97316;">Total Energi</span><span class="stat-val" id="hl-balita-en" style="color:#c2410c; font-weight:900;">0kkal</span></div>
+      <div class="img-wrapper"><img id="gambar-3b" src="" alt="Foto menu 3B (cek koneksi internet)"></div>
+      <div class="brosur-highlight brosur-3b">
+        <h3 style="color:#8b5cf6; margin-bottom:20px; font-size:1.3rem; font-weight:900; border-bottom:3px solid #8b5cf6; padding-bottom:5px; display:inline-block;">Rincian Nilai Menu 3B</h3>
+        <div class="stat-row"><span class="bullet-box bullet-ungu">Karbohidrat</span><span class="stat-val" id="hl-3b-kb">0g</span></div>
+        <div class="stat-row"><span class="bullet-box bullet-ungu">Serat</span><span class="stat-val" id="hl-3b-sr">0g</span></div>
+        <div class="stat-row"><span class="bullet-box bullet-ungu">Protein</span><span class="stat-val" id="hl-3b-pr">0g</span></div>
+        <div class="stat-row"><span class="bullet-box bullet-ungu">Lemak</span><span class="stat-val" id="hl-3b-lm">0g</span></div>
+        <div class="stat-row" style="color:#6d28d9; margin-top:8px;"><span class="bullet-box bullet-ungu">Total Energi</span><span class="stat-val" id="hl-3b-en" style="color:#6d28d9; font-weight:900;">0kkal</span></div>
       </div>
     </div>
-    <p style="font-size:0.72rem; color:#64748b; font-weight:800; text-transform:uppercase;">Komposisi Khusus Balita — Target AKG: <span id="target-balita" style="color:#c2410c; background:#fff7ed; font-weight:900; padding:2px 5px; border-radius:5px;">0</span> Kkal</p>
+    <p style="font-size:0.72rem; color:#64748b; font-weight:800; text-transform:uppercase;">Komposisi Varian Khusus — Target: <span id="target-3b" style="color:#7c3aed; background:#f3e8ff; font-weight:900; padding:2px 5px; border-radius:5px;">0</span> Kkal</p>
     <table>
-      <thead><tr><th style="text-align:left;">Nama Lauk/Masakan</th><th>Takaran(g)</th><th>Energi(kal)</th><th>Prot(g)</th><th>Lemak(g)</th><th>Karbo(g)</th><th>Serat(g)</th></tr></thead>
-      <tbody id="tbody-balita"></tbody>
+      <thead><tr><th style="text-align:left;">Nama Lauk/Masakan Tipe-3B</th><th>Takaran(g)</th><th>Energi(kal)</th><th>Prot(g)</th><th>Lemak(g)</th><th>Karbo(g)</th><th>Serat(g)</th></tr></thead>
+      <tbody id="tbody-3b"></tbody>
       <tfoot>
         <tr class="total-row">
-          <td data-label="Resume Total (Balita)">GIZI TERKUMPUL :</td><td data-label="Berat">-</td>
-          <td data-label="Energi" id="tot-balita-en" style="color:#c2410c;">0</td>
-          <td data-label="Protein" id="tot-balita-pr">0</td><td data-label="Lemak" id="tot-balita-lm">0</td>
-          <td data-label="Karbo" id="tot-balita-kb">0</td><td data-label="Serat" id="tot-balita-sr" style="color:#059669;">0</td>
+          <td data-label="Resume Total (3B)">GIZI TERKUMPUL :</td><td data-label="Berat">-</td>
+          <td data-label="Energi" id="tot-3b-en" style="color:#6d28d9;">0</td>
+          <td data-label="Protein" id="tot-3b-pr">0</td><td data-label="Lemak" id="tot-3b-lm">0</td>
+          <td data-label="Karbo" id="tot-3b-kb">0</td><td data-label="Serat" id="tot-3b-sr" style="color:#059669;">0</td>
         </tr>
       </tfoot>
     </table>
     <div class="prog-container">
-      <div class="prog-text"><span style="font-size:0.6rem; color:#94a3b8; font-weight:800; text-transform:uppercase;">Pemenuhan:</span><h4 id="perc-balita" style="color:#c2410c;">0%</h4></div>
-      <div class="prog-track"><div class="prog-fill" id="bar-balita" style="background-color:#f97316; width:0%;"></div></div>
-    </div>
-  </div>
-
-  <!-- ---------- Sub-Boks: Menu Khusus Bumil/Busui (AKG sendiri, target lebih tinggi) ---------- -->
-  <div class="card">
-    <h3 style="font-size: 1.5rem; font-weight: 900; color: #1e293b; margin-bottom: 5px;">Boks Menu Khusus : Bumil/Busui</h3>
-    <div class="visual-container">
-      <div class="img-wrapper"><img id="gambar-bumil" src="" alt="Foto menu bumil/busui (cek koneksi internet)"></div>
-      <div class="brosur-highlight" style="border-left: 5px solid #ec4899;">
-        <h3 style="color:#ec4899; margin-bottom:20px; font-size:1.3rem; font-weight:900; border-bottom:3px solid #ec4899; padding-bottom:5px; display:inline-block;">Rincian Nilai Menu Bumil/Busui</h3>
-        <div class="stat-row"><span class="bullet-box" style="background-color:#ec4899;">Karbohidrat</span><span class="stat-val" id="hl-bumil-kb">0g</span></div>
-        <div class="stat-row"><span class="bullet-box" style="background-color:#ec4899;">Serat</span><span class="stat-val" id="hl-bumil-sr">0g</span></div>
-        <div class="stat-row"><span class="bullet-box" style="background-color:#ec4899;">Protein</span><span class="stat-val" id="hl-bumil-pr">0g</span></div>
-        <div class="stat-row"><span class="bullet-box" style="background-color:#ec4899;">Lemak</span><span class="stat-val" id="hl-bumil-lm">0g</span></div>
-        <div class="stat-row" style="color:#be185d; margin-top:8px;"><span class="bullet-box" style="background-color:#ec4899;">Total Energi</span><span class="stat-val" id="hl-bumil-en" style="color:#be185d; font-weight:900;">0kkal</span></div>
-      </div>
-    </div>
-    <p style="font-size:0.72rem; color:#64748b; font-weight:800; text-transform:uppercase;">Komposisi Khusus Bumil/Busui — Target AKG: <span id="target-bumil" style="color:#be185d; background:#fdf2f8; font-weight:900; padding:2px 5px; border-radius:5px;">0</span> Kkal</p>
-    <table>
-      <thead><tr><th style="text-align:left;">Nama Lauk/Masakan</th><th>Takaran(g)</th><th>Energi(kal)</th><th>Prot(g)</th><th>Lemak(g)</th><th>Karbo(g)</th><th>Serat(g)</th></tr></thead>
-      <tbody id="tbody-bumil"></tbody>
-      <tfoot>
-        <tr class="total-row">
-          <td data-label="Resume Total (Bumil/Busui)">GIZI TERKUMPUL :</td><td data-label="Berat">-</td>
-          <td data-label="Energi" id="tot-bumil-en" style="color:#be185d;">0</td>
-          <td data-label="Protein" id="tot-bumil-pr">0</td><td data-label="Lemak" id="tot-bumil-lm">0</td>
-          <td data-label="Karbo" id="tot-bumil-kb">0</td><td data-label="Serat" id="tot-bumil-sr" style="color:#059669;">0</td>
-        </tr>
-      </tfoot>
-    </table>
-    <div class="prog-container">
-      <div class="prog-text"><span style="font-size:0.6rem; color:#94a3b8; font-weight:800; text-transform:uppercase;">Pemenuhan:</span><h4 id="perc-bumil" style="color:#be185d;">0%</h4></div>
-      <div class="prog-track"><div class="prog-fill" id="bar-bumil" style="background-color:#ec4899; width:0%;"></div></div>
+      <div class="prog-text"><span style="font-size:0.6rem; color:#94a3b8; font-weight:800; text-transform:uppercase;">Pemenuhan:</span><h4 id="perc-3b" style="color:#7c3aed;">0%</h4></div>
+      <div class="prog-track"><div class="prog-fill" id="bar-3b" style="background-color:#8b5cf6; width:0%;"></div></div>
     </div>
   </div>
 
