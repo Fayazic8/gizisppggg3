@@ -1,155 +1,392 @@
-// ========================= JAM & TAHUN FOOTER =========================
-document.getElementById('tahun-aktif').innerText = new Date().getFullYear();
-function perbaruiJam(){
-  document.getElementById('jam-realtime').innerText = new Date().toLocaleTimeString('id-ID');
-}
-perbaruiJam();
-setInterval(perbaruiJam, 1000);
+// ========================= DATABASE HARIAN SPJ MBG =========================
+// Tambahkan/ubah data per tanggal di sini. Format tanggal: "YYYY-MM-DD"
+const dataSpjHarian = {
+  "2026-08-15": {
+    reguler: {
+      sekolah: [
+        { nama: "TK Al Anwar", kecil: 45, besar: 0 },
+        { nama: "TK Annuqayah", kecil: 77,  besar: 0 },
+        { nama: "MI 1 Annuqayah", kecil: 44,  besar: 74 },
+        { nama: "MI 3 Annuqayah", kecil: 65, besar: 64 },
+        { nama: "MTs 1 Annuqayah", kecil: 0, besar: 838 },
+        { nama: "MTs 2 Annuqayah", kecil: 0, besar: 100 },
+        { nama: "MTs 3 Annuqayah", kecil: 0, besar: 97 },
+        { nama: "MA 1 Annuqayah", kecil: 0, besar: 430 },
+        { nama: "MA 2 Annuqayah", kecil: 0, besar: 98 },
+        { nama: "MA Tahfidh", kecil: 0, besar: 210 },
+        { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
+        { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
+      ],
+      targetKecil: 413, targetBesar: 708,
+      fotoKecil: "https://lh3.googleusercontent.com/d/1Ap0owESD7pJhIigLEF2ACE-s04poMZI3",
+      fotoBesar: "https://lh3.googleusercontent.com/d/1z22G6LHGG2VTb2OPB9l92c6cT-DsPY3H",
+      menuKecil: [
+        { nama: "Nasi Putih",         berat: 125, energi: 225.0, prot: 3.75, lemak: 0.38,  karb: 49.75, serat: 0.25 },
+        { nama: "Ayam Palekko",       berat: 50,  energi: 178.3, prot: 8.19, lemak: 16.25, karb: 0.00,  serat: 0.00 },
+        { nama: "Tempe Goreng",       berat: 30,  energi: 81.7,  prot: 3.50, lemak: 6.93,  karb: 2.27,  serat: 0.35 },
+        { nama: "Mix Sayur Asem",     berat: 40,  energi: 44.0,  prot: 1.42, lemak: 0.77,  karb: 8.36,  serat: 1.23 },
+        { nama: "Anggur Merah", berat: 50, energi: 15.0, prot: 0.25, lemak: 0.10,  karb: 3.40,  serat: 0.60 }
+      ],
+      menuBesar: [
+        { nama: "Nasi Putih XXL",     berat: 180, energi: 324.0, prot: 6.75, lemak: 0.54,  karb: 71.64, serat: 0.36 },
+        { nama: "Ayam Palekko",       berat: 50,  energi: 178.3, prot: 8.19, lemak: 16.25, karb: 0.00,  serat: 0.00 },
+        { nama: "Tempe Bumbu Goreng", berat: 30,  energi: 81.7,  prot: 3.50, lemak: 6.93,  karb: 2.27,  serat: 0.35 },
+        { nama: "Mix Sayur Asem",     berat: 40,  energi: 44.0,  prot: 1.42, lemak: 0.77,  karb: 8.36,  serat: 1.23 },
+        { nama: "Pencuci Mulut Anggur", berat: 50, energi: 15.0, prot: 0.25, lemak: 0.10,  karb: 3.40,  serat: 0.60 }
+      ]
+    },
+  },
 
-// ========================= TOGGLE TABEL DAFTAR PENERIMA =========================
-function toggleTabel(kunci){
-  document.getElementById('area-tabel-' + kunci).classList.toggle('tabel-area-hilang');
-  document.getElementById('panah-' + kunci).classList.toggle('lipat-aktif');
-}
+  "2026-08-18": {
+    reguler: {
+      sekolah: [
+        { nama: "TK Al Anwar", kecil: 45, besar: 0 },
+        { nama: "TK Annuqayah", kecil: 77, besar: 0 },
+        { nama: "MI 1 Annuqayah", kecil: 44, besar: 74 },
+        { nama: "MI 3 Annuqayah", kecil: 65, besar: 64 },
+        { nama: "MTs 1 Annuqayah", kecil: 0, besar: 838 },
+        { nama: "MTs 2 Annuqayah", kecil: 0, besar: 100 },
+        { nama: "MTs 3 Annuqayah", kecil: 0, besar: 97 },
+        { nama: "MA 1 Annuqayah", kecil: 0, besar: 430 },
+        { nama: "MA 2 Annuqayah", kecil: 0, besar: 98 },
+        { nama: "MA Tahfidh", kecil: 0, besar: 210 },
+        { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
+        { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
+      ],
+      targetKecil: 413, targetBesar: 708, // DIPERBAIKI: sebelumnya 231/2559 (copy dari tgl 15 Agt, salah — sudah dicocokkan ke spreadsheet AKG tgl 18 Agt)
+      fotoKecil: "https://lh3.googleusercontent.com/d/1A7rO9aNyQXLdqrL1Bin3kKZvHRxSpPFW",
+      fotoBesar: "https://lh3.googleusercontent.com/d/1TAYmJ2iHCoxgwCZCRZL46KjFDqcSI1m0",
+      menuKecil: [
+        { nama: "Nasi Putih",       berat: 125, energi: 225.0, prot: 3.75, lemak: 0.38,  karb: 49.75, serat: 0.25 },
+        { nama: "Ayam Geprek",      berat: 70,  energi: 244.9, prot: 9.99, lemak: 16.45, karb: 15.44, serat: 0.06 },
+        { nama: "Sambal Bawang",    berat: 25,  energi: 49.15, prot: 0.25, lemak: 5.05,  karb: 0.99,  serat: 0.26 },
+        { nama: "Tahu Goreng",      berat: 60,  energi: 88.2,  prot: 5.99, lemak: 5.11,  karb: 0.44,  serat: 0.04 },
+        { nama: "Timun dan Selada", berat: 18,  energi: 2.24,  prot: 0.12, lemak: 0.04,  karb: 0.37,  serat: 0.03 },
+        { nama: "Kelengkeng",       berat: 50,  energi: 30.0,  prot: 0.66, lemak: 0.05,  karb: 7.57,  serat: 0.00 }
+      ],
+      menuBesar: [
+        { nama: "Nasi Putih",       berat: 180, energi: 324.0, prot: 6.75, lemak: 0.54,  karb: 71.64, serat: 0.36 },
+        { nama: "Ayam Geprek",      berat: 70,  energi: 244.9, prot: 9.99, lemak: 16.45, karb: 15.44, serat: 0.06 },
+        { nama: "Sambal Bawang",    berat: 25,  energi: 49.15, prot: 0.25, lemak: 5.05,  karb: 0.99,  serat: 0.26 },
+        { nama: "Tahu Goreng",      berat: 60,  energi: 88.2,  prot: 5.99, lemak: 5.11,  karb: 0.44,  serat: 0.04 },
+        { nama: "Timun dan Selada", berat: 18,  energi: 2.24,  prot: 0.12, lemak: 0.04,  karb: 0.37,  serat: 0.03 },
+        { nama: "Kelengkeng",       berat: 50,  energi: 30.0,  prot: 0.66, lemak: 0.05,  karb: 7.57,  serat: 0.00 }
+      ]
+    }
+  },
+  
+  "2026-08-19": {
+    reguler: {
+      sekolah: [
+        { nama: "TK Al Anwar", kecil: 45, besar: 0 },
+        { nama: "TK Annuqayah", kecil: 77, besar: 0 },
+        { nama: "MI 1 Annuqayah", kecil: 44, besar: 74 },
+        { nama: "MI 3 Annuqayah", kecil: 65, besar: 64 },
+        { nama: "MTs 1 Annuqayah", kecil: 0, besar: 838 },
+        { nama: "MTs 2 Annuqayah", kecil: 0, besar: 100 },
+        { nama: "MTs 3 Annuqayah", kecil: 0, besar: 97 },
+        { nama: "MA 1 Annuqayah", kecil: 0, besar: 430 },
+        { nama: "MA 2 Annuqayah", kecil: 0, besar: 98 },
+        { nama: "MA Tahfidh", kecil: 0, besar: 210 },
+        { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
+        { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
+      ],
+      targetKecil: 413, targetBesar: 708,
+      fotoKecil: "https://lh3.googleusercontent.com/d/1XG8mjSBo7ErESlyPgzcNHwCtk8JXC4QY",
+      fotoBesar: "https://lh3.googleusercontent.com/d/1aq8uNkk5KDlGr6A0pSjCRnOi3uOZtfKu",
+      menuKecil: [
+        { nama: "Nasi Putih",                berat: 125, energi: 225.0,  prot: 3.75, lemak: 0.38,  karb: 49.75, serat: 0.25 },
+        { nama: "Telur Ceplok Bumbu Rempah", berat: 65,  energi: 132.45, prot: 7.11, lemak: 11.59, karb: 0.83,  serat: 0.00 },
+        { nama: "Tempe Goreng",              berat: 60,  energi: 88.2,   prot: 5.99, lemak: 5.11,  karb: 0.44,  serat: 0.04 },
+        { nama: "Wortel Jagung Pipil",        berat: 30,  energi: 60.3,   prot: 1.62, lemak: 1.19,  karb: 11.54, serat: 0.48 },
+        { nama: "Kelengkeng",                berat: 50,  energi: 30.0,   prot: 0.66, lemak: 0.05,  karb: 7.57,  serat: 0.00 },
+        { nama: "Susu",                      berat: 125, energi: 76.25,  prot: 4.00, lemak: 4.38,  karb: 5.38,  serat: 0.00 }
+      ],
+      menuBesar: [
+        { nama: "Nasi Putih",                berat: 180, energi: 324.0,  prot: 6.75, lemak: 0.54,  karb: 71.64, serat: 0.36 },
+        { nama: "Telur Ceplok Bumbu Rempah", berat: 65,  energi: 132.45, prot: 7.11, lemak: 11.59, karb: 0.83,  serat: 0.00 },
+        { nama: "Tempe Goreng",              berat: 60,  energi: 88.2,   prot: 5.99, lemak: 5.11,  karb: 0.44,  serat: 0.04 },
+        { nama: "Wortel Jagung Pipil",        berat: 30,  energi: 60.3,   prot: 1.62, lemak: 1.19,  karb: 11.54, serat: 0.48 },
+        { nama: "Kelengkeng",                berat: 50,  energi: 30.0,   prot: 0.66, lemak: 0.05,  karb: 7.57,  serat: 0.00 },
+        { nama: "Susu",                      berat: 125, energi: 76.25,  prot: 4.00, lemak: 4.38,  karb: 5.38,  serat: 0.00 }
+      ]
+    }
+  },
 
-// ========================= FUNGSI BANTUAN KALKULATOR & RENDER =========================
-function renderTabelMenu(idTbody, daftarItem) {
-  const el = document.getElementById(idTbody);
-  el.innerHTML = '';
-  daftarItem.forEach(item => {
-    el.innerHTML += `<tr>
-      <td data-label="Bahan">${item.nama}</td>
-      <td data-label="Takaran" style="text-align:center; font-weight:800;">${item.berat}g</td>
-      <td data-label="Energi" style="text-align:center;">${item.energi.toFixed(2)}</td>
-      <td data-label="Protein" style="text-align:center;">${item.prot.toFixed(2)}</td>
-      <td data-label="Lemak" style="text-align:center;">${item.lemak.toFixed(2)}</td>
-      <td data-label="Karbo" style="text-align:center;">${item.karb.toFixed(2)}</td>
-      <td data-label="Serat" style="text-align:center; color:#059669; font-weight:800;">${item.serat.toFixed(2)}</td>
-    </tr>`;
-  });
-}
+  "2026-08-29": {
+    reguler: {
+      sekolah: [
+        { nama: "TK Al Anwar", kecil: 45, besar: 0 },
+        { nama: "TK Annuqayah", kecil: 77, besar: 0 },
+        { nama: "MI 1 Annuqayah", kecil: 44, besar: 74 },
+        { nama: "MI 3 Annuqayah", kecil: 65, besar: 64 },
+        { nama: "MTs 1 Annuqayah", kecil: 0, besar: 838 },
+        { nama: "MTs 2 Annuqayah", kecil: 0, besar: 100 },
+        { nama: "MTs 3 Annuqayah", kecil: 0, besar: 97 },
+        { nama: "MA 1 Annuqayah", kecil: 0, besar: 430 },
+        { nama: "MA 2 Annuqayah", kecil: 0, besar: 98 },
+        { nama: "MA Tahfidh", kecil: 0, besar: 210 },
+        { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
+        { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
+      ],
+      targetKecil: 413, targetBesar: 708,
+      fotoKecil: "https://lh3.googleusercontent.com/d/184imHQFUqUeJ1CC9qDsGfoRoAczWQpIj",
+      fotoBesar: "https://lh3.googleusercontent.com/d/1o_LY49qLrgU9VnCBnMvEPXp-LQym-89x",
+      menuKecil: [
+        { nama: "Nasi Putih",          berat: 125, energi: 225.0,  prot: 3.75,  lemak: 0.38,  karb: 49.75, serat: 0.25 },
+        { nama: "Telur Saus Bolognese", berat: 65,  energi: 165.45, prot: 8.50,  lemak: 12.30, karb: 5.10,  serat: 0.40 },
+        { nama: "Tempe Tepung",        berat: 50,  energi: 142.50, prot: 4.20,  lemak: 8.90,  karb: 11.20, serat: 1.10 },
+        { nama: "Tumis Pakcoy Jagung",  berat: 40,  energi: 57.70,  prot: 1.12,  lemak: 4.50,  karb: 3.56,  serat: 0.28 },
+        { nama: "Apel Fuji",           berat: 75,  energi: 80.00,  prot: 0.50,  lemak: 0.05,  karb: 23.00, serat: 2.40 }
+      ],
+      menuBesar: [
+        { nama: "Nasi Putih",          berat: 180, energi: 324.0,  prot: 6.75,  lemak: 0.54,  karb: 71.64, serat: 0.36 },
+        { nama: "Telur Saus Bolognese", berat: 65,  energi: 165.45, prot: 8.50,  lemak: 12.30, karb: 5.10,  serat: 0.40 },
+        { nama: "Tempe Tepung",        berat: 50,  energi: 142.50, prot: 4.20,  lemak: 8.90,  karb: 11.20, serat: 1.10 },
+        { nama: "Tumis Pakcoy Jagung",  berat: 40,  energi: 57.70,  prot: 1.12,  lemak: 4.50,  karb: 3.56,  serat: 0.28 },
+        { nama: "Apel Fuji",           berat: 75,  energi: 80.00,  prot: 0.49,  lemak: 0.05,  karb: 23.00, serat: 2.40 }
+      ]
+    }
+  },
 
-function jumlahkanGizi(daftarItem) {
-  return daftarItem.reduce((tot, x) => {
-    tot.energi += x.energi; tot.prot += x.prot; tot.lemak += x.lemak; tot.karb += x.karb; tot.serat += x.serat;
-    return tot;
-  }, { energi: 0, prot: 0, lemak: 0, karb: 0, serat: 0 });
-}
+  "2026-08-31": {
+    reguler: {
+      sekolah: [
+        { nama: "TK Al Anwar", kecil: 45, besar: 0 },
+        { nama: "TK Annuqayah", kecil: 77, besar: 0 },
+        { nama: "MI 1 Annuqayah", kecil: 44, besar: 74 },
+        { nama: "MI 3 Annuqayah", kecil: 65, besar: 64 },
+        { nama: "MTs 1 Annuqayah", kecil: 0, besar: 838 },
+        { nama: "MTs 2 Annuqayah", kecil: 0, besar: 100 },
+        { nama: "MTs 3 Annuqayah", kecil: 0, besar: 97 },
+        { nama: "MA 1 Annuqayah", kecil: 0, besar: 430 },
+        { nama: "MA 2 Annuqayah", kecil: 0, besar: 98 },
+        { nama: "MA Tahfidh", kecil: 0, besar: 210 },
+        { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
+        { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
+      ],
+      targetKecil: 413, targetBesar: 708,
+      fotoKecil: "https://lh3.googleusercontent.com/d/1RYLICm5k1NaeiW396eZfW4I4a0TbYNzg",
+      fotoBesar: "https://lh3.googleusercontent.com/d/15Q-eCX-1mlhj1HfzqrpMfo_DHfN1KTAr",
+      menuKecil: [
+        { nama: "Nasi Putih",                berat: 125, energi: 225.0,  prot: 3.75,  lemak: 0.375, karb: 49.75, serat: 0.25 },
+        { nama: "Ayam Semur",                berat: 55,  energi: 181.85, prot: 8.475, lemak: 16.90,  karb: 0.45,  serat: 0.00 },
+        { nama: "Tempe Crispy Daun Jeruk",   berat: 40,  energi: 115.0,  prot: 4.40,  lemak: 7.03,   karb: 9.995, serat: 0.38 },
+        { nama: "Tumis Sawi Kembang Kol",    berat: 30,  energi: 49.5,   prot: 0.435, lemak: 5.05,   karb: 0.925, serat: 0.49 },
+        { nama: "Anggur Hijau",              berat: 50,  energi: 15.0,   prot: 0.25,  lemak: 0.10,   karb: 3.40,  serat: 0.60 }
+      ],
+      menuBesar: [
+        { nama: "Nasi Putih",                berat: 180, energi: 324.0,  prot: 6.75,  lemak: 0.54,   karb: 71.64, serat: 0.36 },
+        { nama: "Ayam Semur",                berat: 55,  energi: 181.85, prot: 8.475, lemak: 16.90,  karb: 0.45,  serat: 0.00 },
+        { nama: "Tempe Crispy Daun Jeruk",   berat: 40,  energi: 115.0,  prot: 4.40,  lemak: 7.03,   karb: 9.995, serat: 0.38 },
+        { nama: "Tumis Sawi Kembang Kol",    berat: 30,  energi: 49.5,   prot: 0.435, lemak: 5.05,   karb: 0.925, serat: 0.49 },
+        { nama: "Anggur Hijau",              berat: 50,  energi: 15.0,   prot: 0.25,  lemak: 0.10,   karb: 3.40,  serat: 0.60 }
+      ]
+    }
+  },
 
-function isiRingkasanGizi(prefix, total) {
-  document.getElementById('tot-' + prefix + '-en').innerText = total.energi.toFixed(2);
-  document.getElementById('tot-' + prefix + '-pr').innerText = total.prot.toFixed(2) + "g";
-  document.getElementById('tot-' + prefix + '-lm').innerText = total.lemak.toFixed(2) + "g";
-  document.getElementById('tot-' + prefix + '-kb').innerText = total.karb.toFixed(2) + "g";
-  document.getElementById('tot-' + prefix + '-sr').innerText = total.serat.toFixed(2) + "g";
+  "2026-09-01": {
+    reguler: {
+      sekolah: [
+        { nama: "TK Al Anwar", kecil: 45, besar: 0 },
+        { nama: "TK Annuqayah", kecil: 77, besar: 0 },
+        { nama: "MI 1 Annuqayah", kecil: 44, besar: 74 },
+        { nama: "MI 3 Annuqayah", kecil: 65, besar: 64 },
+        { nama: "MTs 1 Annuqayah", kecil: 0, besar: 838 },
+        { nama: "MTs 2 Annuqayah", kecil: 0, besar: 100 },
+        { nama: "MTs 3 Annuqayah", kecil: 0, besar: 97 },
+        { nama: "MA 1 Annuqayah", kecil: 0, besar: 430 },
+        { nama: "MA 2 Annuqayah", kecil: 0, besar: 98 },
+        { nama: "MA Tahfidh", kecil: 0, besar: 210 },
+        { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
+        { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
+      ],
+      targetKecil: 413, targetBesar: 708,
+      fotoKecil: "https://lh3.googleusercontent.com/d/1ya8F1ywTGa80TSbri8_X2d2l-2H-Tcgm",
+      fotoBesar: "https://lh3.googleusercontent.com/d/1uWv8dP5s_i2TXs2LgkyZzROQBfdmre-K",
+      menuKecil: [
+        { nama: "Nasi Putih",              berat: 125, energi: 225.0,  prot: 3.75,  lemak: 0.375, karb: 49.75, serat: 0.25 },
+        { nama: "Telur Dadar Saus Padang", berat: 68,  energi: 154.71, prot: 7.12,  lemak: 10.43, karb: 1.275, serat: 0.00 },
+        { nama: "Tahu Goreng",             berat: 60,  energi: 88.2,   prot: 5.99,  lemak: 5.11,  karb: 0.44,  serat: 0.04 },
+        { nama: "Sayur Bening",            berat: 27,  energi: 48.08,  prot: 0.186, lemak: 5.064, karb: 0.782, serat: 0.226 },
+        { nama: "Susu",                    berat: 125, energi: 76.25,  prot: 4.00,  lemak: 4.375, karb: 5.375, serat: 0.00 },
+        { nama: "Kelengkeng",              berat: 20,  energi: 30.0,   prot: 0.66,  lemak: 0.05,  karb: 7.57,  serat: 0.00 }
+      ],
+      menuBesar: [
+        { nama: "Nasi Putih",              berat: 180, energi: 324.0,  prot: 6.75,  lemak: 0.54,  karb: 71.64, serat: 0.36 },
+        { nama: "Telur Dadar Saus Padang", berat: 68,  energi: 154.71, prot: 7.12,  lemak: 10.43, karb: 1.275, serat: 0.00 },
+        { nama: "Tahu Goreng",             berat: 60,  energi: 88.2,   prot: 5.99,  lemak: 5.11,  karb: 0.44,  serat: 0.04 },
+        { nama: "Sayur Bening",            berat: 27,  energi: 48.08,  prot: 0.186, lemak: 5.064, karb: 0.782, serat: 0.226 },
+        { nama: "Susu",                    berat: 125, energi: 76.25,  prot: 4.00,  lemak: 4.375, karb: 5.375, serat: 0.00 },
+        { nama: "Kelengkeng",              berat: 20,  energi: 30.0,   prot: 0.66,  lemak: 0.05,  karb: 7.57,  serat: 0.00 }
+      ]
+    }
+  },
 
-  document.getElementById('hl-' + prefix + '-en').innerText = total.energi.toFixed(2) + "kkal";
-  document.getElementById('hl-' + prefix + '-kb').innerText = total.karb.toFixed(2) + "g";
-  document.getElementById('hl-' + prefix + '-pr').innerText = total.prot.toFixed(2) + "g";
-  document.getElementById('hl-' + prefix + '-lm').innerText = total.lemak.toFixed(2) + "g";
-  document.getElementById('hl-' + prefix + '-sr').innerText = total.serat.toFixed(2) + "g";
-}
+  "2026-09-02": {
+    reguler: {
+      sekolah: [
+        { nama: "TK Al Anwar", kecil: 45, besar: 0 },
+        { nama: "TK Annuqayah", kecil: 77, besar: 0 },
+        { nama: "MI 1 Annuqayah", kecil: 44, besar: 74 },
+        { nama: "MI 3 Annuqayah", kecil: 65, besar: 64 },
+        { nama: "MTs 1 Annuqayah", kecil: 0, besar: 838 },
+        { nama: "MTs 2 Annuqayah", kecil: 0, besar: 100 },
+        { nama: "MTs 3 Annuqayah", kecil: 0, besar: 97 },
+        { nama: "MA 1 Annuqayah", kecil: 0, besar: 430 },
+        { nama: "MA 2 Annuqayah", kecil: 0, besar: 98 },
+        { nama: "MA Tahfidh", kecil: 0, besar: 210 },
+        { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
+        { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
+      ],
+      targetKecil: 413, targetBesar: 708,
+      fotoKecil: "https://lh3.googleusercontent.com/d/1C-x8qv8JzBA0sR2WipqDEag3JIxwQD60",
+      fotoBesar: "https://lh3.googleusercontent.com/d/1VPavqzfAmetYopj_FAMayKrMh8Si2lIx",
+      menuKecil: [
+        { nama: "Nasi Putih",          berat: 125, energi: 225.0,  prot: 3.75,  lemak: 0.375, karb: 49.75, serat: 0.25 },
+        { nama: "Ayam Bumbu Merah",    berat: 50,  energi: 178.3,  prot: 8.19,  lemak: 16.25, karb: 0.0,   serat: 0.0 },
+        { nama: "Tempe Kecap",         berat: 35,  energi: 85.25,  prot: 3.785, lemak: 7.58,  karb: 2.725, serat: 0.35 },
+        { nama: "Timun, Selada",       berat: 23,  energi: 2.79,   prot: 0.171, lemak: 0.031, karb: 0.517, serat: 0.249 },
+        { nama: "Anggur Merah",        berat: 50,  energi: 15.0,   prot: 0.25,  lemak: 0.1,   karb: 3.4,   serat: 0.6 }
+      ],
+      menuBesar: [
+        { nama: "Nasi Putih",          berat: 180, energi: 324.0,  prot: 6.75,  lemak: 0.54,  karb: 71.64, serat: 0.36 },
+        { nama: "Ayam Bumbu Merah",    berat: 50,  energi: 178.3,  prot: 8.19,  lemak: 16.25, karb: 0.0,   serat: 0.0 },
+        { nama: "Tempe Kecap",         berat: 35,  energi: 85.25,  prot: 3.785, lemak: 7.58,  karb: 2.725, serat: 0.35 },
+        { nama: "Timun, Selada",       berat: 23,  energi: 2.79,   prot: 0.171, lemak: 0.031, karb: 0.517, serat: 0.249 },
+        { nama: "Anggur Merah",        berat: 50,  energi: 15.0,   prot: 0.25,  lemak: 0.1,   karb: 3.4,   serat: 0.6 }
+      ]
+    }
+  },
 
-function isiProgress(prefix, energiTerkumpul, target) {
-  const persen = target > 0 ? Math.round((energiTerkumpul / target) * 100) : 0;
-  document.getElementById('perc-' + prefix).innerText = persen + "%";
-  document.getElementById('bar-' + prefix).style.width = Math.min(persen, 100) + "%";
-}
+  "2026-09-03": {
+    reguler: {
+      sekolah: [
+        { nama: "TK Al Anwar", kecil: 45, besar: 0 },
+        { nama: "TK Annuqayah", kecil: 77, besar: 0 },
+        { nama: "MI 1 Annuqayah", kecil: 44, besar: 74 },
+        { nama: "MI 3 Annuqayah", kecil: 65, besar: 64 },
+        { nama: "MTs 1 Annuqayah", kecil: 0, besar: 838 },
+        { nama: "MTs 2 Annuqayah", kecil: 0, besar: 100 },
+        { nama: "MTs 3 Annuqayah", kecil: 0, besar: 97 },
+        { nama: "MA 1 Annuqayah", kecil: 0, besar: 430 },
+        { nama: "MA 2 Annuqayah", kecil: 0, besar: 98 },
+        { nama: "MA Tahfidh", kecil: 0, besar: 210 },
+        { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
+        { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
+      ],
+      targetKecil: 413, targetBesar: 708,
+      fotoKecil: "https://lh3.googleusercontent.com/d/1izVFqsKHpT8yEoXbT7WnyZ60nLtMKMjL",
+      fotoBesar: "https://lh3.googleusercontent.com/d/14q1sfvrkGovyyZhxxx4qW9WAA8P5h4mT",
+      menuKecil: [
+        { nama: "Nasi Putih",            berat: 125, energi: 225.0,  prot: 3.75,  lemak: 0.375, karb: 49.75, serat: 0.25 },
+        { nama: "Daging Kentang Gongso", berat: 65,  energi: 137.45, prot: 7.815, lemak: 11.33,  karb: 5.85,  serat: 0.20 },
+        { nama: "Tahu Goreng",           berat: 60,  energi: 88.2,   prot: 5.99,  lemak: 5.11,   karb: 0.44,  serat: 0.04 },
+        { nama: "Acar Kuning",           berat: 30,  energi: 50.4,   prot: 0.17,  lemak: 5.11,   karb: 1.32,  serat: 0.18 },
+        { nama: "Jeruk Manis",           berat: 130, energi: 58.5,   prot: 1.17,  lemak: 0.26,   karb: 14.56, serat: 1.82 }
+      ],
+      menuBesar: [
+        { nama: "Nasi Putih",            berat: 180, energi: 324.0,  prot: 6.75,  lemak: 0.54,   karb: 71.64, serat: 0.36 },
+        { nama: "Daging Kentang Gongso", berat: 65,  energi: 137.45, prot: 7.815, lemak: 11.33,  karb: 5.85,  serat: 0.20 },
+        { nama: "Tahu Goreng",           berat: 60,  energi: 88.2,   prot: 5.99,  lemak: 5.11,   karb: 0.44,  serat: 0.04 },
+        { nama: "Acar Kuning",           berat: 30,  energi: 50.4,   prot: 0.17,  lemak: 5.11,   karb: 1.32,  serat: 0.18 },
+        { nama: "Jeruk Manis",           berat: 130, energi: 58.5,   prot: 1.17,  lemak: 0.26,   karb: 14.56, serat: 1.82 }
+      ]
+    }
+  },
 
-// Render 1 "boks menu" gizi lengkap (dipakai berulang untuk kecil/besar/balita/bumil)
-// prefix -> dipakai untuk semua id terkait (tot-PREFIX-*, hl-PREFIX-*, perc-PREFIX, bar-PREFIX)
-// idTbody -> id tbody tabel resep
-// idGambar -> id elemen <img>
-// idTarget -> id elemen span target AKG
-function renderBoksMenu(prefix, idTbody, idGambar, idTarget, dataMenuObj) {
-  document.getElementById(idTarget).innerText = dataMenuObj.target;
-  document.getElementById(idGambar).src = dataMenuObj.foto;
-  renderTabelMenu(idTbody, dataMenuObj.menu);
-  const total = jumlahkanGizi(dataMenuObj.menu);
-  isiRingkasanGizi(prefix, total);
-  isiProgress(prefix, total.energi, dataMenuObj.target);
-}
+  "2026-09-07": {
+    reguler: {
+      sekolah: [
+        { nama: "TK Al Anwar", kecil: 45, besar: 0 },
+        { nama: "TK Annuqayah", kecil: 77, besar: 0 },
+        { nama: "MI 1 Annuqayah", kecil: 44, besar: 74 },
+        { nama: "MI 3 Annuqayah", kecil: 65, besar: 64 },
+        { nama: "MTs 1 Annuqayah", kecil: 0, besar: 838 },
+        { nama: "MTs 2 Annuqayah", kecil: 0, besar: 100 },
+        { nama: "MTs 3 Annuqayah", kecil: 0, besar: 97 },
+        { nama: "MA 1 Annuqayah", kecil: 0, besar: 430 },
+        { nama: "MA 2 Annuqayah", kecil: 0, besar: 98 },
+        { nama: "MA Tahfidh", kecil: 0, besar: 210 },
+        { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
+        { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
+      ],
+      targetKecil: 413, targetBesar: 708, // DIPERBAIKI: sebelumnya 231/2559 (itu jumlah siswa, bukan target AKG kkal)
+      fotoKecil: "GANTI_LINK_FOTO_KECIL_7SEP",
+      fotoBesar: "GANTI_LINK_FOTO_BESAR_7SEP",
+      menuKecil: [
+        { nama: "Nasi Putih",        berat: 125, energi: 225.0,  prot: 3.75,  lemak: 0.375, karb: 49.75, serat: 0.25 },
+        { nama: "Ayam Kungpao",      berat: 58,  energi: 198.77, prot: 9.24,  lemak: 18.232,karb: 1.215, serat: 0.084 },
+        { nama: "Tahu Goreng",       berat: 60,  energi: 88.2,   prot: 5.99,  lemak: 5.11,  karb: 0.44,  serat: 0.04 },
+        { nama: "Tumis Wortel Sawi", berat: 35,  energi: 50.95,  prot: 0.30,  lemak: 5.105, karb: 1.435, serat: 0.27 },
+        { nama: "Jeruk Manis",       berat: 130, energi: 58.5,   prot: 1.17,  lemak: 0.26,  karb: 14.56, serat: 1.82 }
+      ],
+      menuBesar: [
+        { nama: "Nasi Putih",        berat: 180, energi: 324.0,  prot: 6.75,  lemak: 0.54,  karb: 71.64, serat: 0.36 },
+        { nama: "Ayam Kungpao",      berat: 58,  energi: 198.77, prot: 9.24,  lemak: 18.232,karb: 1.215, serat: 0.084 },
+        { nama: "Tahu Goreng",       berat: 60,  energi: 88.2,   prot: 5.99,  lemak: 5.11,  karb: 0.44,  serat: 0.04 },
+        { nama: "Tumis Wortel Sawi", berat: 35,  energi: 50.95,  prot: 0.30,  lemak: 5.105, karb: 1.435, serat: 0.27 },
+        { nama: "Jeruk Manis",       berat: 130, energi: 58.5,   prot: 1.17,  lemak: 0.26,  karb: 14.56, serat: 1.82 }
+      ]
+    },
+    khusus3b: {
+      titik: [
+        { nama: "Congapan", balita: 28, bumilBusui: 15 },
+        { nama: "Patapan", balita: 39, bumilBusui: 27 },
+        { nama: "Minomih", balita: 16, bumilBusui: 28 },
+        { nama: "Gultim Selatan & Utara", balita: 38, bumilBusui: 24 },
+        { nama: "Gulteng Utara", balita: 39, bumilBusui: 28 },
+        { nama: "Gulteng Selatan", balita: 18, bumilBusui: 12 }
+      ],
+      balita: {
+        target: 405, // DIPERBAIKI: sebelumnya 178 (itu jumlah sasaran balita, bukan target AKG kkal)
+        foto: "GANTI_LINK_FOTO_BALITA_7SEP",
+        menu: [
+          { nama: "Nasi Putih",           berat: 100,  energi: 180.0,  prot: 3.0,   lemak: 0.3,    karb: 39.8,  serat: 0.2 },
+          { nama: "Ayam Garlic Butter",   berat: 50,   energi: 137.65, prot: 8.475, lemak: 11.9,   karb: 0.45,  serat: 0.0 },
+          { nama: "Sup Tahu Wortel Sawi", berat: 62.5, energi: 149.32, prot: 6.755, lemak: 11.442, karb: 1.205, serat: 0.124 },
+          { nama: "Jeruk Manis",          berat: 130,  energi: 5.4,    prot: 0.15,  lemak: 0.09,   karb: 1.18,  serat: 0.15 }
+        ]
+      },
+      bumilBusui: {
+        target: 833, // DIPERBAIKI: sebelumnya 134 (itu jumlah sasaran bumil/busui, bukan target AKG kkal)
+        foto: "GANTI_LINK_FOTO_BUMIL_7SEP",
+        menu: [
+          { nama: "Nasi Putih",           berat: 250, energi: 450.0,  prot: 7.5,   lemak: 0.75,  karb: 99.5,  serat: 0.5 },
+          { nama: "Ayam Garlic Butter",   berat: 50,  energi: 137.65, prot: 8.475, lemak: 11.9,  karb: 0.45,  serat: 0.0 },
+          { nama: "Kacang Tanah Goreng",  berat: 8,   energi: 61.12,  prot: 0.765, lemak: 6.332, karb: 0.765, serat: 0.084 },
+          { nama: "Tahu Goreng",          berat: 60,  energi: 88.2,   prot: 5.99,  lemak: 5.11,  karb: 0.44,  serat: 0.04 },
+          { nama: "Tumis Wortel Sawi",    berat: 35,  energi: 50.95,  prot: 0.30,  lemak: 5.105, karb: 1.435, serat: 0.27 },
+          { nama: "Jeruk Manis",          berat: 130, energi: 58.5,   prot: 1.17,  lemak: 0.26,  karb: 14.56, serat: 1.82 }
+        ]
+      }
+    }
 
-// ========================= FUNGSI UTAMA: TAMPILKAN DATA 1 HARI =========================
-function tampilkanData(tanggal) {
-  const data = dataSpjHarian[tanggal] || dataKosong;
+  }
 
-  // --- Bagian Reguler (Sekolah) ---
-  const reg = data.reguler;
-  let totalSekolahKecil = 0, totalSekolahBesar = 0, totalSekolahGabungan = 0;
-  const tbodySekolah = document.getElementById('tbody-penerima-sekolah');
-  tbodySekolah.innerHTML = '';
-  reg.sekolah.forEach(s => {
-    const subtotal = s.kecil + s.besar;
-    totalSekolahKecil += s.kecil; totalSekolahBesar += s.besar; totalSekolahGabungan += subtotal;
-    tbodySekolah.innerHTML += `<tr>
-      <td data-label="Sekolah">${s.nama}</td>
-      <td data-label="Kecil" style="text-align:center;">${s.kecil}</td>
-      <td data-label="Besar" style="text-align:center;">${s.besar}</td>
-      <td data-label="Total" style="text-align:center; font-weight:800; color:#2563eb;">${subtotal}</td>
-    </tr>`;
-  });
-  document.getElementById('tfoot-penerima-sekolah').innerHTML =
-    `<tr class="tot-dist-col"><td data-label="Total Sekolah">TOTAL SELURUH SEKOLAH</td>
-      <td data-label="T. Kecil" style="text-align:center;">${totalSekolahKecil}</td>
-      <td data-label="T. Besar" style="text-align:center;">${totalSekolahBesar}</td>
-      <td data-label="Grand Total" style="text-align:center; color:#3b82f6 !important;">${totalSekolahGabungan} Pack</td>
-    </tr>`;
 
-  renderBoksMenu('kcl', 'tbody-kecil', 'gambar-kecil', 'target-kecil',
-    { target: reg.targetKecil, foto: reg.fotoKecil, menu: reg.menuKecil });
-  renderBoksMenu('bsr', 'tbody-besar', 'gambar-besar', 'target-besar',
-    { target: reg.targetBesar, foto: reg.fotoBesar, menu: reg.menuBesar });
 
-  // --- Bagian Khusus 3B (Posko) ---
-  const k3b = data.khusus3b || dataKosong.khusus3b; // cegah error jika data 3B tanggal ini belum diisi
 
-  let totalPaket3b = 0;
-  const tbody3b = document.getElementById('tbody-penerima-3b');
-  tbody3b.innerHTML = '';
-  k3b.titik.forEach(t => {
-    totalPaket3b += t.jumlah;
-    tbody3b.innerHTML += `<tr>
-      <td data-label="Titik/Posko" style="text-align:left;">${t.nama}</td>
-      <td data-label="Jumlah Paket" style="text-align:center; font-weight:800; color:#7c3aed;">${t.jumlah} Paket</td>
-    </tr>`;
-  });
-  document.getElementById('tfoot-penerima-3b').innerHTML =
-    `<tr class="tot-dist-col"><td data-label="Total 3B" style="text-align:left;">TOTAL SELURUH POSKO 3B</td>
-      <td data-label="Total Paket" style="text-align:center; font-size:1.1rem; color:#a855f7 !important;">${totalPaket3b} Paket</td>
-    </tr>`;
+  
+};
 
-  // --- Menu Balita (terpisah, AKG sendiri) ---
-  renderBoksMenu('balita', 'tbody-balita', 'gambar-balita', 'target-balita', k3b.balita);
-
-  // --- Menu Bumil/Busui (terpisah, AKG sendiri) ---
-  renderBoksMenu('bumil', 'tbody-bumil', 'gambar-bumil', 'target-bumil', k3b.bumilBusui);
-
-  // --- Badge Total Porsi (header) ---
-  document.getElementById('label-total-porsi').innerText = totalSekolahGabungan + totalPaket3b;
-}
-
-// ========================= PEMILIH TANGGAL & INISIALISASI =========================
-const namaBulanPendek = ["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agt","Sep","Okt","Nov","Des"];
-const namaBulanPanjang = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
-
-function formatTanggalTampil(tanggalIso, daftarBulan) {
-  const d = new Date(tanggalIso);
-  return isNaN(d) ? "--" : `${d.getDate()} ${daftarBulan[d.getMonth()]} ${d.getFullYear()}`;
-}
-
-const daftarTanggalUrut = Object.keys(dataSpjHarian).sort((a, b) => new Date(b) - new Date(a));
-const inputTanggal = document.getElementById('dateSelector');
-
-if (daftarTanggalUrut.length > 0) {
-  const tanggalTerbaru = daftarTanggalUrut[0];
-  inputTanggal.value = tanggalTerbaru;
-  document.getElementById('label-tgl-atas').innerText = formatTanggalTampil(tanggalTerbaru, namaBulanPendek);
-  tampilkanData(tanggalTerbaru);
-}
-
-inputTanggal.addEventListener('change', (e) => {
-  const tanggalDipilih = e.target.value;
-  document.getElementById('label-tgl-atas').innerText = formatTanggalTampil(tanggalDipilih, namaBulanPanjang);
-  tampilkanData(tanggalDipilih);
-});
+const dataKosong = {
+  reguler: { sekolah: [{ nama: "Kosong", kecil: 0, besar: 0 }], targetKecil: 0, targetBesar: 0,
+    fotoKecil: "https://lh3.googleusercontent.com/d/1izVFqsKHpT8yEoXbT7WnyZ60nLtMKMjL",
+    fotoBesar: "https://lh3.googleusercontent.com/d/1FHP5j4gwqmDbF8DHjIfXj4PFn61t9Bq2",
+    menuKecil: [{ nama: "-", berat: 0, energi: 0, prot: 0, lemak: 0, karb: 0, serat: 0 }],
+    menuBesar: [{ nama: "-", berat: 0, energi: 0, prot: 0, lemak: 0, karb: 0, serat: 0 }] },
+  khusus3b: {
+    titik: [{ nama: "-", balita: 0, bumilBusui: 0 }],
+    balita: {
+      target: 0,
+      foto: "https://lh3.googleusercontent.com/d/1FHP5j4gwqmDbF8DHjIfXj4PFn61t9Bq2",
+      menu: [{ nama: "-", berat: 0, energi: 0, prot: 0, lemak: 0, karb: 0, serat: 0 }]
+    },
+    bumilBusui: {
+      target: 0,
+      foto: "https://lh3.googleusercontent.com/d/1FHP5j4gwqmDbF8DHjIfXj4PFn61t9Bq2",
+      menu: [{ nama: "-", berat: 0, energi: 0, prot: 0, lemak: 0, karb: 0, serat: 0 }]
+    }
+  }
+};
