@@ -331,7 +331,7 @@ const dataSpjHarian = {
         { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
         { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
       ],
-      targetKecil: 231, targetBesar: 2559,
+      targetKecil: 413, targetBesar: 708,
       fotoKecil: "LINK_FOTO_KECIL_7SEP",
       fotoBesar: "LINK_FOTO_BESAR_7SEP",
       menuKecil: [
@@ -351,12 +351,13 @@ const dataSpjHarian = {
     },
     khusus3b: {
       titik: [
-        { nama: "Congapan",               jumlah: 43 },
-        { nama: "Patapan",                jumlah: 66 },
-        { nama: "Minomih",                jumlah: 44 },
-        { nama: "Gultim Selatan & Utara", jumlah: 62 },
-        { nama: "Gulteng Utara",          jumlah: 67 },
-        { nama: "Gulteng Selatan",        jumlah: 30 }
+        { nama: "Congapan", jumlah: 43 },
+        { nama: "Patapan", jumlah: 64 },
+        { nama: "Minomih", jumlah: 41 },
+        { nama: "Guluk-Guluk Timur Selatan", jumlah: 43 },
+        { nama: "Guluk-Guluk Timur Utara", jumlah: 19 },
+        { nama: "Guluk-Guluk Tengah Utara", jumlah: 65 },
+        { nama: "Guluk-Guluk Tengah Selatan", jumlah: 30 }
       ],
       target3b: 312,
       foto3b: "LINK_FOTO_3B_7SEP",
