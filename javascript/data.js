@@ -367,7 +367,7 @@ const dataSpjHarian = {
         { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
       ],
       targetKecil: 231, targetBesar: 2559,
-      fotoKecil: "LINK_FOTO_KECIL_8SEP",
+      fotoKecil: "https://lh3.googleusercontent.com/d/12UEDD6lAGHXjy9wnvJuWFnSlFkRUpKmc",
       fotoBesar: "LINK_FOTO_BESAR_8SEP",
       menuKecil: [
         { nama: "Nasi Putih",                   berat: 125, energi: 225.0,  prot: 3.75,  lemak: 0.375, karb: 49.75, serat: 0.25 },
