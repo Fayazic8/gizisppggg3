@@ -368,7 +368,7 @@ const dataSpjHarian = {
       ],
       targetKecil: 231, targetBesar: 2559,
       fotoKecil: "https://lh3.googleusercontent.com/d/12UEDD6lAGHXjy9wnvJuWFnSlFkRUpKmc",
-      fotoBesar: "LINK_FOTO_BESAR_8SEP",
+      fotoBesar: "https://lh3.googleusercontent.com/d/1qZZvAcmgaAT3RtjdksqrXXYktj4O-qQK",
       menuKecil: [
         { nama: "Nasi Putih",                   berat: 125, energi: 225.0,  prot: 3.75,  lemak: 0.375, karb: 49.75, serat: 0.25 },
         { nama: "Telur Bumbu Kuning",          berat: 60,  energi: 128.9,  prot: 6.82,  lemak: 10.94, karb: 0.385, serat: 0.0 },
