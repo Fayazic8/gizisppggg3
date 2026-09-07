@@ -348,8 +348,62 @@ const dataSpjHarian = {
         { nama: "Jeruk Manis",          berat: 130,  energi: 5.4,    prot: 0.15,  lemak: 0.09,   karb: 1.18,  serat: 0.15 }
       ]
     }
-  }
+  },
 
+  "2026-09-08": {
+    reguler: {
+      sekolah: [
+        { nama: "TK Al Anwar", kecil: 45, besar: 0 },
+        { nama: "TK Annuqayah", kecil: 77, besar: 0 },
+        { nama: "MI 1 Annuqayah", kecil: 44, besar: 74 },
+        { nama: "MI 3 Annuqayah", kecil: 65, besar: 64 },
+        { nama: "MTs 1 Annuqayah", kecil: 0, besar: 838 },
+        { nama: "MTs 2 Annuqayah", kecil: 0, besar: 100 },
+        { nama: "MTs 3 Annuqayah", kecil: 0, besar: 97 },
+        { nama: "MA 1 Annuqayah", kecil: 0, besar: 430 },
+        { nama: "MA 2 Annuqayah", kecil: 0, besar: 98 },
+        { nama: "MA Tahfidh", kecil: 0, besar: 210 },
+        { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
+        { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
+      ],
+      targetKecil: 231, targetBesar: 2559,
+      fotoKecil: "LINK_FOTO_KECIL_8SEP",
+      fotoBesar: "LINK_FOTO_BESAR_8SEP",
+      menuKecil: [
+        { nama: "Nasi Putih",                   berat: 125, energi: 225.0,  prot: 3.75,  lemak: 0.375, karb: 49.75, serat: 0.25 },
+        { nama: "Telur Bumbu Kuning",          berat: 60,  energi: 128.9,  prot: 6.82,  lemak: 10.94, karb: 0.385, serat: 0.0 },
+        { nama: "Sambal Goreng Tempe Kentang", berat: 40,  energi: 87.9,   prot: 3.71,  lemak: 6.95,  karb: 3.625, serat: 0.4 },
+        { nama: "Tumis Jagung Wortel",        berat: 35,  energi: 104.5,  prot: 1.62,  lemak: 6.185, karb: 11.54, serat: 0.48 },
+        { nama: "Buah Naga",                   berat: 75,  energi: 53.25,  prot: 1.275, lemak: 2.325, karb: 6.825, serat: 2.4 }
+      ],
+      menuBesar: [
+        { nama: "Nasi Putih",                   berat: 180, energi: 324.0,  prot: 6.75,  lemak: 0.54,  karb: 71.64, serat: 0.36 },
+        { nama: "Telur Bumbu Kuning",          berat: 60,  energi: 128.9,  prot: 6.82,  lemak: 10.94, karb: 0.385, serat: 0.0 },
+        { nama: "Sambal Goreng Tempe Kentang", berat: 40,  energi: 87.9,   prot: 3.71,  lemak: 6.95,  karb: 3.625, serat: 0.4 },
+        { nama: "Tumis Jagung Wortel",        berat: 35,  energi: 104.5,  prot: 1.62,  lemak: 6.185, karb: 11.54, serat: 0.48 },
+        { nama: "Buah Naga",                   berat: 75,  energi: 53.25,  prot: 1.275, lemak: 2.325, karb: 6.825, serat: 2.4 }
+      ]
+    },
+    khusus3b: {
+      titik: [
+        { nama: "Congapan",               jumlah: 43 },
+        { nama: "Patapan",                jumlah: 66 },
+        { nama: "Minomih",                jumlah: 44 },
+        { nama: "Gultim Selatan & Utara", jumlah: 62 },
+        { nama: "Gulteng Utara",          jumlah: 67 },
+        { nama: "Gulteng Selatan",        jumlah: 30 }
+      ],
+      target3b: 312,
+      foto3b: "LINK_FOTO_3B_8SEP",
+      menu3b: [
+        { nama: "Bola Kentang Nori",            berat: 140,  energi: 296.0, prot: 7.0,   lemak: 8.1,   karb: 47.52, serat: 0.23 },
+        { nama: "Telur Bumbu Kuning",           berat: 60,   energi: 128.9, prot: 6.82,  lemak: 10.94, karb: 0.385, serat: 0.0 },
+        { nama: "Tempe Balado",                 berat: 17.5, energi: 62.95, prot: 1.75,  lemak: 5.965, karb: 1.175, serat: 0.175 },
+        { nama: "Cream Sup Jagung Wortel",      berat: 35,   energi: 104.5, prot: 1.62,  lemak: 6.185, karb: 11.54, serat: 0.48 },
+        { nama: "Buah Naga",                    berat: 75,   energi: 53.25, prot: 1.275, lemak: 2.325, karb: 6.825, serat: 2.4 }
+      ]
+    }
+  }
   
 };
 
