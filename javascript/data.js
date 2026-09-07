@@ -340,7 +340,7 @@ const dataSpjHarian = {
         { nama: "Guluk-Guluk Tengah Selatan", jumlah: 30 }
       ],
       target3b: 312,
-      foto3b: "https://lh3.googleusercontent.com/d/",
+      foto3b: "https://lh3.googleusercontent.com/d/1r92Ux20MIMd88-ZGBHZ4p4rPkcZKI-E9",
       menu3b: [
         { nama: "Nasi Putih",           berat: 100,  energi: 180.0,  prot: 3.0,   lemak: 0.3,    karb: 39.8,  serat: 0.2 },
         { nama: "Ayam Garlic Butter",   berat: 50,   energi: 137.65, prot: 8.475, lemak: 11.9,   karb: 0.45,  serat: 0.0 },
