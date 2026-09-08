@@ -394,7 +394,7 @@ const dataSpjHarian = {
         { nama: "Gulteng Selatan",        jumlah: 30 }
       ],
       target3b: 312,
-      foto3b: "https://lh3.googleusercontent.com/d/",
+      foto3b: "https://lh3.googleusercontent.com/d/1hKWifZVdxysiQcJ_EQSmMPfnyw1tieqf",
       menu3b: [
         { nama: "Bola Kentang Nori",            berat: 140,  energi: 296.0, prot: 7.0,   lemak: 8.1,   karb: 47.52, serat: 0.23 },
         { nama: "Telur Bumbu Kuning",           berat: 60,   energi: 128.9, prot: 6.82,  lemak: 10.94, karb: 0.385, serat: 0.0 },
