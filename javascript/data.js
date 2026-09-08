@@ -403,7 +403,63 @@ const dataSpjHarian = {
         { nama: "Buah Naga",                    berat: 75,   energi: 53.25, prot: 1.275, lemak: 2.325, karb: 6.825, serat: 2.4 }
       ]
     }
+  },
+
+  "2026-09-09": {
+    reguler: {
+      sekolah: [
+        { nama: "TK Al Anwar", kecil: 45, besar: 0 },
+        { nama: "TK Annuqayah", kecil: 77, besar: 0 },
+        { nama: "MI 1 Annuqayah", kecil: 44, besar: 74 },
+        { nama: "MI 3 Annuqayah", kecil: 65, besar: 64 },
+        { nama: "MTs 1 Annuqayah", kecil: 0, besar: 838 },
+        { nama: "MTs 2 Annuqayah", kecil: 0, besar: 100 },
+        { nama: "MTs 3 Annuqayah", kecil: 0, besar: 97 },
+        { nama: "MA 1 Annuqayah", kecil: 0, besar: 430 },
+        { nama: "MA 2 Annuqayah", kecil: 0, besar: 98 },
+        { nama: "MA Tahfidh", kecil: 0, besar: 210 },
+        { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
+        { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
+      ],
+      targetKecil: 231, targetBesar: 2559,
+      fotoKecil: "https://lh3.googleusercontent.com/d/1-tzqUZ5HSs0imYL6I2eDGXPLT94Upha-",
+      fotoBesar: "https://lh3.googleusercontent.com/d/1DrWAbTLUrEBBbwDXnbiuM6QQa7YqvCBR",
+      menuKecil: [
+        { nama: "Nasi Putih",                   berat: 125, energi: 225.0,  prot: 3.75,  lemak: 0.375, karb: 49.75,  serat: 0.25 },
+        { nama: "Ayam Crispy Lava Saus Keju",   berat: 53,  energi: 200.56, prot: 8.205, lemak: 18.69,  karb: 0.042,  serat: 0.0 },
+        { nama: "Tahu Goreng",                  berat: 60,  energi: 88.2,   prot: 5.99,  lemak: 5.11,   karb: 0.44,   serat: 0.04 },
+        { nama: "Tumis Jagung Labu Siam",       berat: 35,  energi: 103.6,  prot: 1.56,  lemak: 6.11,   karb: 11.365, serat: 1.26 },
+        { nama: "Salak",                        berat: 80,  energi: 61.6,   prot: 0.32,  lemak: 0.0,    karb: 16.0,   serat: 0.0 }
+      ],
+      menuBesar: [
+        { nama: "Nasi Putih",                   berat: 180, energi: 324.0,  prot: 6.75,  lemak: 0.54,   karb: 71.64,  serat: 0.36 },
+        { nama: "Ayam Crispy Lava Saus Keju",   berat: 53,  energi: 200.56, prot: 8.205, lemak: 18.69,  karb: 0.042,  serat: 0.0 },
+        { nama: "Tahu Goreng",                  berat: 60,  energi: 88.2,   prot: 5.99,  lemak: 5.11,   karb: 0.44,   serat: 0.04 },
+        { nama: "Tumis Jagung Labu Siam",       berat: 35,  energi: 103.6,  prot: 1.56,  lemak: 6.11,   karb: 11.365, serat: 1.26 },
+        { nama: "Salak",                        berat: 80,  energi: 61.6,   prot: 0.32,  lemak: 0.0,    karb: 16.0,   serat: 0.0 }
+      ]
+    },
+    khusus3b: {
+      titik: [
+        { nama: "Congapan",               jumlah: 43 },
+        { nama: "Patapan",                jumlah: 66 },
+        { nama: "Minomih",                jumlah: 44 },
+        { nama: "Gultim Selatan & Utara", jumlah: 62 },
+        { nama: "Gulteng Utara",          jumlah: 67 },
+        { nama: "Gulteng Selatan",        jumlah: 30 }
+      ],
+      target3b: 312,
+      foto3b: "https://lh3.googleusercontent.com/d/",
+      menu3b: [
+        { nama: "Nasi Putih",              berat: 100,  energi: 180.0,  prot: 3.0,   lemak: 0.3,   karb: 39.8,   serat: 0.2 },
+        { nama: "Ayam Suwir Daun Jeruk",   berat: 50,   energi: 178.3,  prot: 8.19,  lemak: 16.25, karb: 0.0,    serat: 0.0 },
+        { nama: "Martabak Tahu",           berat: 62.5, energi: 119.25, prot: 6.585, lemak: 7.835, karb: 3.82,   serat: 0.11 },
+        { nama: "Tumis Jagung Labu Siam",  berat: 35,   energi: 103.6,  prot: 1.56,  lemak: 6.11,  karb: 11.365, serat: 1.26 },
+        { nama: "Salak",                   berat: 80,   energi: 61.6,   prot: 0.32,  lemak: 0.0,   karb: 16.0,   serat: 0.0 }
+      ]
+    }
   }
+
   
 };
 
