@@ -478,7 +478,7 @@ const dataSpjHarian = {
       ],
       targetKecil: 413, targetBesar: 708,
       fotoKecil: "https://lh3.googleusercontent.com/d/1eBE71bWYC5BE4FVgKA_e9NDeqZOQbLf3",
-      fotoBesar: "https://lh3.googleusercontent.com/d/",
+      fotoBesar: "https://lh3.googleusercontent.com/d/1piFw6L6-3bc2w1Dt3x65ON_b-0TsKzao",
       menuKecil: [
         { nama: "Nasi Putih",       berat: 125, energi: 225.0,  prot: 3.75,  lemak: 0.375, karb: 49.75, serat: 0.25 },
         { nama: "Martabak Telur",   berat: 65,  energi: 143.45, prot: 7.31,  lemak: 11.02, karb: 3.285, serat: 0.09 },
