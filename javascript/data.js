@@ -476,7 +476,7 @@ const dataSpjHarian = {
         { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
         { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
       ],
-      targetKecil: 231, targetBesar: 2559,
+      targetKecil: 413, targetBesar: 708,
       fotoKecil: "LINK_FOTO_KECIL_10SEP",
       fotoBesar: "LINK_FOTO_BESAR_10SEP",
       menuKecil: [
