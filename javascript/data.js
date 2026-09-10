@@ -458,9 +458,63 @@ const dataSpjHarian = {
         { nama: "Salak",                   berat: 80,   energi: 61.6,   prot: 0.32,  lemak: 0.0,   karb: 16.0,   serat: 0.0 }
       ]
     }
+  },
+
+  "2026-09-10": {
+    reguler: {
+      sekolah: [
+        { nama: "TK Al Anwar", kecil: 45, besar: 0 },
+        { nama: "TK Annuqayah", kecil: 77, besar: 0 },
+        { nama: "MI 1 Annuqayah", kecil: 44, besar: 74 },
+        { nama: "MI 3 Annuqayah", kecil: 65, besar: 64 },
+        { nama: "MTs 1 Annuqayah", kecil: 0, besar: 838 },
+        { nama: "MTs 2 Annuqayah", kecil: 0, besar: 100 },
+        { nama: "MTs 3 Annuqayah", kecil: 0, besar: 97 },
+        { nama: "MA 1 Annuqayah", kecil: 0, besar: 430 },
+        { nama: "MA 2 Annuqayah", kecil: 0, besar: 98 },
+        { nama: "MA Tahfidh", kecil: 0, besar: 210 },
+        { nama: "SMA Annuqayah", kecil: 0, besar: 499 },
+        { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
+      ],
+      targetKecil: 231, targetBesar: 2559,
+      fotoKecil: "LINK_FOTO_KECIL_10SEP",
+      fotoBesar: "LINK_FOTO_BESAR_10SEP",
+      menuKecil: [
+        { nama: "Nasi Putih",       berat: 125, energi: 225.0,  prot: 3.75,  lemak: 0.375, karb: 49.75, serat: 0.25 },
+        { nama: "Martabak Telur",   berat: 65,  energi: 143.45, prot: 7.31,  lemak: 11.02, karb: 3.285, serat: 0.09 },
+        { nama: "Saus Bangkok",     berat: 28,  energi: 71.26,  prot: 0.275, lemak: 7.54,  karb: 0.982, serat: 0.3 },
+        { nama: "Sapo Tahu",        berat: 83,  energi: 101.52, prot: 6.6,   lemak: 5.165, karb: 3.338, serat: 1.62 },
+        { nama: "Susu",             berat: 125, energi: 76.25,  prot: 4.0,   lemak: 4.375, karb: 5.375, serat: 0.0 }
+      ],
+      menuBesar: [
+        { nama: "Nasi Putih",       berat: 180, energi: 324.0,  prot: 6.75,  lemak: 0.54,  karb: 71.64, serat: 0.36 },
+        { nama: "Martabak Telur",   berat: 65,  energi: 143.45, prot: 7.31,  lemak: 11.02, karb: 3.285, serat: 0.09 },
+        { nama: "Saus Bangkok",     berat: 28,  energi: 71.26,  prot: 0.275, lemak: 7.54,  karb: 0.982, serat: 0.3 },
+        { nama: "Sapo Tahu",        berat: 83,  energi: 101.52, prot: 6.6,   lemak: 5.165, karb: 3.338, serat: 1.62 },
+        { nama: "Susu",             berat: 125, energi: 76.25,  prot: 4.0,   lemak: 4.375, karb: 5.375, serat: 0.0 }
+      ]
+    },
+    khusus3b: {
+      titik: [
+        { nama: "Congapan",               jumlah: 43 },
+        { nama: "Patapan",                jumlah: 66 },
+        { nama: "Minomih",                jumlah: 44 },
+        { nama: "Gultim Selatan & Utara", jumlah: 62 },
+        { nama: "Gulteng Utara",          jumlah: 67 },
+        { nama: "Gulteng Selatan",        jumlah: 30 }
+      ],
+      target3b: 312,
+      foto3b: "LINK_FOTO_3B_10SEP",
+      menu3b: [
+        { nama: "Nasi Putih",          berat: 100, energi: 180.0,  prot: 3.0,   lemak: 0.3,   karb: 39.8,  serat: 0.2 },
+        { nama: "Martabak Telur",      berat: 65,  energi: 143.45, prot: 7.31,  lemak: 11.02, karb: 3.285, serat: 0.09 },
+        { nama: "Saus Tomat Homemade", berat: 28,  energi: 71.26,  prot: 0.275, lemak: 7.54,  karb: 0.982, serat: 0.3 },
+        { nama: "Sapo Tahu",           berat: 83,  energi: 101.52, prot: 6.6,   lemak: 5.165, karb: 3.338, serat: 1.62 },
+        { nama: "Susu",                berat: 125, energi: 76.25,  prot: 4.0,   lemak: 4.375, karb: 5.375, serat: 0.0 }
+      ]
+    }
   }
 
-  
 };
 
 const dataKosong = {
