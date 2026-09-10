@@ -504,7 +504,7 @@ const dataSpjHarian = {
         { nama: "Gulteng Selatan",        jumlah: 30 }
       ],
       target3b: 312,
-      foto3b: "https://lh3.googleusercontent.com/d/1mFG402WedYKdquTYSW_J6LgInlymrIZR",
+      foto3b: "https://lh3.googleusercontent.com/d/1QXF2s0qbFV-U_BfBryqaTGdsrMgNFsiU",
       menu3b: [
         { nama: "Nasi Putih",          berat: 100, energi: 180.0,  prot: 3.0,   lemak: 0.3,   karb: 39.8,  serat: 0.2 },
         { nama: "Martabak Telur",      berat: 65,  energi: 143.45, prot: 7.31,  lemak: 11.02, karb: 3.285, serat: 0.09 },
