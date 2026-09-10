@@ -477,8 +477,8 @@ const dataSpjHarian = {
         { nama: "SMA 3 Annuqayah", kecil: 0, besar: 149 }
       ],
       targetKecil: 413, targetBesar: 708,
-      fotoKecil: "LINK_FOTO_KECIL_10SEP",
-      fotoBesar: "LINK_FOTO_BESAR_10SEP",
+      fotoKecil: "https://lh3.googleusercontent.com/d/",
+      fotoBesar: "https://lh3.googleusercontent.com/d/",
       menuKecil: [
         { nama: "Nasi Putih",       berat: 125, energi: 225.0,  prot: 3.75,  lemak: 0.375, karb: 49.75, serat: 0.25 },
         { nama: "Martabak Telur",   berat: 65,  energi: 143.45, prot: 7.31,  lemak: 11.02, karb: 3.285, serat: 0.09 },
@@ -504,7 +504,7 @@ const dataSpjHarian = {
         { nama: "Gulteng Selatan",        jumlah: 30 }
       ],
       target3b: 312,
-      foto3b: "LINK_FOTO_3B_10SEP",
+      foto3b: "https://lh3.googleusercontent.com/d/1mFG402WedYKdquTYSW_J6LgInlymrIZR",
       menu3b: [
         { nama: "Nasi Putih",          berat: 100, energi: 180.0,  prot: 3.0,   lemak: 0.3,   karb: 39.8,  serat: 0.2 },
         { nama: "Martabak Telur",      berat: 65,  energi: 143.45, prot: 7.31,  lemak: 11.02, karb: 3.285, serat: 0.09 },
