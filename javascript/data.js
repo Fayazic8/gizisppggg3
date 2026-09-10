@@ -449,7 +449,7 @@ const dataSpjHarian = {
         { nama: "Gulteng Selatan",        jumlah: 30 }
       ],
       target3b: 312,
-      foto3b: "https://lh3.googleusercontent.com/d/",
+      foto3b: "https://lh3.googleusercontent.com/d/1mFG402WedYKdquTYSW_J6LgInlymrIZR",
       menu3b: [
         { nama: "Nasi Putih",              berat: 100,  energi: 180.0,  prot: 3.0,   lemak: 0.3,   karb: 39.8,   serat: 0.2 },
         { nama: "Ayam Suwir Daun Jeruk",   berat: 50,   energi: 178.3,  prot: 8.19,  lemak: 16.25, karb: 0.0,    serat: 0.0 },
