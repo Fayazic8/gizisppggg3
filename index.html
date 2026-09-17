@@ -5,8 +5,138 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sistem Distribusi Gizi | SPPG Guluk-Guluk 03</title>
   <link rel="stylesheet" href="style/styles.css">
+
+  <!-- ========================================== -->
+  <!-- CSS TAMBAHAN UNTUK POPUP BLUR PENGUMUMAN   -->
+  <!-- ========================================== -->
+  <style>
+    /* Latar Belakang Blur */
+    .pengumuman-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Warna gelap transparan */
+        backdrop-filter: blur(8px); /* Efek blur/kaca buram */
+        -webkit-backdrop-filter: blur(8px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 99999; /* Paling depan menutupi header */
+    }
+
+    /* Kotak Pesan */
+    .pengumuman-box {
+        background-color: #ffffff;
+        padding: 30px 25px;
+        border-radius: 16px;
+        border: 2px solid #cbd5e1; /* Border kecil elegan */
+        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        text-align: center;
+        max-width: 420px;
+        width: 90%;
+        animation: munculPopup 0.5s ease-out;
+    }
+
+    @keyframes munculPopup {
+        from { transform: scale(0.8); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+
+    .pengumuman-box h3 {
+        margin-top: 0;
+        color: #0f172a;
+        font-size: 1.4rem;
+        font-weight: 900;
+        margin-bottom: 15px;
+    }
+
+    .pengumuman-box p {
+        color: #334155;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+
+    .pesan-tambahan {
+        font-size: 0.85rem !important;
+        color: #64748b !important;
+        margin-bottom: 25px !important;
+        padding: 10px;
+        background: #f8fafc;
+        border-radius: 8px;
+        border: 1px dashed #cbd5e1;
+    }
+
+    /* Grup Tombol */
+    .tombol-grup {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .tombol-grup button {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+        font-weight: 800;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    /* Tombol 1: Masuk Menu (Menutup Popup) */
+    .btn-masuk {
+        background-color: #2563eb;
+        color: white;
+    }
+    .btn-masuk:hover {
+        background-color: #1d4ed8;
+        transform: translateY(-2px);
+    }
+
+    /* Tombol 2: Cek Status Mimin (Ke Github) */
+    .btn-status {
+        background-color: #10b981;
+        color: white;
+    }
+    .btn-status:hover {
+        background-color: #059669;
+        transform: translateY(-2px);
+    }
+  </style>
 </head>
 <body>
+
+  <!-- ========================================== -->
+  <!-- KOTAK POPUP PENGUMUMAN MIMIN LAMA          -->
+  <!-- ========================================== -->
+  <div class="pengumuman-overlay" id="popup-mimin">
+      <div class="pengumuman-box">
+          <h3>📢 Pengumuman Penting</h3>
+          <p>
+              Mohon maaf, untuk admin yang sebelumnya terhitung pada tanggal <strong style="color: #e11d48;">10 September 2026</strong> sudah berhenti.
+          </p>
+          <p class="pesan-tambahan">
+              Urusan mengenai konten, barang, dan semua tugas admin sudah bukan tanggung jawab admin yang dulu. Jika ada kendala atau terdapat kesalahan di masa lalu, mimin sebelumnya memohon maaf yang sebesar-besarnya. 🙏
+          </p>
+          
+          <div class="tombol-grup">
+              <!-- Tombol Tutup Popup & Lihat Menu -->
+              <button onclick="document.getElementById('popup-mimin').style.display='none';" class="btn-masuk">
+                  🚪 Masuk ke Menu Web
+              </button>
+              
+              <!-- Tombol Arahkan ke Github -->
+              <button onclick="window.location.href='https://github.com/Fayazic8/gizisppggg3'" class="btn-status">
+                  🤩 Cek Status Mimin Lama
+              </button>
+          </div>
+      </div>
+  </div>
+  <!-- ========================================== -->
 
   <div class="card nav-top flex justify-between items-center no-print" style="position: sticky; top: 0; z-index: 50; margin-bottom: 25px;">
     <div class="flex items-center gap-15" style="justify-content: space-between; width: 100%;">
